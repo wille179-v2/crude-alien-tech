@@ -28,18 +28,34 @@ New recipes have been added and technology has been altered to aid in using thes
 
 
 Reccomended Mods:
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8bdfd7866ed9ab42d56e1f39a133196eab2b1170
 * [Flare Stack](https://mods.factorio.com/mod/Flare%20Stack) (100% compatable, provides an alternate method of venting excess gasses)
 * [Omega Drill](https://mods.factorio.com/mod/OmegaDrill) (WIP. The Omega-Tau drill can be produced earlier without needing to venture to Vulcanus.)
 * [Any Planet Start](https://mods.factorio.com/mod/any-planet-start) (WIP. When starting on Fulgora, Vulcanus, Gleba, or Aquilo, the crude version of each building is disabled but the recipes to enable their crafting and full use elsewhere in the solar system remains.)
 * Wood mods, such as Wooden Military or Wooden Industry (No native compatability, but should be fine to install as-is.)
 	
 Other Compatable Mods:
+<<<<<<< HEAD
 * [Planetaris: Arig](https://mods.factorio.com/mod/planetaris-arig) (100% compatable)
 	
 Planned future compatability patches:
 * [Lignumis](https://mods.factorio.com/mod/lignumis) (Gold processing and, in a reverse of this mod's normal buildings, an elecrified *advanced* version of the lumber mill)
 	
 Future updates to this mod may include:
+=======
+
+* [Planetaris: Arig](https://mods.factorio.com/mod/planetaris-arig) (100% compatable)
+	
+Planned future compatability patches:
+
+* [Lignumis](https://mods.factorio.com/mod/lignumis) (Gold processing and, in a reverse of this mod's normal buildings, an elecrified *advanced* version of the lumber mill)
+	
+Future updates to this mod may include:
+
+>>>>>>> 8bdfd7866ed9ab42d56e1f39a133196eab2b1170
 * A crude Fusion Plant with worse energy efficiency
 * Early access to Stack Inserters, Turbo Belts, and all Mk3 Modules
 * Early access to foundations

@@ -11,7 +11,8 @@
     "? OmegaDrill >= 0.3.8",
     "? Flare Stack >=4.0.3",
     "(?) planetaris-arig >= 1.0.5",
-    "? any-planet-start >= 1.1.24"
+    "? any-planet-start >= 1.1.24",
+    "lignumis"
   ],
   "quality_required": "true",
   "spoiling_required": "true",

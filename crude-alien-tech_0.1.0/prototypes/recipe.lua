@@ -22,6 +22,7 @@ TODO:
 			✔️- Lava Synthesis
 			✔️- Impure molten iron
 			✔️- Impure molten copper
+			- Direct Iron/Copper melting without calcite
 			✔️- Tungsten Extraction
 
 		Aquilo:
