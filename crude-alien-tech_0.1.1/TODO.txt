@@ -1,5 +1,5 @@
 Urgent:
-	Update locale text for all research / items / entities
+	✔️ Update locale text for all research / items / entities
 	Nooberrys get their own seed processing (1/40 chance to get a seed, to match 1 tree = 4 wood = 10 berries), remove vanilla wood processing
 
 

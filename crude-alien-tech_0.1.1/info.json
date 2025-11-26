@@ -1,13 +1,12 @@
 {
   "name": "crude-alien-tech",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "title": "Crude Alien Technology",
   "author": "Wille179",
   "factorio_version": "2.0",
   "dependencies": [
     "base >= 2.0",
     "space-age >= 2.0",
-    "? id-like-cliff-explosives-on-nauvis-please",
     "? OmegaDrill >= 0.3.8",
     "? Flare Stack >=4.0.3",
     "? any-planet-start >= 1.1.24",
