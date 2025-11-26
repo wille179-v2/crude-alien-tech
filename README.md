@@ -34,7 +34,7 @@ Recommended Mods:
 * Wood mods, such as Wooden Military or Wooden Industry (No native compatibility, but should be fine to install as-is.)
 
 Other compatible Mods:
-* [Planetaris: Arig](https://mods.factorio.com/mod/planetaris-arig) (100% compatible)
+* [Planetaris: Arig](https://mods.factorio.com/mod/planetaris-arig) (100% compatible. Restructures Arig's tech tree to not require visiting Vulcanus first, but still encourage it. Any Planet Start - Arig is still a work in progress.)
 	
 Planned future compatibility  patches:
 * [Lignumis](https://mods.factorio.com/mod/lignumis) (Gold processing and, in a reverse of this mod's normal buildings, an electrified *advanced* version of the lumber mill)
