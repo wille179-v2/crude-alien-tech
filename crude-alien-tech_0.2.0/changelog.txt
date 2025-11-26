@@ -3,11 +3,15 @@ Version: 0.1.2
 Date: 11-26-2025
   Features:
     - Added two new Recipes: Uncatalyzed Molten Iron and Uncatalyzed Molten Copper for a simpler but less resource-efficient method of smelting ores, closer to the vanilla experience but without requiring stone or calcite.
+  Modding:
+    - Full compatibility with Planetaris: Arig. Arig can be accessed without visiting Volcanus first if the crude foundry and crude big mining drill have been researched. Arig's advanced technology also (mostly) no longer requires metallurgic science packs.
   Balancing:
     - Adjusted stone byproduct of Purify Molten Iron/Copper to prevent an infinite stone source using the 50% base productivity of the Foundry (using productivity modules to generate free stone is fine, however).
+	- Adjusted sand-related recipes to produce less byproduct sand
   Bugfixes:
     - Fixed some recipe sorting issues
 	- Fixed some item names and descriptions
+	- Fixed some recipies showing in the "Total Raw" calculations incorrectly
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.1
 Date: 11-26-2025

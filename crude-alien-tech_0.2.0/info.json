@@ -1,6 +1,6 @@
 {
   "name": "crude-alien-tech",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "title": "Crude Alien Technology",
   "author": "Wille179",
   "factorio_version": "2.0",
@@ -10,7 +10,7 @@
     "? OmegaDrill >= 0.3.8",
     "? Flare Stack >=4.0.3",
     "? any-planet-start >= 1.1.24",
-    "(?) planetaris-arig >= 1.0.5",
+    "? planetaris-arig >= 1.0.5",
     "(?) lignumis"
   ],
   "quality_required": "true",

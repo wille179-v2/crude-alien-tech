@@ -346,6 +346,7 @@ data:extend({
 				type = "unlock-recipe",
 				recipe = "cat-foundry-mk1"
 			},
+			-- cat-sand inserted in data-updates.lua for Arig compatibility ?
 			{
 				type = "unlock-recipe",
 				recipe = "cat-sand"
@@ -437,6 +438,7 @@ data:extend({
 				type = "unlock-recipe",
 				recipe = "carbon"
 			},
+			--cat-pure-sand inserted in data-updates.lua for Arig compatibility
 			{
 				type = "unlock-recipe",
 				recipe = "cat-pure-sand"

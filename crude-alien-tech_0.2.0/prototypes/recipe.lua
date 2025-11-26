@@ -1,67 +1,4 @@
 ﻿--[[
-TODO:
-	Recipes to create:
-		✔️- Mk1 Foundry
-		✔️- Mk1 Big Mining Drill
-		✔️- Mk1 Recycler
-		✔️- Mk1 Electromagnetic Plant
-		✔️- Mk1 Agricultural Tower
-		✔️- Mk1 Biochamber
-		✔️- Mk1 Cryogenic Plant
-
-		Gleba:
-			✔️- Nooberry to Fruit Mash
-			✔️- Nooberry to Jelly
-			✔️- Wood to Nutrients
-			✔️- Wood to Nooberry
-
-		Fulgora:
-			✔️- Holmium Ore Extraction
-
-		Vulcanus:
-			✔️- Lava Synthesis
-			✔️- Impure molten iron
-			✔️- Impure molten copper
-			- Direct Iron/Copper melting without calcite
-			✔️- Tungsten Extraction
-
-		Aquilo:
-			✔️- Fluorine Synthesis
-			✔️- Ammonia Synthesis
-			✔️- Lithium Brine Synthesis
-
-		Generic:
-			✔️- Sand
-			✔️- Pure Sand
-			✔️- Ice Freezing
-
-		- Oxygenated Rocket Fuel from
-			✔️- Oil
-			✔️- Ammonia
-			✔️- Jelly
-		- Oxygenated Solid Fuel from
-			✔️- Light Oil
-			✔️- Heavy Oil
-			✔️- Petrolium Gas
-			✔️- Ammonia
-
-		- Venting
-			✔️- Oxygen Venting (if Flare Stack not intalled)
-			✔️- Nitrogen Venting (if Flare Stack not intalled)
-			✔️- Hydrogen Venting (if Flare Stack not intalled)
-			✔️- Sand to Bricks
-
-	Recipes to update:
-		✔️- Mk2 Foundry
-		✔️- Mk2 Big Mining Drill
-		✔️- Mk2 Recycler
-		✔️- Mk2 Electromagnetic Plant
-		✔️- Mk2 Agricultural Tower
-		✔️- Mk2 Biochamber
-		✔️- Mk2 Cryogenic Plant
-]]
-
---[[
 Crafting Categories:
 	Cryogenic Plant: "cryogenics", "chemistry-or-cryogenics","cryogenics-or-assembling"
 	Biochamber: "organic", "organic-or-hand-crafting", "organic-or-assembling","organic-or-chemistry"
@@ -75,15 +12,7 @@ Crafting Categories:
 		Cryogenic Plant = "cryogenics-or-assembling"
 ]]
 
---TODO: Remove this sand filtering setup from here and make the alterations in data-updates.lua
 
-local sandType = "cat-sand"
-local pureSandType = "cat-pure-sand"
-
-if mods["planetaris-arig"] then
-	sandType = "planetaris-sand"
-	pureSandType = "planetaris-pure-sand"
-end
 
 -- Mk1 Buildings
 data:extend({
@@ -318,7 +247,8 @@ data:extend({
 		},
 		category = "organic-or-assembling",
 		energy_required = 2.5,
-		allow_productivity = true
+		allow_productivity = true,
+		allow_decomposition = false
 	},
 	{
 		type = "recipe",
@@ -333,7 +263,8 @@ data:extend({
 		},
 		category = "organic-or-assembling",
 		energy_required = 4,
-		allow_productivity = true
+		allow_productivity = true,
+		allow_decomposition = false
 	},
 	{
 		type = "recipe",
@@ -348,7 +279,8 @@ data:extend({
 		},
 		category = "organic-or-hand-crafting",
 		energy_required = 4,
-		allow_productivity = true
+		allow_productivity = true,
+		allow_decomposition = false
 	},
 	{
 		type = "recipe",
@@ -362,7 +294,8 @@ data:extend({
 		},
 		category = "organic-or-hand-crafting",
 		energy_required = 4,
-		allow_productivity = true
+		allow_productivity = true,
+		allow_decomposition = false
 	},
 })
 
@@ -376,7 +309,7 @@ copperBacteria.surface_conditions = nil
 ironBacteriaCultivation.surface_conditions = nil
 copperBacteriaCultivation.surface_conditions = nil
 
-data:extend{ironBacteria,copperBacteria,ironBacteriaCultivation,copperBacteriaCultivation}
+
 
 -- Fulgora recipes
 
@@ -387,19 +320,14 @@ data:extend({
 		icon = "__crude-alien-tech__/graphics/icon/holmium-sifting.png",
 		icon_size = 64,
 		enabled = false,
-		ingredients = {
-			{type = "fluid", name = sandType, amount = 100},
-			{type = "fluid", name = "sulfuric-acid", amount = 10}
-		},
-		results = {
-			{type = "fluid", name = sandType, amount = 90, ignored_by_productivity = 90},
-			{type = "item", name = "holmium-ore", amount = 1, probability = 0.25}
-		},
+		ingredients = {}, --set in data-updates.lua for Arig compatibility
+		results = {},
 		main_product = "holmium-ore",
 		category = "chemistry-or-cryogenics",
 		energy_required = 1,
 		allow_productivity = true,
-		subgroup = "fulgora-processes"
+		subgroup = "fulgora-processes",
+		allow_decomposition = false
 	},
 })
 
@@ -409,18 +337,15 @@ data:extend({
 		type = "recipe",
 		name = "cat-lava",
 		enabled = false,
-		ingredients = {
-			{type = "fluid", name = sandType, amount = 500},
-			{type = "item", name = "iron-ore", amount = 1},
-			{type = "item", name = "copper-ore", amount = 1}
-		},
+		ingredients = {},--set in data-updates.lua for Arig compatibility
 		results = {
 			{type = "fluid", name = "lava", amount = 500}
 		},
 		category = "metallurgy",
 		energy_required = 20,
 		allow_productivity = true,
-		subgroup = "vulcanus-processes"
+		subgroup = "vulcanus-processes",
+		allow_decomposition = false
 	},
 	{
 		type = "recipe",
@@ -437,6 +362,7 @@ data:extend({
 		energy_required = 5,
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
+		allow_decomposition = false
 	},
 	{
 		type = "recipe",
@@ -453,6 +379,7 @@ data:extend({
 		energy_required = 5,
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
+		allow_decomposition = false
 	},
 	{
 		type = "recipe",
@@ -472,7 +399,8 @@ data:extend({
 		energy_required = 5,
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
-		order = "d[metallurgy]-a[copper]"
+		order = "d[metallurgy]-a[copper]",
+		allow_decomposition = false
 	},
 	{
 		type = "recipe",
@@ -492,7 +420,8 @@ data:extend({
 		energy_required = 5,
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
-		order = "d[metallurgy]-a[iron]"
+		order = "d[metallurgy]-a[iron]",
+		allow_decomposition = false
 	},
 	{
 		type = "recipe",
@@ -500,18 +429,16 @@ data:extend({
 		icon = "__space-age__/graphics/icons/tungsten-ore.png",
 		icon_size = 64,
 		enabled = false,
-		ingredients = {
-			{type = "fluid", name = pureSandType, amount = 50},
-			{type = "fluid", name = "sulfuric-acid", amount = 5},
-		},
+		ingredients = {},--set in data-updates.lua for Arig compatibility
 		results = {
-			{type = "item", name = "tungsten-ore", amount = 4}
+			{type = "item", name = "tungsten-ore", amount_min = 3, amount_max = 4}
 		},
 		category = "chemistry-or-cryogenics",
 		energy_required = 5,
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
-		order = "d[metallurgy]-a[iron]"
+		order = "d[metallurgy]-a[iron]",
+		allow_decomposition = false
 	},
 	{
 		type = "recipe",
@@ -529,7 +456,8 @@ data:extend({
 		category = "metallurgy",
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
-		order = "a[melting]-b[molten-iron]-b"
+		order = "a[melting]-b[molten-iron]-b",
+		allow_decomposition = false
 	},
 	{
 		type = "recipe",
@@ -547,7 +475,8 @@ data:extend({
 		category = "metallurgy",
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
-		order = "a[melting]-c[molten-copper]-b"
+		order = "a[melting]-c[molten-copper]-b",
+		allow_decomposition = false
 	},
 })
 
@@ -560,19 +489,13 @@ data:extend({
 		icon = "__crude-alien-tech__/graphics/icon/hydrogen-fluoride-bobs.png",
 		icon_size = 64,
 		enabled = false,
-		ingredients = {
-			{type = "fluid", name = sandType, amount = 50},
-			{type = "fluid", name = "sulfuric-acid", amount = 50},
-			{type = "fluid", name = "water", amount = 100},
-		},
-		results = {
-			{type = "fluid", name = "cat-hydrofluoric-acid", amount = 10},
-			{type = "fluid", name = pureSandType, amount = 10},
-		},
+		ingredients = {}, --set in data-updates.lua for Arig compatibility
+		results = {}, --set in data-updates.lua for Arig compatibility
 		category = "cryogenics",
 		energy_required = 10,
 		allow_productivity = true,
-		subgroup = "fluid-recipes"
+		subgroup = "fluid-recipes",
+		allow_decomposition = false
 	},
 	{ -- electrolysis
 		type = "recipe",
@@ -590,7 +513,8 @@ data:extend({
 		category = "chemistry-or-cryogenics",
 		energy_required = 2,
 		allow_productivity = false,
-		subgroup = "fluid-recipes"
+		subgroup = "fluid-recipes",
+		allow_decomposition = false
 	},
 	{ -- air separation
 		type = "recipe",
@@ -606,7 +530,8 @@ data:extend({
 		category = "chemistry-or-cryogenics",
 		energy_required = 1,
 		allow_productivity = false,
-		subgroup = "fluid-recipes"
+		subgroup = "fluid-recipes",
+		allow_decomposition = false
 	},
 	{ -- fluorine
 		type = "recipe",
@@ -626,7 +551,8 @@ data:extend({
 		category = "cryogenics",
 		energy_required = 1,
 		allow_productivity = true,
-		subgroup = "fluid-recipes"
+		subgroup = "fluid-recipes",
+		allow_decomposition = false
 	},
 	{ -- ammonia
 		type = "recipe",
@@ -644,7 +570,8 @@ data:extend({
 		category = "cryogenics",
 		energy_required = 2,
 		allow_productivity = true,
-		subgroup = "fluid-recipes"
+		subgroup = "fluid-recipes",
+		allow_decomposition = false
 	},
 	{ -- lithium brine
 		type = "recipe",
@@ -666,7 +593,8 @@ data:extend({
 		category = "cryogenics",
 		energy_required = 15,
 		allow_productivity = true,
-		subgroup = "fluid-recipes"
+		subgroup = "fluid-recipes",
+		allow_decomposition = false
 	},
 })
 
@@ -681,14 +609,13 @@ data:extend({
 		ingredients = {
 			{type = "item", name = "stone", amount = 50}
 		},
-		results = {
-			{type = "fluid", name = sandType, amount = 500}
-		},
+		results = {}, --set in data-updates.lua under Arig compatibility
 		category = "metallurgy-or-assembling",
 		energy_required = 20,
 		allow_productivity = true,
 		alternative_unlock_methods = {"cat-somethings-rumbling"},
 		subgroup = "fluid-recipes",
+		allow_decomposition = false
 	},
 	{ -- pure sand
 		type = "recipe",
@@ -696,18 +623,13 @@ data:extend({
 		icon = "__crude-alien-tech__/graphics/icon/pure-sand.png",
 		icon_size = 64,
 		enabled = false,
-		ingredients = {
-			{type = "fluid", name = sandType, amount = 50}
-		},
-		results = {
-			{type = "fluid", name = pureSandType, amount = 45},
-			{type = "item", name = "iron-ore", amount_min = 1, amount_max = 2, probability = 0.1},
-			{type = "item", name = "copper-ore", amount_min = 1, amount_max = 2, probability = 0.1}
-		},
+		ingredients = {}, --set in data-updates.lua under Arig compatibility
+		results = {}, --set in data-updates.lua under Arig compatibility
 		category = "chemistry-or-cryogenics",
 		energy_required = 1,
 		allow_productivity = true,
 		subgroup = "fluid-recipes",
+		allow_decomposition = false
 	},
 	{ -- ice
 		type = "recipe",
@@ -724,7 +646,8 @@ data:extend({
 		category = "cryogenics",
 		energy_required = 1,
 		allow_productivity = false,
-		subgroup = "fluid-recipes"
+		subgroup = "fluid-recipes",
+		allow_decomposition = false
 	},
 	{ -- sand to brick
 		type = "recipe",
@@ -732,9 +655,7 @@ data:extend({
 		icon = "__crude-alien-tech__/graphics/icon/sand-stone-brick.png",
 		icon_size = 64,
 		enabled = false,
-		ingredients = {
-			{type = "fluid", name = sandType, amount = 20}
-		},
+		ingredients = {}, --set in data-updates.lua under Arig compatibility
 		results = {
 			{type = "item", name = "stone-brick", amount = 1}
 		},
@@ -743,7 +664,8 @@ data:extend({
 		energy_required = 3,
 		allow_productivity = true,
 		subgroup = "terrain",
-		hidden_from_player_crafting = true
+		hidden_from_player_crafting = true,
+		allow_decomposition = false
 	},
 	{ -- pure sand to brick
 		type = "recipe",
@@ -751,9 +673,7 @@ data:extend({
 		icon = "__crude-alien-tech__/graphics/icon/pure-sand-stone-brick.png",
 		icon_size = 64,
 		enabled = false,
-		ingredients = {
-			{type = "fluid", name = pureSandType, amount = 15}
-		},
+		ingredients = {}, --set in data-updates.lua under Arig compatibility},
 		results = {
 			{type = "item", name = "stone-brick", amount = 1}
 		},
@@ -762,7 +682,8 @@ data:extend({
 		energy_required = 2,
 		allow_productivity = true,
 		subgroup = "terrain",
-		hidden_from_player_crafting = true
+		hidden_from_player_crafting = true,
+		allow_decomposition = false
 	},
 })
 
@@ -784,6 +705,7 @@ data:extend({
 		allow_productivity = false,
 		subgroup = "fluid-recipes",
 		order = "z[cat]-v[o]",
+		allow_decomposition = false
 	},
 	{ -- vent hydrogen
 		type = "recipe",
@@ -801,6 +723,7 @@ data:extend({
 		allow_productivity = false,
 		subgroup = "fluid-recipes",
 		order = "z[cat]-v[h]",
+		allow_decomposition = false
 	},
 	{ -- vent nitrogen
 		type = "recipe",
@@ -818,6 +741,7 @@ data:extend({
 		allow_productivity = false,
 		subgroup = "fluid-recipes",
 		order = "z[cat]-v[n]",
+		allow_decomposition = false
 	},
 })
 
@@ -830,7 +754,6 @@ data:extend({
 		name = "cat-oxygenated-rocket-fuel",
 		icon = "__base__/graphics/icons/rocket-fuel.png",
 		icon_size = 64,
-		--icon_size = data.raw["recipe"]["rocket-fuel"].icon_size,
 		enabled = false,
 		ingredients = {
 			{type = "fluid", name = "light-oil", amount = 15},
@@ -847,14 +770,14 @@ data:extend({
 		order = "d[rocket-parts]-b[rocket-fuel]-a",
 		hidden_from_player_crafting = true,
 		hidden_in_factoriopedia = hideFuels,
-		hidden = hideFuels
+		hidden = hideFuels,
+		allow_decomposition = false
 	},
 	{ -- Rocket Fuel from Jelly
 		type = "recipe",
 		name = "cat-oxygenated-rocket-fuel-from-jelly",
 		icon = "__space-age__/graphics/icons/rocket-fuel-from-jelly.png",
 		icon_size = 64,
-		--icon_size = data.raw["recipe"]["rocket-fuel-from-jelly"].icon_size,
 		enabled = false,
 		ingredients = {
 			{type = "item", name = "bioflux", amount = 3},
@@ -872,14 +795,14 @@ data:extend({
 		order = "d[rocket-parts]-b[rocket-fuel]-b",
 		hidden_from_player_crafting = true,
 		hidden_in_factoriopedia = hideFuels,
-		hidden = hideFuels
+		hidden = hideFuels,
+		allow_decomposition = false
 	},
 	{ -- Rocket Fuel from Ammonia
 		type = "recipe",
 		name = "cat-oxygenated-ammonia-rocket-fuel",
 		icon = "__space-age__/graphics/icons/ammonia-rocket-fuel.png",
 		icon_size = 64,
-		--icon_size = data.raw["recipe"]["ammonia-rocket-fuel"].icon_size,
 		enabled = false,
 		ingredients = {
 			{type = "item", name = "solid-fuel", amount = 15},
@@ -897,14 +820,14 @@ data:extend({
 		order = "d[rocket-parts]-b[rocket-fuel]-c",
 		hidden_from_player_crafting = true,
 		hidden_in_factoriopedia = hideFuels,
-		hidden = hideFuels
+		hidden = hideFuels,
+		allow_decomposition = false
 	},
 	{ -- Solid Fuel from Light Oil
 		type = "recipe",
 		name = "cat-oxygenated-solid-fuel-from-light-oil",
 		icon = "__base__/graphics/icons/solid-fuel-from-light-oil.png",
 		icon_size = 64,
-		--icon_size = data.raw["recipe"]["solid-fuel-from-light-oil"].icon_size,
 		enabled = false,
 		ingredients = {
 			{type = "fluid", name = "light-oil", amount = 15},
@@ -920,7 +843,8 @@ data:extend({
 		order = "b[fluid-chemistry]-e[solid-fuel-from-light-oil]-o",
 		hidden_from_player_crafting = true,
 		hidden_in_factoriopedia = hideFuels,
-		hidden = hideFuels
+		hidden = hideFuels,
+		allow_decomposition = false
 	},
 	{ -- Solid Fuel from Heavy Oil
 		type = "recipe",
@@ -943,7 +867,8 @@ data:extend({
 		order = "b[fluid-chemistry]-e[solid-fuel-from-heavy-oil]-o",
 		hidden_from_player_crafting = true,
 		hidden_in_factoriopedia = hideFuels,
-		hidden = hideFuels
+		hidden = hideFuels,
+		allow_decomposition = false
 	},
 	{ -- Solid Fuel from Petrolium Gas
 		type = "recipe",
@@ -966,7 +891,8 @@ data:extend({
 		order = "b[fluid-chemistry]-e[solid-fuel-from-petroleum-gas]-o",
 		hidden_from_player_crafting = true,
 		hidden_in_factoriopedia = hideFuels,
-		hidden = hideFuels
+		hidden = hideFuels,
+		allow_decomposition = false
 	},
 	{ -- Solid Fuel from Ammonia
 		type = "recipe",
@@ -990,7 +916,8 @@ data:extend({
 		order = "a[ammonia]-b[solid-fuel-from-ammonia]-o",
 		hidden_from_player_crafting = true,
 		hidden_in_factoriopedia = hideFuels,
-		hidden = hideFuels
+		hidden = hideFuels,
+		allow_decomposition = false
 	},
 })
 
