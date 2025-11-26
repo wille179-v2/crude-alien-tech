@@ -25,7 +25,7 @@ New recipes have been added and technology has been altered to aid in using thes
 * You can create molten metals without calcite, and can even use stone to supplement that process with artificial lava, but the yield is always worse than what you can do with calcite.
 * You can extract Lithium, Fluorine, Tungsten, and Holmium from stone anywhere in the solar system, just not as well as you could on Fulgora or Aquilo.
 * You can synthesize Ammonia using air and water with oxygen as a byproduct. This oxygen can supplement your production of solid and rocket fuel.
-	
+
 
 Reccomended Mods:
 * [Flare Stack](https://mods.factorio.com/mod/Flare%20Stack) (100% compatable, provides an alternate method of venting excess gasses)
