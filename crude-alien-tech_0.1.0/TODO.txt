@@ -1,0 +1,18 @@
+Urgent:
+	Update locale text for all research / items / entities
+	Nooberrys get their own seed processing (1/40 chance to get a seed, to match 1 tree = 4 wood = 10 berries), remove vanilla wood processing
+
+
+Mod Compatability:
+	✔️ Flare Stack compatability
+	Omega Drill compatability
+	Planetaris Arig Compatability (sand / pure sand)
+	any-planet-start compatability
+
+Future Features:
+	Mk1 Fission Plant
+	Early Foundations
+	Early Stack Inserter
+	Early Turbo Belts
+	Early mk3 Modules (needs biter hatching)
+

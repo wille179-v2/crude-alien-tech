@@ -1,0 +1,270 @@
+Crude Alien Technology
+	Description: Adds early-game versions of the Gleba, Fulgora, Vulcanus, and Aquilo production buildings while boosting the existing versions into more powerful Mk2 variants.
+	
+Optional Dependancies: 
+	- Flare Stack Mod (for venting excess gasses)
+	- Omega Drill (Makes Big Drill Mk1 a prerequisite for Omega Drill and buffs Omega Drill)
+	- Any Planet Start (Reshuffles dependencies, unlocks Uranium and Nuclear Reactors on other planets
+	- Planetaris: Arig (sand compatibility)
+	
+Unlocks a Mk1 version of the following buildings:
+	- Electromagnetic Plant (1.5 crafting speed, 1.5MW electricity, 4 Module Slots, 5/m pollution, 20% Productivity)
+	- Recycler (0.25 crafting speed, 150KW electricity, 3 Module Slots, 3/m pollution)
+	- Foundry (3 crafting speed, 2000KW electricity, 3 Module Slots, 7/m pollution, 20% productivity)
+	- Big Mining Drill (1.5 Mining Speed, 200KW electricity, 3 Module Slots, 45/m pollution, 75% resource drain)
+	- Agricultural Tower (5x5 grid, 80KW electricity)
+	- Biochamber (1.5 crafting speed, 450KW nutrients, -0.5/m pollution, 3 Module Slots, 20% productivity)
+	- Cryogenic Plant (1.5 crafting speed, 1.2 MW electricity, 7/m pollution, 6 module slots)
+	
+Upgrades the vanilla buildings into Mk2 variants:
+	- EM Plant (2.6 crafting speed)
+	- Recycler (0.65 crafting speed)
+	- Foundry (5.2 crafting speed)
+	- Big Mining Drill (41% resource drain)
+	- Agricultural Tower (9x9 grid)
+	- Biochamber (2.6 crafting speed)
+	- Cryogenic Plant (2.6 crafting speed)
+	
+Mk1 buildings have simplified crafting recipes compared to their mk2 counterparts. Mk2 buildings take their mk1 versions but have cheaper costs.
+	Mk1:
+		Electromagnetic Plant
+			Mk1: 30 Processing Units + 30 Refined Concrete + 30 Steel
+			Mk2: 150 Holomium Plates + 20 Processing Units + 20 Refined Concrete + 20 Steel + 1 Mk1 EM Plant
+		Recycler
+			Mk1: 4 Advanced Circuits + 20 Gears + 10 Concrete + 10 Steel
+			Mk2: 4 Processing Units + 20 Gears + 10 Concrete + 10 Steel + Mk1 Recycler
+		Foundry
+			Mk1: 10 Electronic Circuits + 20 Lubricant + 10 Concrete + 20 Steel + 50 Iron Plate
+			Mk2: 20 Electronic Circuits + 20 Refined Concrete + 30 Steel + 50 Tungsten Carbide + 1 Mk1 Foundry.
+		Big Mining Drill
+			Mk1: 5 Advanced Circuits + 5 Electric Engine Units + 1 Electric Mining Drill + 100 Molten Iron
+			Mk2: 5 Advanced Circuits + 5 Electric Engine Units + 1 Mk1 Big Mining Drill + 100 Molten Iron
+		Agricultural Tower
+			Mk1: 2 Electronic Circuits + 1 Landfill + 10 Spoilage + 8 Steel
+			Mk2: 1 Electronic Circuit + 1 Landfill + 10 Spoilage + 2 Steel + 1 Mk1 Agricultrual Tower.
+		Biochamber
+			Mk1: 1 Electronic Circuits + 1 Landfill + 10 Iron Plate + 5 Nutrients
+			Mk2: 4 Electronic Circuits + 1 Landfill + 5 Nutrients + 1 Pentapod Egg + 1 Mk1. Biochamber
+		Cryogenic Plant
+			Mk1: 20 Steel + 10 Processing Units + 40 Refined Concrete + 20 Batteries
+			Mk2: 20 Lithium Plate + 10 Processing Units + 20 Superconductors + 1 Mk1 Cryogenic Plant
+		
+
+
+	
+Adds complex alternate recipes to generate the following planet-specific resources. Items marked with a * are new items.
+	Lava (with non-calcite recipe for making molten copper and iron at worse ratios).
+		5 Stone (assembler) -> 5 Sand*
+		50 Sand + 1 iron ore + 1 copper ore (foundry) -> 500 Lava
+		500 Lava + 2 iron/copper ore (foundry) -> 500 impure molten iron/copper*
+		500 impure molten iron/copper (foundry) -> 200 molten iron/copper + 10 stone byproduct
+	Tungsten
+		5 Stone (assembler) -> 5 Sand*
+		50 Sand (chem/cryo) -> 50 Pure Sand 10% iron ore + 10% copper ore
+		50 Pure Sand + 5 Sulfuric Acid (chemistry or cryo) -> 4 Tungsten Ore
+	Fruit Mash (Renamed Yumako Mash)
+		1 Nooberry* (assembler or biochamber) -> 2 Nutrient Mash
+	Jelly 
+		1 Nooberry* + 10 Water -> 4 Jelly
+	Fluorine
+		50 Sand* + 50 Sulfuric Acid + 100 Water(chemical plant / cryogenic) -> 10 Hydrofluoric Acid* + 1 Stone
+		10 Hydrofluoric Acid + 10 Water (cryogenic) -> 15 Steam (500 degrees) + 10 Fluorine
+	Ammonia
+		100 Water (chemical plant / cryogenic) -> 33 Oxygen* + 66 Hydrogen*
+		[Nothing] (chemical plant / cryogenic) -> 78 Nitrogen* + 21 Oxygen
+		10 Nitrogen* + 30 Hydrogen* (chem/cryo) -> 20 Amonia
+	Lithium Brine
+		100 stone + 100 water + 10 Ice (chem/cryo) -> 80 Stone + 10 Lithium Brine + 100 Steam (165 degrees)
+	Ice
+		20 water -> 1 ice (no productivity allowed)
+	Holmium Ore Sifting
+		100 Sand + 10 sulfuric acid (chem/cryo) -> 95 Sand + 20% Holmium Ore
+	
+Adds new Items:
+	Sand (5 Stone (assembler) -> 5 Sand) [Note: Find other mods that can produce sand, disable if they're loaded].
+	Pure Sand (50 Sand (chem/cryo) -> 45 Pure Sand + 10% iron ore + 10% copper ore)
+	Impure Molten Iron (500 Lava + 2 Iron Ore (foundry) -> 500 Impure Molten Iron)
+	Impure Molten Copper  (500 Lava + 2 Copper Ore (foundry) -> 500 Impure Molten Copper)
+	Nooberry (2 wood + 20 Water (assembler) -> 15 Nooberries) [Note: Jank until I can figure out how to make custom trees].
+	Hydrofluoric Acid (50 Sand + 50 Sulfuric Acid + 100 Water (cryo)-> 10 Hydrofluoric Acid + 1 Stone)
+	Oxygen
+	Hydrogen
+	Nitrogen
+	
+Adds New Bonus Recipe:
+	Oxygenated Rocket Fuel From...
+		Oil Products: 15 light oil + 15 solid fuel + 30 oxygen (chem/cryo) -> 2 rocket fuel
+		Ammonia: 75 water + 750 ammonia + 15 solid fuel + 30 oxygen (chem/cryo) -> 2 rocket fuel
+		Jelly: 3 Bioflux + 45 Jelly + 45 water + 30 oxygen (bio) -> 2 rocket fuel
+	Oxygenated Solid Fuel From...
+		Light Oil: 15 light + 30 oxygen (chem/cryo) -> 2 solid fuel
+		Heavy Oil: 30 heavy oil + 30 oxygen (chem/cryo) -> 2 solid fuel
+		Petrolium Gas: 30 petrolium gas + 30 oxygen (chem/cryo) -> 2 solid fuel
+		Ammonia: 18 crude oil + 45 ammonia + 30 oxygen (chem/cryo) -> 4 solid fuel
+	Oxygen/Nitrogen/Hydrogen Venting (only if Flare Stack mod isn't loaded.)
+		Oxygen (chem) -> Nothing
+		Hydrogen (chem) -> Nothing
+		Nitrogen (chem) -> Nothing
+	Wooden Nutrients
+		1 Wood (assembler/bio) -> 5 Nutrients
+	
+	
+Unlocks additional vanilla recipes earlier:
+	Carbon (both from Coal and from spoilage)
+	Heating Tower (Unlocks with Mk1 Biochamber)
+	
+Other Changes
+	- Ice Melting can no longer use productivity modules (to prevent infinite net-positive loop)
+	
+Technologies
+
+	Gleba Branch:
+		1. Earthly Roots
+			Research: Red, Green, Blue x 100
+			Prerequisite: Landfill, Assembler
+			Unlocks: Agricultural Tower Mk1, Wood Recipes (Seeds, Fruit, Nutrients), Spoilage
+		2. Dreaming of Greener Pastures
+			Research: Red, Green, Blue x 200
+			Prerequisite: Earthly Roots
+			Unlocks: Biochamber Mk1, Nooberry Processing, Bioflux, Nutrients From Bioflux
+		?. Fishy Feeling
+			Research: Red, Green, Blue x 100
+			Prerequisite: Dreaming of Greener Pastures
+			Unlock: Fish Breeding, Nutrients from Fish
+		3. The Fire of Life (Moved Heating Tower research)
+			Research: Red, Green, Blue x 150
+			Prerequisites: Earthly Roots, Concrete
+			Unlocks: Heating Tower, Heat Pipe, Heat Exchanger, Turbine
+		4. Stellar Lifeforms (Moved Bacteria Cultivation)
+			Trigger: Craft Bioflux
+			Prerequisite: Dreaming of Greener Pastures
+			Unlocks: Bacteria Cultivation
+		5. Candy Factory (Moved Bioflux processing research:
+			Prerequisite: Dreaming of Greener Pastures
+		
+		-----
+		
+		6. Life Amongst the Stars (Renamed Planet Discovery Gleba research)
+			Additional Prerequisite: Dreaming of Greener Pastures, Stellar Lifeforms, The Fire of Life, Candy Factory
+		7. The Green Must Grow (Renamed Agriculture research)
+			Unlocks: Mk2 Agricultural Tower
+		8. Sweet Delicacies (Renamed Yumako research)
+		9. Sour Delights (Renamed Jellynut research)
+		10. Organic Chef (Renamed Biochamber research)
+			Unlocks: Mk2. Biochamber
+		11. Alien Treats (Renamed Bioflux Research)
+			Unlocks Gleba's Bioflux Recipe
+		12. Seeding the Stars (Renamed Artificial Soil)
+		13. You Know What Must Grow (Renamed Agricultural Science Pack)
+		
+		---
+		Removed Vanilla Technologies: Tree Seeding, Fish Breeding
+		
+	Fulgora Branch:
+	
+		Bolt of Inspiration
+			Research: Red, Green, Blue x 100
+			Prerequisite: Processing Units, Concrete, Acumulator
+			Unlocks: Electromagnetic Plant Mk1
+		Salvage Failed Efforts
+			Research: Red. Green, Blue x 100
+			Prerequisite: Processing Units, Concrete
+			Unlocks: Recycler Mk1.
+		Extract Rare Elements:
+			Research: Red, Green, Blue x 200
+			Prerequisite: Bolt of Inspiration
+			Unlocks: Alternate Holmium Ore
+		Refine Rare Elements (renamed Holomium processing)
+			Prerequisite: Extract Rare Elements
+		Energize Innovation
+			Trigger: Craft Holmium Plate
+			Prerequisites: Refine Rare Elements
+			Unlocks: Superconductor, Supercapacitor, Electrolyte
+			
+		---
+		
+		Ride the Lightning (Renamed Planet discovery Fulgora)
+			Additional Prerequisites: Energize Innovation, Salvage Failed Efforts
+		Reclaim Success (Renamed Recycling)
+			Unlocks: Scrap Recycling, Mk2 Recycler
+		Iterate upon Inspiration
+			Trigger: Craft Recycler Mk2
+			Prerequisite: Recycling (vanilla)
+			Unlocks: Electromagnetic Plant Mk2.
+		Electrofied Invention (Renamed Electromagnetic Science Pack)
+			Altered Prerequisite: Iterate upon Inspiration
+		
+		
+		
+	Vulcanus Branch:
+		
+		Something's Rumbling
+			Research: Red, Green, Blue x 100
+			Prerequisite: Concrete, Lubricant
+			Unlocks: Foundry Mk1., Lava Synthesis, Impure Iron/Copper, Sand
+		Wolfram's Might
+			Research: Red, Green, Blue x 150
+			Prerequisite: Something's Rumbling
+			Unlocks: Carbon, alternate tungsten ore, tungsten carbide, Pure Sand
+		Rock and Stone!
+			Trigger: craft tungsten carbide
+			Prerequisite: Something's Rumbling
+			Unlock: Big Mining Drill Mk1
+		Cliff Collapse (Moved Cliff Explosive research)
+			Research: Red, Green, Blue, White x 500
+			Prerequisite: Rock and Stone!
+		
+		---
+		
+		Find the Forgeworld (Renamed Planet Discovery Volcanus)
+			Additional Prerequisite: Rock and Stone!
+		Prospector's Perspective
+			Trigger: Mine Entity Big Volcanic Rock
+			Prerequisite: Find the Foregeworld
+			Unlock: Tungsten Steel, Big Mining Drill Mk2., Foundry Mk2.
+		Catalytic Crystals (renamed Calcite Processing)
+			Additional Unlocks: Molten Iron/Copper from Lava, Copper/Iron Melting (vanilla recipes)
+		Memory Metal (renamed Metalurgic Science Pack)
+			Altered Prerequisite: Prospector's Perspective, Catalytic Crystals
+			
+		---
+		
+		Removed Vanilla Recipies: Tungsten Carbide, Foundy, Big Mining Drill
+		
+	Aquilo Branch:
+		
+		Frozen Dreams:
+			Research: Red, Green, Blue, Purple, Yellow, White x 500
+			Prerequisites: Rock and Stone!, Energize Innovation, Salvage Failed Efforts, The Fire of Life, Dreaming of Greener Pastures
+			Unlocks: Cryogenic Plant Mk1., Ice
+		Cold Chemistry
+			Research: Red, Green, Blue, Purple, White x 5000
+			Prerequisite: Frozen Dreams
+			Unlocks: Water Elecrolysis, Ammonia synthesis, Fluorine Synthesis, Lithium Synthesis, Gas Venting
+		A Breath of Cold Air
+			Research: Research: Red, Green, Blue, Purple, White x 250
+			Prerequisites: Cold Chemistry
+			Unlocks Oxygenated Fuels (basic)
+		Even Colder Chemistry (Moved Lithium Processing)
+			Alternate Trigger: Craft Lithium Brine
+			Prerequisite: Cold Chemistry
+			
+		---
+		
+		Frozen Nightmares (renamed Planet Discovery Aquilo)
+			Alternate Prerequisite: Frozen Dreams
+		Ultimate Brainfreeze (Renamed Cryogenic Plant)
+			Alternate Trigger: Mine Entity Big Lithium Ice Formation
+			Prerequisite: Frozen Nightmares
+			Unlocks: Cryogenic Plant mk2., Fluoroketone Hot/Cold
+		Frozen Lungs:
+			Trigger: Build Cryogenic Plant mk2.
+			Unlocks: Oxygenated Ammonia Fuels
+			
+			
+Bonus Early Tech Options:
+	- Early Stack Inserter
+	- Early Turbo Belts
+	- Early Quality Modules
+	- Early Biter Capture and Productivity Mk3
+	- Early Foundations
