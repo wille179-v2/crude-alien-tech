@@ -124,7 +124,8 @@ data:extend({
 		category = "metallurgy",
 		energy_required = 25,
 		hidden_from_player_crafting = false,
-		hidden_in_factoriopedia = false
+		hidden_in_factoriopedia = false,
+		order = "a[items]-c[big-mining-drill]-a"
 	},
 	{ --Mk1 Recycler
 		-- 4 Advanced Circuits + 20 Gears + 10 Concrete + 10 Steel
@@ -233,6 +234,8 @@ if settings.startup["use-chain-recipe"].value then
 	local biochamberMk2 = data.raw["recipe"]["biochamber"]
 	local cryogenicPlantMk2 = data.raw["recipe"]["cryogenic-plant"]
 
+	bigMiningDrillMk2.order = "a[items]-c[big-mining-drill]-b"
+
 	foundryMk2.ingredients = {
 		--20 Electronic Circuits + 20 Refined Concrete + 30 Steel + 50 Tungsten Carbide + 1 Mk1 Foundry.
 		{type = "item",name = "electronic-circuit", amount = 20},
@@ -288,6 +291,7 @@ if settings.startup["use-chain-recipe"].value then
 		{type = "item",name = "cat-cryogenic-plant-mk1", amount = 1},
 	}
 
+	--[[
 	data:extend({
 		foundryMk2,
 		bigMiningDrillMk2,
@@ -297,6 +301,7 @@ if settings.startup["use-chain-recipe"].value then
 		biochamberMk2,
 		cryogenicPlantMk2
 	})
+	]]
 end
 
 -- Gleba Recipes
@@ -390,6 +395,7 @@ data:extend({
 			{type = "fluid", name = sandType, amount = 90, ignored_by_productivity = 90},
 			{type = "item", name = "holmium-ore", amount = 1, probability = 0.25}
 		},
+		main_product = "holmium-ore",
 		category = "chemistry-or-cryogenics",
 		energy_required = 1,
 		allow_productivity = true,
@@ -416,22 +422,6 @@ data:extend({
 		allow_productivity = true,
 		subgroup = "vulcanus-processes"
 	},
-	--[[{
-		type = "recipe",
-		name = "cat-tungsten-ore",
-		enabled = false,
-		ingredients = {
-			{type = "fluid", name = pureSandType, amount = 50},
-			{type = "fluid", name = "sulfuric-acid", amount = 5}
-		},
-		results = {
-			{type = "item", name = "tungsten-ore", amount = 4}
-		},
-		category = "chemistry-or-cryogenics",
-		energy_required = 10,
-		allow_productivity = true,
-		subgroup = "vulcanus-processes",
-	},]]
 	{
 		type = "recipe",
 		name = "cat-impure-molten-iron",
@@ -475,8 +465,9 @@ data:extend({
 		},
 		results = {
 			{type = "fluid", name = "molten-copper", amount=200},
-			{type = "item", name = "stone", amount = 10}
+			{type = "item", name = "stone", amount = 5}
 		},
+		main_product = "molten-copper",
 		category = "metallurgy",
 		energy_required = 5,
 		allow_productivity = true,
@@ -494,8 +485,9 @@ data:extend({
 		},
 		results = {
 			{type = "fluid", name = "molten-iron", amount=200},
-			{type = "item", name = "stone", amount = 10}
+			{type = "item", name = "stone", amount = 5}
 		},
+		main_product = "molten-iron",
 		category = "metallurgy",
 		energy_required = 5,
 		allow_productivity = true,
@@ -520,6 +512,42 @@ data:extend({
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
 		order = "d[metallurgy]-a[iron]"
+	},
+	{
+		type = "recipe",
+		name = "cat-uncatalyzed-molten-iron",
+		icon = "__space-age__/graphics/icons/fluid/molten-iron.png",
+		icon_size = 64,
+		enabled = false,
+		ingredients = {
+			{type = "item", name = "iron-ore", amount = 50}
+		},
+		results = {
+			{type = "fluid", name = "molten-iron", amount = 450}
+		},
+		energy_required = 35,
+		category = "metallurgy",
+		allow_productivity = true,
+		subgroup = "vulcanus-processes",
+		order = "a[melting]-b[molten-iron]-b"
+	},
+	{
+		type = "recipe",
+		name = "cat-uncatalyzed-molten-copper",
+		icon = "__space-age__/graphics/icons/fluid/molten-copper.png",
+		icon_size = 64,
+		enabled = false,
+		ingredients = {
+			{type = "item", name = "copper-ore", amount = 50}
+		},
+		results = {
+			{type = "fluid", name = "molten-copper", amount = 450}
+		},
+		energy_required = 35,
+		category = "metallurgy",
+		allow_productivity = true,
+		subgroup = "vulcanus-processes",
+		order = "a[melting]-c[molten-copper]-b"
 	},
 })
 

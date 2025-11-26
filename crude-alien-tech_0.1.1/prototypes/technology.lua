@@ -1,93 +1,4 @@
-﻿--[[
-TODO
-Create or Update these technologies:
-	Gleba
-		✔️Earthly Roots
-		✔️Dreaming of Greener Pastures
-		✔️Fishy Feeling
-		✔️The Fire of Life
-		✔️Stellar Lifefirms
-		✔️Candy Factory
-
-		✔️Life Amongst the Stars
-		✔️The Green Must Grow
-		✔️Sweet Delicacies
-		✔️Sour Delights
-		✔️Organic Chef
-		✔️Alien Treats
-		✔️Seeding the Stars
-		✔️You Know What Must Grow
-
-		✔️Removed: Tree Seeding, Fish Breeding
-
-	Fulgora
-		✔️Bolt of Inspiration
-		✔️Salvage Failed Efforts
-		✔️Extract Rare Elements
-		✔️Refine Rare Elements
-		✔️Energize Innovation
-
-		✔️Ride the Lightning
-		✔️Reclaim Success
-		✔️Iterate Upon Inspiration
-		✔️Electrofied Invention
-
-
-	Vulcanus:
-		✔️Something's Rumbling
-		✔️Wolfram's Might
-		✔️Rock and Stone!
-		✔️Cliff Collapse
-
-		✔️Find the Forgeworld
-		✔️Prospector's Perspective
-		✔️Catalytic Crystals
-		✔️Memory Metal
-
-
-	Aquilo
-		✔️Frozen Dreams
-		✔️Cold Chemistry
-		✔️Even Colder Chemistry
-		✔️Permafrost Foundations
-		
-		✔️Frozen Nightmares
-		✔️Ultimate Brainfreeze
-
-]]
-
---[[
-Template:
-data:extend({
-	{
-		type = "technology",
-		name = "cat-",
-		icon_size = 64,
-		icon = "__crude-alien-tech__/graphics/icon/cat-science-placecholder.png",
-		--research_trigger = {
-		--	type = "craft-item",
-		--	item = "lab"
-		--},
-		unit = {
-			count = 10,
-			ingredients = {
-				{"automation-science-pack",1}
-			},
-			time = 30
-		}
-		--effects = {
-		--	{
-		--		type = "unlock-recipe",
-		--		recipe = ""
-		--	},
-		--},
-		prerequisites = {""},
-		essential = true
-	},
-})
-]]
-
---Gleba Branch
+﻿--Gleba Branch
 data:extend({
 	{ -- Earthly Roots
 		type = "technology",
@@ -279,9 +190,6 @@ local function processGlebaTech ()
 		type = "build-entity",
 		entity = "biochamber"
 	}
-
-
-	--data:extend{treeSeeding,fishBreeding,heatingTower,bacteriaCultivation,planetDiscoveryGleba,artificialSoil,yumako,jellynut,agriculturalSciencePack}
 end
 
 processGlebaTech()
@@ -572,6 +480,34 @@ data:extend({
 		prerequisites = {"cat-somethings-rumbling","electric-engine"},
 		essential = true
 	},
+	{
+		type = "technology",
+		name = "cat-uncatalyzed-melting",
+		icon_size = 256,
+		icon = "__space-age__/graphics/technology/foundry.png",
+		unit = {
+			count = 250,
+			ingredients = {
+				{"automation-science-pack",1},
+				{"logistic-science-pack",1},
+				{"chemical-science-pack",1},
+				{"production-science-pack",1}
+			},
+			time = 30
+		},
+		effects = {
+			{
+				type = "unlock-recipe",
+				recipe = "cat-uncatalyzed-molten-iron"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "cat-uncatalyzed-molten-copper"
+			},
+		},
+		prerequisites = {"cat-somethings-rumbling","production-science-pack"},
+		essential = false
+	}
 })
 
 local planetDiscoveryVulcanus = data.raw["technology"]["planet-discovery-vulcanus"]
@@ -584,6 +520,28 @@ local tungstenCarbide = data.raw["technology"]["tungsten-carbide"]
 local foundry = data.raw["technology"]["foundry"]
 foundry.research_trigger = table.deepcopy(data.raw["technology"]["tungsten-carbide"].research_trigger)
 foundry.prerequisites = {"calcite-processing"}
+foundry.effects = {
+	{
+		type = "unlock-recipe",
+		recipe = "foundry"
+	},
+	{
+		type = "unlock-recipe",
+		recipe = "molten-iron-from-lava"
+	},
+	{
+		type = "unlock-recipe",
+		recipe = "molten-copper-from-lava"
+	},
+	{
+		type = "unlock-recipe",
+		recipe = "molten-iron"
+	},
+	{
+		type = "unlock-recipe",
+		recipe = "molten-copper"
+	},
+}
 
 
 

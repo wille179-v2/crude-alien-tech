@@ -1,34 +1,4 @@
-﻿--[[
-TODO: 
-Entities to create:
-	✔️- Mk1 Foundry
-	✔️- Mk1 Big Mining Drill
-	✔️- Mk1 Recycler
-	✔️- Mk1 Electromagnetic Plant
-	✔️- Mk1 Agricultural Tower
-	✔️- Mk1 Biochamber
-	✔️- Mk1 Cryogenic Plant
-
-Update Art for Mk1 Entities:
-	- Mk1 Foundry
-	- Mk1 Big Mining Drill
-	- Mk1 Recycler
-	- Mk1 Electromagnetic Plant
-	- Mk1 Agricultural Tower
-	- Mk1 Biochamber
-	- Mk1 Cryogenic Plant
-
-Entities to update:
-	✔️- Mk2 Foundry
-	✔️- Mk2 Big Mining Drill
-	✔️- Mk2 Recycler
-	✔️- Mk2 Electromagnetic Plant
-	✔️- Mk2 Agricultural Tower
-	✔️- Mk2 Biochamber
-	✔️- Mk2 Cryogenic Plant
-]]
-
-local mk1Tint = {r=.7,g=.4,b=.4,a=.8}
+﻿local mk1Tint = {r=.7,g=.4,b=.4,a=.8}
 
 local foundryMk1 = table.deepcopy(data.raw["assembling-machine"]["foundry"])
 local bigMiningDrillMk1 = table.deepcopy(data.raw["mining-drill"]["big-mining-drill"])
@@ -170,7 +140,6 @@ if settings.startup["augment-vanilla-buildings"].value then
 	biochamberMk2.crafting_speed = 2.6
 	cryogenicPlantMk2.crafting_speed = 2.6
 	agriculturalTowerMk2.radius = 4
-	--agriculturalTowerMk2.randomize_planting_tile = false
 
 
 	data:extend{
