@@ -28,19 +28,23 @@ New recipes have been added and technology has been altered to aid in using thes
 	
 
 Reccomended Mods:
-	- [Flare Stack](https://mods.factorio.com/mod/Flare%20Stack) (100% compatable, provides an alternate method of venting excess gasses)
-	- [Omega Drill](https://mods.factorio.com/mod/OmegaDrill) (WIP. The Omega-Tau drill can be produced earlier without needing to venture to Vulcanus.)
-	- [Any Planet Start](https://mods.factorio.com/mod/any-planet-start) (WIP. When starting on Fulgora, Vulcanus, Gleba, or Aquilo, the crude version of each building is disabled but the recipes to enable their crafting and full use elsewhere in the solar system remains.)
-	- Wood mods, such as Wooden Military or Wooden Industry (No native compatability, but should be fine to install as-is.)
+
+* [Flare Stack](https://mods.factorio.com/mod/Flare%20Stack) (100% compatable, provides an alternate method of venting excess gasses)
+* [Omega Drill](https://mods.factorio.com/mod/OmegaDrill) (WIP. The Omega-Tau drill can be produced earlier without needing to venture to Vulcanus.)
+* [Any Planet Start](https://mods.factorio.com/mod/any-planet-start) (WIP. When starting on Fulgora, Vulcanus, Gleba, or Aquilo, the crude version of each building is disabled but the recipes to enable their crafting and full use elsewhere in the solar system remains.)
+* Wood mods, such as Wooden Military or Wooden Industry (No native compatability, but should be fine to install as-is.)
 	
 Other Compatable Mods:
-	- [Planetaris: Arig](https://mods.factorio.com/mod/planetaris-arig) (100% compatable)
+
+* [Planetaris: Arig](https://mods.factorio.com/mod/planetaris-arig) (100% compatable)
 	
 Planned future compatability patches:
-	- [Lignumis](https://mods.factorio.com/mod/lignumis) (Gold processing and, in a reverse of this mod's normal buildings, an elecrified *advanced* version of the lumber mill)
+
+* [Lignumis](https://mods.factorio.com/mod/lignumis) (Gold processing and, in a reverse of this mod's normal buildings, an elecrified *advanced* version of the lumber mill)
 	
 Future updates to this mod may include:
-	- A crude Fusion Plant with worse energy efficiency
-	- Early access to Stack Inserters, Turbo Belts, and all Mk3 Modules
-	- Early access to foundations
-	- Specific compatability with other modded planets (as the need arises)
+
+* A crude Fusion Plant with worse energy efficiency
+* Early access to Stack Inserters, Turbo Belts, and all Mk3 Modules
+* Early access to foundations
+* Specific compatability with other modded planets (as the need arises)
