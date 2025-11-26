@@ -1,4 +1,4 @@
-# crude-alien-tech
+# Crude Alien Tech
 A factorio mod that adds early-game versions of the Gleba, Fulgora, Vulcanus, and Aquilo production buildings while boosting the existing versions into more powerful Mk2 variants.
 
 I initially created this mod because I wanted to explore all the various modded planets out there, and I wanted to take a taste of the other planets with me without having to venture back to those planets first. This mod adds the ability to get what I consider the best technologies of Space age and take them anywhere in the solar system.
