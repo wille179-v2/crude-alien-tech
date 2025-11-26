@@ -8,6 +8,7 @@ Mod Compatability:
 	Omega Drill compatability
 	Planetaris Arig Compatability (sand / pure sand)
 	any-planet-start compatability
+	Lignimus (gold and Mk2 Lumber Mill)
 
 Future Features:
 	Mk1 Fission Plant
