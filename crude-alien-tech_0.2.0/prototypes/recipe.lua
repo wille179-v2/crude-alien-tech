@@ -156,26 +156,9 @@ data:extend({
 -- Mk2 Buildings
 -- TODO: Move entirely to planet-specific files
 if settings.startup["use-chain-recipe"].value then
-	local agriculturalTowerMk2 = data.raw["recipe"]["agricultural-tower"]
-	local biochamberMk2 = data.raw["recipe"]["biochamber"]
 	local cryogenicPlantMk2 = data.raw["recipe"]["cryogenic-plant"]
 
-	agriculturalTowerMk2.ingredients = {
-		--1 Electronic Circuit + 1 Landfill + 10 Spoilage + 2 Steel + 1 Mk1 Agricultrual Tower.
-		{type = "item",name = "electronic-circuit", amount = 1},
-		{type = "item",name = "landfill", amount = 1},
-		{type = "item",name = "spoilage", amount = 10},
-		{type = "item",name = "steel-plate", amount = 2},
-		{type = "item",name = "cat-agricultural-tower-mk1", amount = 1},
-	}
-	biochamberMk2.ingredients = {
-		--4 Electronic Circuits + 1 Landfill + 5 Nutrients + 1 Pentapod Egg + 1 Mk1. Biochamber
-		{type = "item",name = "electronic-circuit", amount = 4},
-		{type = "item",name = "landfill", amount = 1},
-		{type = "item",name = "nutrients", amount = 5},
-		{type = "item",name = "pentapod-egg", amount = 1},
-		{type = "item",name = "cat-biochamber-mk1", amount = 1},
-	}
+	
 	cryogenicPlantMk2.ingredients = {
 		--20 Lithium Plate + 10 Processing Units + 20 Superconductors + 1 Mk1 Cryogenic Plant
 		{type = "item",name = "lithium-plate", amount = 20},
