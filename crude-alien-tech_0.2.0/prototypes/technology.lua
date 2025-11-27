@@ -438,7 +438,6 @@ data:extend({
 				type = "unlock-recipe",
 				recipe = "carbon"
 			},
-			--cat-pure-sand inserted in data-updates.lua for Arig compatibility
 			{
 				type = "unlock-recipe",
 				recipe = "cat-pure-sand"
@@ -507,43 +506,11 @@ data:extend({
 				recipe = "cat-uncatalyzed-molten-copper"
 			},
 		},
-		prerequisites = {"cat-somethings-rumbling","production-science-pack"},
+		prerequisites = {"production-science-pack"},
 		essential = false
 	}
 })
 
-local planetDiscoveryVulcanus = data.raw["technology"]["planet-discovery-vulcanus"]
-planetDiscoveryVulcanus.prerequisites = {"space-platform-thruster","cat-rock-and-stone","cat-wolframs-might"}
-
-local tungstenCarbide = data.raw["technology"]["tungsten-carbide"]
-	tungstenCarbide.enabled = false
-	tungstenCarbide.hidden = true
-
-local foundry = data.raw["technology"]["foundry"]
-foundry.research_trigger = table.deepcopy(data.raw["technology"]["tungsten-carbide"].research_trigger)
-foundry.prerequisites = {"calcite-processing"}
-foundry.effects = {
-	{
-		type = "unlock-recipe",
-		recipe = "foundry"
-	},
-	{
-		type = "unlock-recipe",
-		recipe = "molten-iron-from-lava"
-	},
-	{
-		type = "unlock-recipe",
-		recipe = "molten-copper-from-lava"
-	},
-	{
-		type = "unlock-recipe",
-		recipe = "molten-iron"
-	},
-	{
-		type = "unlock-recipe",
-		recipe = "molten-copper"
-	},
-}
 
 
 

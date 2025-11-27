@@ -154,32 +154,15 @@ data:extend({
 })
 
 -- Mk2 Buildings
+-- TODO: Move entirely to planet-specific files
 if settings.startup["use-chain-recipe"].value then
-	local foundryMk2 = data.raw["recipe"]["foundry"]
-	local bigMiningDrillMk2 = data.raw["recipe"]["big-mining-drill"]
 	local recyclerMk2 = data.raw["recipe"]["recycler"]
 	local electromagneticPlantMk2 = data.raw["recipe"]["electromagnetic-plant"]
 	local agriculturalTowerMk2 = data.raw["recipe"]["agricultural-tower"]
 	local biochamberMk2 = data.raw["recipe"]["biochamber"]
 	local cryogenicPlantMk2 = data.raw["recipe"]["cryogenic-plant"]
 
-	bigMiningDrillMk2.order = "a[items]-c[big-mining-drill]-b"
 
-	foundryMk2.ingredients = {
-		--20 Electronic Circuits + 20 Refined Concrete + 30 Steel + 50 Tungsten Carbide + 1 Mk1 Foundry.
-		{type = "item",name = "electronic-circuit", amount = 20},
-		{type = "item",name = "refined-concrete", amount = 20},
-		{type = "item",name = "steel-plate", amount = 30},
-		{type = "item",name = "tungsten-carbide", amount = 50},
-		{type = "item",name = "cat-foundry-mk1", amount = 1},
-	}
-	bigMiningDrillMk2.ingredients = {
-		--5 Advanced Circuits + 5 Electric Engine Units + 1 Mk1 Big Mining Drill + 100 Molten Iron
-		{type = "item",name = "advanced-circuit", amount = 5},
-		{type = "item",name = "electric-engine-unit", amount = 5},
-		{type = "fluid",name = "molten-iron", amount = 100},
-		{type = "item",name = "cat-big-mining-drill-mk1", amount = 1},
-	}
 	recyclerMk2.ingredients = {
 		--4 Processing Units + 20 Gears + 10 Concrete + 10 Steel + Mk1 Recycler
 		{type = "item",name = "processing-unit", amount = 4},
@@ -219,18 +202,6 @@ if settings.startup["use-chain-recipe"].value then
 		{type = "item",name = "superconductor", amount = 10},
 		{type = "item",name = "cat-cryogenic-plant-mk1", amount = 1},
 	}
-
-	--[[
-	data:extend({
-		foundryMk2,
-		bigMiningDrillMk2,
-		recyclerMk2,
-		electromagneticPlantMk2,
-		agriculturalTowerMk2,
-		biochamberMk2,
-		cryogenicPlantMk2
-	})
-	]]
 end
 
 -- Gleba Recipes
