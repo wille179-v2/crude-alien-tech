@@ -1,28 +1,4 @@
-﻿--[[
-TODO:
-Items to Create:
-	✔️- Mk1 Foundry (cat-foundry-mk1)
-	✔️- Mk1 Big Mining Drill (cat-big-mining-drill-mk1)
-	✔️- Mk1 Recycler (cat-recycler-mk1)
-	✔️- Mk1 Electromagnetic Plant (cat-electromagnetic-plant-mk1)
-	✔️- Mk1 Agricultural Tower (cat-agricultural-tower-mk1)
-	✔️- Mk1 Biochamber (cat-biochamber-mk1)
-	✔️- Mk1 Cryogenic Plant (cat-cryogenic-plant-mk1)
-
-	✔️- Sand
-	- Nooberry
-
-Fluids to Create
-	✔️- Hydrofluoric Acid
-	✔️- Hydrogen
-	✔️- Oxygen
-	✔️- Nitrogen
-	✔️- Impure Molten Iron
-	✔️- Impure Molten Copper
-
-]]
-
-local mk1Tint = {r=.7,g=.4,b=.4,a=1}
+﻿local mk1Tint = {r=.7,g=.4,b=.4,a=1}
 
 -- get deep copies
 local foundryMk1 = table.deepcopy(data.raw["item"]["foundry"])
@@ -182,7 +158,31 @@ impureMoltenCopper.icons = {
 	}
 }
 
-data:extend{impureMoltenIron,impureMoltenCopper}
+local vulcanusTreeSeed = table.deepcopy(data.raw["item"]["tree-seed"])
+vulcanusTreeSeed.icons = {
+	{
+		icon = vulcanusTreeSeed.icon,
+		icon_size = vulcanusTreeSeed.icon_size,
+		tint = {r = .3, b = .3, g = .3, a = 1}
+	}
+}
+vulcanusTreeSeed.plant_result = "cat-planted-ashland-lichen-tree"
+vulcanusTreeSeed.place_result = "cat-planted-ashland-lichen-tree"
+vulcanusTreeSeed.name = "cat-ashland-tree-seed"
+vulcanusTreeSeed.localised_name = nil
+
+local vulcanusCarbonizedWood = table.deepcopy(data.raw["item"]["wood"])
+vulcanusCarbonizedWood.icons = {
+	{
+		icon = vulcanusCarbonizedWood.icon,
+		icon_size = vulcanusCarbonizedWood.icon_size,
+		tint = {r = .3, b = .3, g = .3, a = 1}
+	}
+}
+vulcanusCarbonizedWood.name = "cat-carbonized-wood"
+vulcanusCarbonizedWood.default_import_location = "vulcanus"
+
+data:extend{impureMoltenIron,impureMoltenCopper,vulcanusTreeSeed,vulcanusCarbonizedWood}
 
 
 -- Aquilo Items

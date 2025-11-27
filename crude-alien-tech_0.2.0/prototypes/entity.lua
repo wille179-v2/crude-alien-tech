@@ -95,6 +95,7 @@ agriculturalTowerMk1.energy_usage = "80kW"
 agriculturalTowerMk1.crane_energy_usage = "80kW"
 agriculturalTowerMk1.radius = 2
 agriculturalTowerMk1.minable.result = "cat-agricultural-tower-mk1"
+agriculturalTowerMk1.surface_conditions = nil
 
 -- (1.5 crafting speed, 450KW nutrients, -0.5/m pollution, 3 Module Slots, 20% productivity)
 biochamberMk1.crafting_speed = 1.5
@@ -140,6 +141,7 @@ if settings.startup["augment-vanilla-buildings"].value then
 	biochamberMk2.crafting_speed = 2.6
 	cryogenicPlantMk2.crafting_speed = 2.6
 	agriculturalTowerMk2.radius = 4
+	agriculturalTowerMk2.surface_conditions = nil
 
 
 	data:extend{
@@ -155,3 +157,24 @@ end
 
 data.raw["furnace"]["recycler"].result_inventory_size = data.raw["furnace"]["recycler"].result_inventory_size + 2
 data.raw["furnace"]["cat-recycler-mk1"].result_inventory_size = data.raw["furnace"]["recycler"].result_inventory_size + 2
+
+
+local vulcanusGrownTree = table.deepcopy(data.raw["tree"]["ashland-lichen-tree"])
+vulcanusGrownTree.type = "plant"
+vulcanusGrownTree.growth_ticks = 18000
+vulcanusGrownTree.name = "cat-planted-ashland-lichen-tree"
+vulcanusGrownTree.autoplace.probability_expression = 0
+vulcanusGrownTree.minable.results = {
+	{type="item", name = "cat-carbonized-wood", amount = 4},
+	{type="item", name = "carbon", amount = 2}
+}
+
+data:extend{vulcanusGrownTree}
+
+local vulcanusNaturalTreeResults = {
+	{type="item", name = "cat-carbonized-wood", amount = 4},
+	{type="item", name = "carbon", amount = 2},
+	{type="item", name = "cat-ashland-tree-seed", amount = 1, probability = .1}
+}
+data.raw["tree"]["ashland-lichen-tree"].minable.results = vulcanusNaturalTreeResults
+data.raw["tree"]["ashland-lichen-tree-flaming"].minable.results = vulcanusNaturalTreeResults

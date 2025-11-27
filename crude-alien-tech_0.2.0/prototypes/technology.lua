@@ -34,6 +34,10 @@ data:extend({
 			{
 				type = "unlock-recipe",
 				recipe = "cat-wood-to-nooberry"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "cat-wood-decarbonization"
 			}
 		},
 		prerequisites = {"landfill","automation-2","chemical-science-pack"},

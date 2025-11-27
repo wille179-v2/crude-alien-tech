@@ -431,6 +431,35 @@ data:extend({
 		order = "a[melting]-c[molten-copper]-b",
 		allow_decomposition = false
 	},
+	{
+		type = "recipe",
+		name = "cat-wood-decarbonization",
+		icon = "__base__/graphics/icons/wood.png",
+		icon_size = 64,
+		icon_tint = {r = .3, b = .3, g = .3, a = 1},
+		enabled = false,
+		ingredients = {
+			{type = "item", name = "cat-carbonized-wood", amount = 1},
+			{type = "fluid", name = "sulfuric-acid", amount = 5}
+
+		},
+		results = {
+			{type = "item", name = "wood", amount = 1},
+			{type = "item", name = "cat-ashland-tree-seed", amount = 1, probability = .25},
+		},
+		energy_required = 1,
+		category = "organic-or-chemistry",
+		allow_productivity = true,
+		subgroup = "vulcanus-processes",
+		order = "c[wood]-a[decarbonization]",
+		allow_decomposition = false,
+		surface_conditions = {
+			{
+				property = "pressure",
+				min = 4000
+			}
+		}
+	},
 })
 
 

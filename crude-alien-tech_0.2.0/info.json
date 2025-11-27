@@ -13,7 +13,7 @@
     "? any-planet-start >= 1.1.24",
     "(?) planetaris-arig >= 1.0.5",
     "(?) lignumis",
-    "(?) vulcanus-sulfuric-bacteria",
+    "? vulcanus-sulfuric-bacteria",
     "? fulgora-coralmium-agriculture"
   ],
   "quality_required": "true",

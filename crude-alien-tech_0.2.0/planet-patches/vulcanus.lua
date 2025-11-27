@@ -26,6 +26,11 @@ if vulcanusStart then --Starting on Vulcanus
 	data.raw["technology"]["cat-otherworldly-lava"].hidden = false
 
 	utils.set_prerequisites("cat-frozen-dreams", {"foundry","cat-energize-innovation","cat-salvage-failed-efforts","heating-tower","cat-dreaming-of-greener-pastures"})
+
+	if mods["vulcanus-sulfuric-bacteria"] then --Sulfuric Bacteria available
+		data.raw["recipe"]["sulfuric-bacteria-filtering"].surface_conditions = nil
+		data.raw["recipe"]["sulfuric-bacteria-cultivation"].surface_conditions = nil
+	end
 	
 
 
