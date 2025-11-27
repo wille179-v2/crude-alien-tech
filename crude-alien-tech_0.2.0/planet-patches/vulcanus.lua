@@ -25,8 +25,8 @@ if vulcanusStart then --Starting on Vulcanus
 	utils.hide_asset("recipe","cat-big-mining-drill-mk1")
 
 	data.raw["technology"]["cat-otherworldly-lava"].hidden = false
-	--Add new tech for: sand, bricks from sand, lava, impure molten iron/copper, pure sand, bricks from pure sand.
 
+	utils.set_prerequisites("cat-frozen-dreams", {"foundry","cat-energize-innovation","cat-salvage-failed-efforts","heating-tower","cat-dreaming-of-greener-pastures"})
 	
 
 
@@ -58,5 +58,4 @@ else -- Starting elsewhere
 		}
 		data.raw["recipe"]["big-mining-drill"].order = "a[items]-c[big-mining-drill]-b"
 	end
-	utils.set_prerequisites("cat-frozen-dreams", {"foundry","cat-energize-innovation","cat-salvage-failed-efforts","heating-tower","cat-dreaming-of-greener-pastures"})
 end
