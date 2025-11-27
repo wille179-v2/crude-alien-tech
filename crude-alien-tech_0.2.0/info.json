@@ -14,7 +14,8 @@
     "(?) planetaris-arig >= 1.0.5",
     "(?) lignumis",
     "? vulcanus-sulfuric-bacteria",
-    "? fulgora-coralmium-agriculture"
+    "? fulgora-coralmium-agriculture",
+    "! early-agriculture"
   ],
   "quality_required": "true",
   "spoiling_required": "true",
