@@ -7,11 +7,14 @@
   "dependencies": [
     "base >= 2.0",
     "space-age >= 2.0",
-    "? OmegaDrill >= 0.3.8",
+    "fdsl >= 0.2.4",
+    "(?) OmegaDrill >= 0.3.8",
     "? Flare Stack >=4.0.3",
     "? any-planet-start >= 1.1.24",
-    "? planetaris-arig >= 1.0.5",
-    "(?) lignumis"
+    "(?) planetaris-arig >= 1.0.5",
+    "(?) lignumis",
+    "(?) vulcanus-sulfuric-bacteria",
+    "? fulgora-coralmium-agriculture"
   ],
   "quality_required": "true",
   "spoiling_required": "true",

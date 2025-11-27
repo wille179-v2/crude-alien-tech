@@ -12,7 +12,7 @@ Crafting Categories:
 		Cryogenic Plant = "cryogenics-or-assembling"
 ]]
 
-
+local frep = require("__fdsl__.lib.recipe")
 
 -- Mk1 Buildings
 data:extend({
@@ -166,7 +166,7 @@ if settings.startup["use-chain-recipe"].value then
 		{type = "item",name = "landfill", amount = 1},
 		{type = "item",name = "spoilage", amount = 10},
 		{type = "item",name = "steel-plate", amount = 2},
-		{type = "item",name = "cat-electromagnetic-plant-mk1", amount = 1},
+		{type = "item",name = "cat-agricultural-tower-mk1", amount = 1},
 	}
 	biochamberMk2.ingredients = {
 		--4 Electronic Circuits + 1 Landfill + 5 Nutrients + 1 Pentapod Egg + 1 Mk1. Biochamber
@@ -264,7 +264,6 @@ copperBacteriaCultivation.surface_conditions = nil
 
 
 -- Fulgora recipes
-
 data:extend({
 	{
 		type = "recipe",
@@ -282,6 +281,8 @@ data:extend({
 		allow_decomposition = false
 	},
 })
+
+frep.add_result("scrap-recycling",{type = "item", name = "small-electric-pole", amount = 1, probability = .04, show_details_in_recipe_tooltip = false})
 
 -- Vulcanus recipes
 data:extend({

@@ -115,9 +115,6 @@ if mods["planetaris-arig"] then
 	data.raw["recipe"]["cat-oxygenated-solid-fuel-from-light-oil"].additional_categories = {"compressing"}
 	data.raw["recipe"]["cat-oxygenated-solid-fuel-from-heavy-oil"].additional_categories = {"compressing"}
 	data.raw["recipe"]["cat-oxygenated-solid-fuel-from-petroleum-gas"].additional_categories = {"compressing"}
-
-	-- prohibit nooberry on arig
-	data.raw["recipe"]["cat-wood-to-nooberry"].surface_conditions = {{property = "planetaris-dust-concentration", max = 30}}
 	
 
 	-- add Oxygenated Compressed Rocket Fuel variant

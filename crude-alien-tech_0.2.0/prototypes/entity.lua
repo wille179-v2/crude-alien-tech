@@ -152,3 +152,6 @@ if settings.startup["augment-vanilla-buildings"].value then
 		cryogenicPlantMk2
 	}
 end
+
+data.raw["furnace"]["recycler"].result_inventory_size = data.raw["furnace"]["recycler"].result_inventory_size + 2
+data.raw["furnace"]["cat-recycler-mk1"].result_inventory_size = data.raw["furnace"]["recycler"].result_inventory_size + 2

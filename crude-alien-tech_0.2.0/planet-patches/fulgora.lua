@@ -1,5 +1,6 @@
 local utils = require("utils")
 
+
 local fulgoraStart = false
 
 if mods["any-planet-start"] then 
@@ -10,7 +11,6 @@ end
 
 
 if fulgoraStart then -- Starting on Fulgora
-	--utils.set_prerequisites("cat-salvage-failed-efforts", nil)
 	utils.remove_tech("cat-salvage-failed-efforts", false, false)
 	utils.remove_tech("cat-bolt-of-inspiration", false, false)
 	utils.set_prerequisites("cat-extract-rare-elements",{"automation-2","holmium-processing"})
@@ -23,9 +23,20 @@ if fulgoraStart then -- Starting on Fulgora
 	utils.hide_asset("recipe","cat-electromagnetic-plant-mk1")
 	utils.hide_asset("recipe","cat-recycler-mk1")
 
-	--{"cat-rock-and-stone","cat-energize-innovation","cat-salvage-failed-efforts","heating-tower","cat-dreaming-of-greener-pastures"}
 
 	utils.set_prerequisites("cat-frozen-dreams",{"cat-rock-and-stone","electromagnetic-plant","recycling","heating-tower","cat-dreaming-of-greener-pastures"})
+
+	if mods["fulgora-coralmium-agriculture"] then
+		-- remove crude agricultural tower entirely. Earthly Roots additionally requires Electromagnetic Plant
+		-- remove burnt spoilage from dreaming of greener pastures
+		utils.remove_recipes("cat-earthly-roots",{"cat-agricultural-tower-mk1"})
+		utils.remove_recipes("cat-dreaming-of-greener-pastures",{"burnt-spoilage"})
+		utils.hide_asset("agricultural-tower","cat-agricultural-tower-mk1")
+		utils.hide_asset("item","cat-agricultural-tower-mk1")
+		utils.hide_asset("recipe","cat-agricultural-tower-mk1")
+		utils.add_prerequisites("cat-earthly-roots",{"electromagnetic-plant"})
+
+	end
 
 else -- Starting Elsewhere
 	utils.set_prerequisites("holmium-processing",{"cat-extract-rare-elements"})

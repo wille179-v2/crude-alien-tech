@@ -1,4 +1,3 @@
-
 local utils = require("utils")
 
 local vulcanusStart = false
