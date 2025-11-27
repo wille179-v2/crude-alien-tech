@@ -23,6 +23,10 @@ if fulgoraStart then -- Starting on Fulgora
 	utils.hide_asset("recipe","cat-electromagnetic-plant-mk1")
 	utils.hide_asset("recipe","cat-recycler-mk1")
 
+	--{"cat-rock-and-stone","cat-energize-innovation","cat-salvage-failed-efforts","heating-tower","cat-dreaming-of-greener-pastures"}
+
+	utils.set_prerequisites("cat-frozen-dreams",{"cat-rock-and-stone","electromagnetic-plant","recycler","heating-tower","cat-dreaming-of-greener-pastures"})
+
 else -- Starting Elsewhere
 	utils.set_prerequisites("holmium-processing",{"cat-extract-rare-elements"})
 	utils.set_prerequisites("planet-discovery-fulgora",{"cat-extract-rare-elements","cat-salvage-failed-efforts","space-platform-thruster"})
