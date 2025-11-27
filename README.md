@@ -29,15 +29,16 @@ New recipes have been added and technology has been altered to aid in using thes
 
 Recommended Mods:
 * [Flare Stack](https://mods.factorio.com/mod/Flare%20Stack) (100% compatible, provides an alternate method of venting excess gasses)
-* [Omega Drill](https://mods.factorio.com/mod/OmegaDrill) (WIP. The Omega-Tau drill can be produced earlier without needing to venture to Vulcanus.)
-* [Any Planet Start](https://mods.factorio.com/mod/any-planet-start) (WIP. When starting on Fulgora, Vulcanus, Gleba, or Aquilo, the crude version of each building is disabled but the recipes to enable their crafting and full use elsewhere in the solar system remains.)
-* Wood mods, such as Wooden Military or Wooden Industry (No native compatibility, but should be fine to install as-is.)
+* [Any Planet Start](https://mods.factorio.com/mod/any-planet-start) (WIP. When starting on Fulgora, Vulcanus, Gleba, or Aquilo, the crude version of each building is disabled but the recipes to enable their crafting and full use elsewhere in the solar system remains. When starting on another planet, you skip the crude version of that planet's signature building.)
+* [Wooden Fulgora: Coralmium Agriculture](https://mods.factorio.com/mod/fulgora-coralmium-agriculture) and [Wooden Vulcanus: Sulfuric Bacteria](https://mods.factorio.com/mod/vulcanus-sulfuric-bacteria) (100% compatible. Both mods provide extra wood options for use on Fulgora/Vulcanus, though neither are required to get wood on both planets.)
+* Other wood-related mods, such as Wooden Military or Wooden Industry (No native compatibility, but should be fine to install as-is.)
 
 Other compatible Mods:
-* [Planetaris: Arig](https://mods.factorio.com/mod/planetaris-arig) (100% compatible. Restructures Arig's tech tree to not require visiting Vulcanus first, but still encourage it. Any Planet Start - Arig is still a work in progress.)
+* [Planetaris: Arig](https://mods.factorio.com/mod/planetaris-arig) (90% compatible. Restructures Arig's tech tree to not require visiting Vulcanus first, but still encourage it. Any Planet Start - Arig is still a work in progress, but probably should work well enough.)
 	
 Planned future compatibility  patches:
 * [Lignumis](https://mods.factorio.com/mod/lignumis) (Gold processing and, in a reverse of this mod's normal buildings, an electrified *advanced* version of the lumber mill)
+* [Omega Drill](https://mods.factorio.com/mod/OmegaDrill) (The Omega-Tau drill can be produced earlier without needing to venture to Vulcanus.)
 	
 Future updates to this mod may include:
 * A crude Fusion Plant with worse energy efficiency
