@@ -1,13 +1,13 @@
 Urgent:
 	✔️ Update locale text for all research / items / entities
 	Nooberrys get their own seed processing (1/40 chance to get a seed, to match 1 tree = 4 wood = 10 berries), alternative to vanilla wood processing
-	Use the util.lua file to clean up my code a lot.
+	✔️ Use the util.lua file to clean up my code a lot.
 
 Mod Compatability:
 	✔️ Flare Stack compatability
 	Omega Drill compatability
 	✔️Planetaris Arig Compatability (sand / pure sand)
-	any-planet-start compatability
+	any-planet-start compatability (Remaining: Aquilo, Arig, Lignumus)
 	Lignimus (gold and Mk2 Lumber Mill)
 
 Future Features:
