@@ -301,28 +301,7 @@ data:extend({
 		prerequisites = {"holmium-processing"},
 		essential = true
 	},
-
 })
-
-local holmiumProcessing = data.raw["technology"]["holmium-processing"]
-holmiumProcessing.prerequisites = {"cat-extract-rare-elements"}
-
-local planetDiscoveryFulgora = data.raw["technology"]["planet-discovery-fulgora"]
-planetDiscoveryFulgora.prerequisites = {"cat-extract-rare-elements","cat-salvage-failed-efforts","space-platform-thruster"}
-
-local recycling = data.raw["technology"]["recycling"]
-recycling.prerequisites = {"planet-discovery-fulgora","cat-salvage-failed-efforts"}
-
-local electromagneticPlant = data.raw["technology"]["electromagnetic-plant"]
-electromagneticPlant.prerequisites = {"planet-discovery-fulgora","holmium-processing"}
-electromagneticPlant.research_trigger = table.deepcopy(recycling.research_trigger)
-
-local electromagneticSciencePack = data.raw["technology"]["electromagnetic-science-pack"]
-electromagneticSciencePack.prerequisites = {"cat-energize-innovation","electromagnetic-plant"}
-electromagneticSciencePack.research_trigger = {
-	type = "build-entity",
-	entity = "electromagnetic-plant"
-}
 
 
 -- Vulcanus Branch
@@ -346,7 +325,6 @@ data:extend({
 				type = "unlock-recipe",
 				recipe = "cat-foundry-mk1"
 			},
-			-- cat-sand inserted in data-updates.lua for Arig compatibility ?
 			{
 				type = "unlock-recipe",
 				recipe = "cat-sand"
@@ -508,7 +486,64 @@ data:extend({
 		},
 		prerequisites = {"production-science-pack"},
 		essential = false
-	}
+	},
+	{ -- Lava synthesis ONLY for Vulcanus start.
+		type = "technology",
+		name = "cat-otherworldly-lava",
+		icon_size = 256,
+		icon = "__space-age__/graphics/technology/foundry.png",
+		unit = {
+			count = 300,
+			ingredients = {
+				{"automation-science-pack",1},
+				{"logistic-science-pack",1},
+				{"chemical-science-pack",1},
+				{"space-science-pack",1}
+			},
+			time = 30
+		},
+		effects = {
+			{
+				type = "unlock-recipe",
+				recipe = "cat-uncatalyzed-molten-iron"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "cat-uncatalyzed-molten-copper"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "cat-sand"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "cat-sand-brick"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "cat-lava"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "cat-impure-molten-copper"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "cat-impure-molten-iron"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "cat-purify-molten-iron"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "cat-purify-molten-copper"
+			},
+		},
+		prerequisites = {"foundry","space-science-pack"},
+		essential = false,
+		hidden = true
+	},
 })
 
 

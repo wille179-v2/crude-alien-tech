@@ -156,29 +156,10 @@ data:extend({
 -- Mk2 Buildings
 -- TODO: Move entirely to planet-specific files
 if settings.startup["use-chain-recipe"].value then
-	local recyclerMk2 = data.raw["recipe"]["recycler"]
-	local electromagneticPlantMk2 = data.raw["recipe"]["electromagnetic-plant"]
 	local agriculturalTowerMk2 = data.raw["recipe"]["agricultural-tower"]
 	local biochamberMk2 = data.raw["recipe"]["biochamber"]
 	local cryogenicPlantMk2 = data.raw["recipe"]["cryogenic-plant"]
 
-
-	recyclerMk2.ingredients = {
-		--4 Processing Units + 20 Gears + 10 Concrete + 10 Steel + Mk1 Recycler
-		{type = "item",name = "processing-unit", amount = 4},
-		{type = "item",name = "iron-gear-wheel", amount = 20},
-		{type = "item",name = "concrete", amount = 10},
-		{type = "item",name = "steel-plate", amount = 10},
-		{type = "item",name = "cat-recycler-mk1", amount = 1},
-	}
-	electromagneticPlantMk2.ingredients = {
-		--150 Holmium Plates + 20 Processing Units + 20 Refined Concrete + 20 Steel + 1 Mk1 EM Plant
-		{type = "item",name = "holmium-plate", amount = 150},
-		{type = "item",name = "processing-unit", amount = 20},
-		{type = "item",name = "refined-concrete", amount = 20},
-		{type = "item",name = "steel-plate", amount = 20},
-		{type = "item",name = "cat-electromagnetic-plant-mk1", amount = 1},
-	}
 	agriculturalTowerMk2.ingredients = {
 		--1 Electronic Circuit + 1 Landfill + 10 Spoilage + 2 Steel + 1 Mk1 Agricultrual Tower.
 		{type = "item",name = "electronic-circuit", amount = 1},

@@ -9,11 +9,11 @@ if mods["any-planet-start"] then
 	end
 end
 
-
 if vulcanusStart then --Starting on Vulcanus
 	utils.remove_tech("cat-somethings-rumbling", false, false)
 	utils.remove_tech("cat-wolframs-might", false, false)
 	utils.remove_tech("cat-rock-and-stone", false, false)
+	utils.remove_tech("cat-uncatalyzed-melting", false, false)
 
 	utils.hide_asset("fluid","cat-impure-molten-iron")
 	utils.hide_asset("fluid","cat-impure-molten-copper")
@@ -24,7 +24,11 @@ if vulcanusStart then --Starting on Vulcanus
 	utils.hide_asset("recipe","cat-foundry-mk1")
 	utils.hide_asset("recipe","cat-big-mining-drill-mk1")
 
-	utils.add_prerequisites("cat-uncatalyzed-melting",{"foundry"})
+	data.raw["technology"]["cat-otherworldly-lava"].hidden = false
+	--Add new tech for: sand, bricks from sand, lava, impure molten iron/copper, pure sand, bricks from pure sand.
+
+	
+
 
 else -- Starting elsewhere
 	utils.set_prerequisites("planet-discovery-vulcanus",{"space-platform-thruster","cat-rock-and-stone","cat-wolframs-might"})
