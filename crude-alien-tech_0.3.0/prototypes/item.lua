@@ -169,7 +169,7 @@ vulcanusTreeSeed.icons = {
 vulcanusTreeSeed.plant_result = "cat-planted-ashland-lichen-tree"
 vulcanusTreeSeed.place_result = "cat-planted-ashland-lichen-tree"
 vulcanusTreeSeed.name = "cat-ashland-tree-seed"
-vulcanusTreeSeed.localised_name = nil
+vulcanusTreeSeed.localised_name = {"item-name.cat-ashland-tree-seed"}
 
 local vulcanusCarbonizedWood = table.deepcopy(data.raw["item"]["wood"])
 vulcanusCarbonizedWood.icons = {
