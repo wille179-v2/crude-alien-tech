@@ -108,7 +108,7 @@ data:extend({
 				recipe = "cat-electromagnetic-plant-mk1"
 			}
 		},
-		prerequisites = {"processing-unit","electric-energy-accumulators"},
+		prerequisites = {"processing-unit","electric-energy-accumulators","concrete"},
 		essential = true
 	},
 	{--Salvage Failed Efforts
@@ -438,45 +438,7 @@ data:extend({
 })
 
 
-
-
 -- Aquilo Branch
-
-local coldChemistryEffects = {
-	{
-		type = "unlock-recipe",
-		recipe = "cat-hydrofluoric-acid"
-	},
-	{
-		type = "unlock-recipe",
-		recipe = "cat-electrolysis"
-	},
-	{
-		type = "unlock-recipe",
-		recipe = "cat-air-separation"
-	},
-	{
-		type = "unlock-recipe",
-		recipe = "cat-fluorine"
-	},
-	{
-		type = "unlock-recipe",
-		recipe = "cat-ammonia"
-	},
-	{
-		type = "unlock-recipe",
-		recipe = "cat-lithium-brine"
-	},
-}
-
-if not mods["Flare Stack"] then
-	table.insert(coldChemistryEffects,{type = "unlock-recipe", recipe = "cat-vent-oxygen"})
-	table.insert(coldChemistryEffects,{type = "unlock-recipe", recipe = "cat-vent-hydrogen"})
-	table.insert(coldChemistryEffects,{type = "unlock-recipe", recipe = "cat-vent-nitrogen"})
-end
- 
--- TODO Ammonia Synthesis, Fluorine Synthesis, Lithium Synthesis, Air Filtering, Electrolysis, Gas Venting
-
 
 data:extend({
 	{
@@ -525,7 +487,32 @@ data:extend({
 			},
 			time = 45
 		},
-		effects = coldChemistryEffects,
+		effects = {
+		{
+			type = "unlock-recipe",
+			recipe = "cat-hydrofluoric-acid"
+		},
+		{
+			type = "unlock-recipe",
+			recipe = "cat-electrolysis"
+		},
+		{
+			type = "unlock-recipe",
+			recipe = "cat-air-separation"
+		},
+		{
+			type = "unlock-recipe",
+			recipe = "cat-fluorine"
+		},
+		{
+			type = "unlock-recipe",
+			recipe = "cat-ammonia"
+		},
+		{
+			type = "unlock-recipe",
+			recipe = "cat-lithium-brine"
+		},
+	},
 		prerequisites = {"cat-frozen-dreams"},
 		essential = true
 	},
@@ -616,27 +603,3 @@ data:extend({
 		hidden = hideOxygen
 	},
 })
-
-
-local lithiumProcessing = data.raw["technology"]["lithium-processing"]
-lithiumProcessing.research_trigger = {
-	type = "craft-fluid",
-	fluid = "lithium-brine"
-}
-lithiumProcessing.prerequisites = {"cat-cold-chemistry"}
-
-local planetDiscoveryAquilo = data.raw["technology"]["planet-discovery-aquilo"]
-planetDiscoveryAquilo.prerequisites = {
-	"lithium-processing",
-	"electromagnetic-science-pack",
-	"advanced-asteroid-processing",
-	"asteroid-reprocessing",
-	"rocket-turret"
-}
-
-local cryogenicPlant = data.raw["technology"]["cryogenic-plant"]
-cryogenicPlant.research_trigger = {
-	type = "mine-entity",
-	entity = "lithium-iceberg-big"
-}
-cryogenicPlant.prerequisites = {"planet-discovery-aquilo"}

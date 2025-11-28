@@ -14,7 +14,7 @@ Crafting Categories:
 
 local frep = require("__fdsl__.lib.recipe")
 
--- Mk1 Buildings
+-- Mk1 Buildings (Mk2 building recipes are in their specific planet lua files)
 data:extend({
 	{ --Mk1 Foundry
 		-- 10 Electronic Circuits + 20 Lubricant + 10 Concrete + 20 Steel + 50 Iron Plate
@@ -152,21 +152,6 @@ data:extend({
 		
 	},
 })
-
--- Mk2 Buildings
--- TODO: Move entirely to planet-specific files
-if settings.startup["use-chain-recipe"].value then
-	local cryogenicPlantMk2 = data.raw["recipe"]["cryogenic-plant"]
-
-	
-	cryogenicPlantMk2.ingredients = {
-		--20 Lithium Plate + 10 Processing Units + 20 Superconductors + 1 Mk1 Cryogenic Plant
-		{type = "item",name = "lithium-plate", amount = 20},
-		{type = "item",name = "processing-unit", amount = 10},
-		{type = "item",name = "superconductor", amount = 10},
-		{type = "item",name = "cat-cryogenic-plant-mk1", amount = 1},
-	}
-end
 
 -- Gleba Recipes
 data:extend({

@@ -17,10 +17,7 @@ require("planet-patches.vulcanus")
 require("planet-patches.gleba")
 require("planet-patches.fulgora")
 require("planet-patches.aquilo")
-
-if mods["planetaris-arig"] then
-	require("planet-patches.planetaris-arig")
-end
+require("planet-patches.planetaris-arig")
 
 -- ##################### Omega Drill compatibility #####################
 

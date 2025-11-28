@@ -24,12 +24,16 @@ if glebaStart then -- Starting on Gleba
 
 	
 else -- Starting Elsewhere
+
+	if mods["any-planet-start"] and not settings.startup["aps-planet"].value == "aquilo" then -- Check if starting on Aquilo instead; if so, don't change.
+		utils.set_prerequisites("heating-tower",{"cat-dreaming-of-greener-pastures","concrete"})
+		utils.set_trigger("heating-tower", {type = "craft-item", item = { name = "nutrients", count = 10 }})
+	end
+
 	utils.remove_tech("tree-seeding", false, false)
 	utils.remove_tech("artificial-soil", false, false)
 	utils.set_unit("fish-breeding",{count = 100, ingredients = {{"automation-science-pack",1}, {"logistic-science-pack",1}, {"chemical-science-pack",1},},time = 15 })
 	utils.set_prerequisites("fish-breeding",{"cat-dreaming-of-greener-pastures"})
-	utils.set_prerequisites("heating-tower",{"cat-dreaming-of-greener-pastures","concrete"})
-	utils.set_trigger("heating-tower", {type = "craft-item", item = { name = "nutrients", count = 10 }})
 	utils.set_recipes("agriculture",{"agricultural-tower"})
 
 	utils.set_prerequisites("bioflux",{"cat-dreaming-of-greener-pastures"})
