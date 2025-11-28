@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+Date: 11-28-2025
+  Minor Features:
+    - Added compatibility for Any Planet Start on Aquilo (via the Dredgeworks: Frozen Reaches mod)
+  Balancing:
+    - The Crude Agricultural Tower's crane now plants more slowly than the default tower.
+    - If the setting "Improve original Space Age buildings" is enabled, the default Agricultural Tower's crane now plants faster than before.
+  Bugfixes:
+    - Fixed a few sand-related bugs.
+---------------------------------------------------------------------------------------------------
 Version: 0.3.0
 Date: 11-28-2025
   Major Features:
