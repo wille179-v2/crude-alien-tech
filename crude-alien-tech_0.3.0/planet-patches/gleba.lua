@@ -19,7 +19,7 @@ if glebaStart then -- Starting on Gleba
 	utils.hide_asset("recipe","cat-biochamber-mk1")
 	utils.hide_asset("recipe","cat-agricultural-tower-mk1")
 
-	util.set_prerequisites("cat-frozen-dreams",{"cat-rock-and-stone","cat-energize-innovation","cat-salvage-failed-efforts","heating-tower","biochamber"})
+	utils.set_prerequisites("cat-frozen-dreams",{"cat-rock-and-stone","cat-energize-innovation","cat-salvage-failed-efforts","heating-tower","biochamber"})
 
 	
 else -- Starting Elsewhere
