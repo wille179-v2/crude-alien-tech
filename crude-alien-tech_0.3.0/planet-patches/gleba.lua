@@ -20,6 +20,7 @@ if glebaStart then -- Starting on Gleba
 	utils.hide_asset("recipe","cat-agricultural-tower-mk1")
 
 	utils.set_prerequisites("cat-frozen-dreams",{"cat-rock-and-stone","cat-energize-innovation","cat-salvage-failed-efforts","heating-tower","biochamber"})
+	utils.add_recipes("planet-discovery-vulcanus",{"cat-wood-decarbonization"})
 
 	
 else -- Starting Elsewhere
