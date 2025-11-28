@@ -21,4 +21,11 @@ data:extend({
 		default_value = true,
 		order="c"
 	},
+	{
+		type = "bool-setting",
+		name = "scrap-power-poles",
+		setting_type = "startup",
+		default_value = true,
+		order="d"
+	}
 })

@@ -234,15 +234,10 @@ data:extend({
 	},
 })
 
-local ironBacteria = data.raw["recipe"]["iron-bacteria"]
-local copperBacteria = data.raw["recipe"]["copper-bacteria"]
-local ironBacteriaCultivation = data.raw["recipe"]["iron-bacteria-cultivation"]
-local copperBacteriaCultivation = data.raw["recipe"]["copper-bacteria-cultivation"]
-
-ironBacteria.surface_conditions = nil
-copperBacteria.surface_conditions = nil
-ironBacteriaCultivation.surface_conditions = nil
-copperBacteriaCultivation.surface_conditions = nil
+data.raw["recipe"]["iron-bacteria"].surface_conditions = nil
+data.raw["recipe"]["copper-bacteria"].surface_conditions = nil
+data.raw["recipe"]["iron-bacteria-cultivation"].surface_conditions = nil
+data.raw["recipe"]["copper-bacteria-cultivation"].surface_conditions = nil
 
 
 
@@ -263,9 +258,32 @@ data:extend({
 		subgroup = "fulgora-processes",
 		allow_decomposition = false
 	},
+	{
+		type = "recipe",
+		name = "cat-synthetic-wood",
+		icons = {
+			{icon = "__base__/graphics/icons/wood.png"},
+			{icon = "__space-age__/graphics/icons/fluid/holmium-solution.png", shift={-8,-8}, scale=0.3}
+		},
+		enabled = false,
+		ingredients = {
+		  {type="item", name="plastic-bar", amount=2},
+		  {type="fluid", name="holmium-solution", amount=10}
+		},	
+		results = {{type="item", name="wood", amount=3}},
+		category = "organic-or-chemistry",
+		energy_required = 2,
+		auto_recycle = false,
+		allow_productivity = true,
+		subgroup = "fulgora-processes",
+		allow_decomposition = false,
+		order = "d[wood]-a[synthetic-wood]"
+	},
 })
 
-frep.add_result("scrap-recycling",{type = "item", name = "small-electric-pole", amount = 1, probability = .04, show_details_in_recipe_tooltip = false})
+if settings.startup["scrap-power-poles"].value then
+	frep.add_result("scrap-recycling",{type = "item", name = "small-electric-pole", amount = 1, probability = .04, show_details_in_recipe_tooltip = false})
+end
 
 -- Vulcanus recipes
 data:extend({

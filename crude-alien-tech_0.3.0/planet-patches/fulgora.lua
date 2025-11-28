@@ -35,6 +35,13 @@ if fulgoraStart then -- Starting on Fulgora
 		utils.hide_asset("item","cat-agricultural-tower-mk1")
 		utils.hide_asset("recipe","cat-agricultural-tower-mk1")
 		utils.add_prerequisites("cat-earthly-roots",{"electromagnetic-plant"})
+	elseif not settings.startup["scrap-power-poles"].value then -- No coralmium and no native source of wood on Fulgora
+		utils.add_recipes("holmium-processing",{"cat-synthetic-wood"})
+		-- Bioflux, bacteria, bioflux processing
+		--local sciencePacks = {{"automation-science-pack",1},{"logistic-science-pack",1},{"chemical-science-pack",1}}
+		--utils.set_unit("bioflux",{count = 200,ingredients = sciencePacks,time = 30})
+		--utils.set_unit("bacteria-cultivation",{count = 200,ingredients = sciencePacks,time = 30})
+		--utils.set_unit("bioflux-processing",{count = 200,ingredients = sciencePacks,time = 30})
 
 	end
 
