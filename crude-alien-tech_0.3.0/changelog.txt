@@ -7,7 +7,7 @@ Date: 11-28-2025
     - Wood can be accessed on Vulcanus now that the Ashland trees can be farmed.
   Minor Features:
     - Added compatibility with the mods "Wooden Vulcanus: Sulfuric Bacteria" and "Wooden Fulgora: Coralmium Agriculture" for even more wood on Fulgora and Vulcanus.
-    - If Wooden Fulgora: Coralmium Agriculture is not installed and wooden power poles are disabled in scrap recycling, a recipe for synthetic wood has been added to enable wood production on Fulgora.
+    - If "Wooden Fulgora: Coralmium Agriculture" is not installed and wooden power poles are disabled in scrap recycling, a recipe for synthetic wood has been added to enable wood production on Fulgora.
   Info:
     - New Dependency: Factorio Data Standards Library (fdsl)
 ---------------------------------------------------------------------------------------------------
