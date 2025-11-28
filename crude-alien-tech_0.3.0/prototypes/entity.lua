@@ -96,6 +96,17 @@ agriculturalTowerMk1.crane_energy_usage = "80kW"
 agriculturalTowerMk1.radius = 2
 agriculturalTowerMk1.minable.result = "cat-agricultural-tower-mk1"
 agriculturalTowerMk1.surface_conditions = nil
+agriculturalTowerMk1.crane.speed = {
+	arm = {
+		turn_rate = .0015, --vanilla .002
+		extension_speed = .0045-- vanilla .005
+	},
+	grappler = {
+		vertical_turn_rate = .0015, -- vanilla .002
+		horizontal_turn_rate = .005, -- vanilla .01
+		extension_speed = .005 -- vanilla .01
+	}
+}
 
 -- (1.5 crafting speed, 450KW nutrients, -0.5/m pollution, 3 Module Slots, 20% productivity)
 biochamberMk1.crafting_speed = 1.5
@@ -142,6 +153,17 @@ if settings.startup["augment-vanilla-buildings"].value then
 	cryogenicPlantMk2.crafting_speed = 2.6
 	agriculturalTowerMk2.radius = 4
 	agriculturalTowerMk2.surface_conditions = nil
+	agriculturalTowerMk2.crane.speed = {
+	arm = {
+		turn_rate = .003, --vanilla .002
+		extension_speed = .0075-- vanilla .005
+	},
+	grappler = {
+		vertical_turn_rate = .003, -- vanilla .002
+		horizontal_turn_rate = .015, -- vanilla .01
+		extension_speed = .015 -- vanilla .01
+	}
+}
 
 
 	data:extend{
