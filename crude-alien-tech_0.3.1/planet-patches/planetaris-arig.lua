@@ -1,3 +1,13 @@
+local utils = require("utils")
+
+local arigStart = false
+
+if mods["any-planet-start"] then 
+	if settings.startup["aps-planet"].value == "arig" then
+		arigStart = true
+	end
+end
+
 --planetaris-sand / planetaris-pure-sand
 local arigSand = "planetaris-sand"
 local arigPure = "planetaris-pure-sand"
@@ -150,4 +160,10 @@ if mods["planetaris-arig"] then
 	if not hideFuels then
 		table.insert(data.raw["technology"]["planetaris-compression"].effects,5,{type = "unlock-recipe", recipe = "cat-oxygenated-compression-rocket-fuel"})
 	end
+end
+
+-- Further changes for Any Planet Start: Arig
+if arigStart then
+
+
 end

@@ -16,7 +16,7 @@ This mod adds these buildings, with the following changes from baseline:
 	
 By comparison, the vanilla buildings have been boosted (though you can disable this in the mod settings):
 * Foundry, Recycler, Electromagnetic Plant, Biochamber, Cryogenic Plant: Base rafting speed increased by 30%.
-* Agricultural Tower: Planting area increased to 9x9 (up from 7x7).
+* Agricultural Tower: Planting area increased to 9x9 (up from 7x7) and planting speed increased by approximately 50%.
 * Big Mining Drill: Resource Drain reduced to 41% (down from 50%).
 
 New recipes have been added and technology has been altered to aid in using these items on Nauvis:
@@ -29,8 +29,8 @@ New recipes have been added and technology has been altered to aid in using thes
 
 Recommended Mods:
 * [Flare Stack](https://mods.factorio.com/mod/Flare%20Stack) (100% compatible, provides an alternate method of venting excess gasses)
-* [Any Planet Start](https://mods.factorio.com/mod/any-planet-start) (WIP. When starting on Fulgora, Vulcanus, Gleba, or Aquilo, the crude version of each building is disabled but the recipes to enable their crafting and full use elsewhere in the solar system remains. When starting on another planet, you skip the crude version of that planet's signature building.)
-* [Wooden Fulgora: Coralmium Agriculture](https://mods.factorio.com/mod/fulgora-coralmium-agriculture) and [Wooden Vulcanus: Sulfuric Bacteria](https://mods.factorio.com/mod/vulcanus-sulfuric-bacteria) (100% compatible. Both mods provide extra wood options for use on Fulgora/Vulcanus, though neither are required to get wood on both planets.)
+* [Any Planet Start](https://mods.factorio.com/mod/any-planet-start) (100% compatable with vanilla planets. When starting on Fulgora, Vulcanus, Gleba, or Aquilo, the crude version of each building is disabled but the recipes to enable their crafting and full use elsewhere in the solar system remains. When starting on another planet, you skip the crude version of that planet's signature building.)
+* [Wooden Fulgora: Coralmium Agriculture](https://mods.factorio.com/mod/fulgora-coralmium-agriculture), [Wooden Vulcanus: Sulfuric Bacteria](https://mods.factorio.com/mod/vulcanus-sulfuric-bacteria), and [Wooden Aquilo: Seabloom Algaculture](https://mods.factorio.com/mod/aquilo-seabloom-algaculture) (100% compatible. All three mods provide extra wood options for use on Fulgora, Vulcanus, and Aquilo, though none are required to get wood on any of those planets.)
 * Other wood-related mods, such as Wooden Military or Wooden Industry (No native compatibility, but should be fine to install as-is.)
 
 Other compatible Mods:

@@ -23,6 +23,9 @@ if aquiloStart then -- Start on aquilo
 	utils.remove_recipes("electromagnetic-plant",{"superconductor","supercapacitor","electrolyte"})
 	utils.set_prerequisites("cryogenic-plant",{"lithium-processing","cat-energize-innovation"})
 
+	utils.set_prerequisites("heating-tower",{"concrete"})
+	utils.set_unit("heating-tower",{count = 50, ingredients = {{"automation-science-pack", 2}}, time = 15,})
+
 	-- if aquilo-seabloom-algaculture
 
 	if mods["aquilo-seabloom-algaculture"] then
