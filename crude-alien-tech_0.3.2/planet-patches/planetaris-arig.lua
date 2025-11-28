@@ -164,6 +164,5 @@ end
 
 -- Further changes for Any Planet Start: Arig
 if arigStart then
-
-
+	utils.add_prerequisites("cat-earthly-roots",{"planetaris-cactus-wood","planetaris-water-harvesting"})
 end
