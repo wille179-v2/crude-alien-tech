@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.0
-Date: 11-27-2025
+Date: 11-28-2025
   Major Features:
     - Major compatibility patch for Any Planet Start. (Currently Fulgora, Gleba, and Vulcanus are 100% implemented. Support for other modded planets is partially completed. Support for Aquilo, via Dredgeworks, is planned but has not yet been started.)
 	- Wood can be accessed on Fulgora through the addition of Wooden Power Poles to Scrap Recycling.
