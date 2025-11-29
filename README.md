@@ -3,7 +3,7 @@ A work-in-progress Factorio mod that adds early-game versions of the Gleba, Fulg
 
 I initially created this mod because I wanted to explore all the various modded planets out there, and I wanted to take a taste of the other planets with me without having to venture back to those planets first. This mod adds the ability to get what I consider the best technologies of Space age and take them anywhere in the solar system.
 
-This mod adds several new buildings, each a primitive version of the buildings added by Space Age. Each of these buildings can be unlocked on Nauvis before launching your first rocket. This mod also adds several new items, recipies, and technologies to research in order to make full use of these buildings on other planets. Finally, the vanilla versions of these buildings are improved (as if they were made at uncommon level quality) to encourage you to still reach for the stars.
+This mod adds several new buildings, each a primitive version of the buildings added by Space Age. Each of these buildings can be unlocked on Nauvis before launching your first rocket. This mod also adds several new items, recipes, and technologies to research in order to make full use of these buildings on other planets. Finally, the vanilla versions of these buildings are improved (as if they were made at uncommon level quality) to encourage you to still reach for the stars.
 
 This mod adds these buildings, with the following changes from baseline:
 * Crude Foundry (Reduced crafting speed, 20% productivity, -1 Module Slot)
