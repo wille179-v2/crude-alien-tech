@@ -13,16 +13,18 @@ end
 
 -- ##################### Planet-Specific Patches & Any Planet Start compatibility #####################
 
-require("planet-patches.vulcanus")
+require("planet-patches.vulcanus") -- Wooden Vulcanus compatibility here
 require("planet-patches.gleba")
-require("planet-patches.fulgora")
-require("planet-patches.aquilo")
+require("planet-patches.fulgora") -- Wooden Fulgora compatibility here
+require("planet-patches.aquilo") -- Wooden aquilo compatibility here
 require("planet-patches.planetaris-arig")
 
 -- ##################### Omega Drill compatibility #####################
 
 
--- ##################### Wooden fulgora: Coralmium Agriculture compatibility #####################
+-- ##################### Lignumis compatibility #####################
 
-
+if mods["lignumis"] then
+	require("planet-patches.lignumis")
+end
 

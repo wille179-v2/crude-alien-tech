@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+Date: 11-29-2025
+  Modding:
+    - 100% Compatible with Lignumis. Added recipies to cultivate gold bacteria and create peat off world. Also added an electric version of the Lumber Mill.
+    - Removed a bug that would have caused a softlock when playing on Lignumis.
+  Minor Features:
+    - Adjusted some item/recipe icons for greater clarity.
+  Bugfixes:
+    - Fixed some item sorting issues.
+---------------------------------------------------------------------------------------------------
 Version: 0.3.3
 Date: 11-28-2025
   Modding:

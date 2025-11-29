@@ -7,8 +7,8 @@ Mod Compatability:
 	✔️ Flare Stack compatability
 	Omega Drill compatability
 	✔️Planetaris Arig Compatability (sand / pure sand)
-	any-planet-start compatability (Remaining: Aquilo, Arig, Lignumus)
-	Lignimus (gold and Mk2 Lumber Mill)
+	✔️any-planet-start compatability
+	Lignumis (gold and Mk2 Lumber Mill)
 
 Future Features:
 	Mk1 Fission Plant
@@ -16,4 +16,4 @@ Future Features:
 	Early Stack Inserter
 	Early Turbo Belts
 	Early mk3 Modules (needs biter hatching)
-
+	Nuclear Science compatibility https://mods.factorio.com/mod/atan-nuclear-science

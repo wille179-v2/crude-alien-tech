@@ -1,4 +1,4 @@
-﻿local mk1Tint = {r=.7,g=.4,b=.4,a=1}
+﻿local mk1Tint = {r=.8,g=.5,b=.5,a=1}
 
 -- get deep copies
 local foundryMk1 = table.deepcopy(data.raw["item"]["foundry"])
@@ -30,6 +30,8 @@ foundryMk1.localised_description = {"item-description." .. foundryMk1.name}
 
 bigMiningDrillMk1.localised_name = {"entity-name." .. bigMiningDrillMk1.name}
 bigMiningDrillMk1.localised_description = {"item-description." .. bigMiningDrillMk1.name}
+bigMiningDrillMk1.order = "a[items]-c[big-mining-drill]-a[mk1]"
+data.raw["item"]["big-mining-drill"].order = "a[items]-c[big-mining-drill]-b[mk2]" -- Order fix
 
 recyclerMk1.localised_name = {"entity-name." .. recyclerMk1.name}
 recyclerMk1.localised_description = {"item-description." .. recyclerMk1.name}
@@ -39,9 +41,13 @@ electromagneticPlantMk1.localised_description = {"item-description." .. electrom
 
 agriculturalTowerMk1.localised_name = {"entity-name." .. agriculturalTowerMk1.name}
 agriculturalTowerMk1.localised_description = {"item-description." .. agriculturalTowerMk1.name}
+agriculturalTowerMk1.order = "a[agricultural-tower]-a[mk1]"
+data.raw["item"]["agricultural-tower"].order = "a[agricultural-tower]-b[mk2]" -- Order fix
 
 biochamberMk1.localised_name = {"entity-name." .. biochamberMk1.name}
 biochamberMk1.localised_description = {"item-description." .. biochamberMk1.name}
+biochamberMk1.order = "b[biochamber]-a[mk1]"
+data.raw["item"]["biochamber"].order = "b[biochamber]-b[mk2]"
 
 cryogenicPlantMk1.localised_name = {"entity-name." .. cryogenicPlantMk1.name}
 cryogenicPlantMk1.localised_description = {"item-description." .. cryogenicPlantMk1.name}

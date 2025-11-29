@@ -74,6 +74,7 @@ bigMiningDrillMk1.module_slots = 3
 bigMiningDrillMk1.energy_source.emissions_per_minute.pollution = 45
 bigMiningDrillMk1.resource_drain_rate_percent = 75
 bigMiningDrillMk1.minable.result = "cat-big-mining-drill-mk1"
+bigMiningDrillMk1.order = "a[items]-c[big-mining-drill]-a[mk1]"
 
 -- (0.25 crafting speed, 150KW electricity, 3 Module Slots, 3/m pollution)
 recyclerMk1.crafting_speed = 0.25
@@ -107,6 +108,7 @@ agriculturalTowerMk1.crane.speed = {
 		extension_speed = .005 -- vanilla .01
 	}
 }
+agriculturalTowerMk1.order = "a[agricultural-tower]-a[mk1]"
 
 -- (1.5 crafting speed, 450KW nutrients, -0.5/m pollution, 3 Module Slots, 20% productivity)
 biochamberMk1.crafting_speed = 1.5
@@ -154,17 +156,18 @@ if settings.startup["augment-vanilla-buildings"].value then
 	agriculturalTowerMk2.radius = 4
 	agriculturalTowerMk2.surface_conditions = nil
 	agriculturalTowerMk2.crane.speed = {
-	arm = {
-		turn_rate = .003, --vanilla .002
-		extension_speed = .0075-- vanilla .005
-	},
-	grappler = {
-		vertical_turn_rate = .003, -- vanilla .002
-		horizontal_turn_rate = .015, -- vanilla .01
-		extension_speed = .015 -- vanilla .01
+		arm = {
+			turn_rate = .003, --vanilla .002
+			extension_speed = .0075-- vanilla .005
+		},
+		grappler = {
+			vertical_turn_rate = .003, -- vanilla .002
+			horizontal_turn_rate = .015, -- vanilla .01
+			extension_speed = .015 -- vanilla .01
+		}
 	}
-}
-
+	agriculturalTowerMk2.order = "a[agricultural-tower]-b[mk2]"
+	bigMiningDrillMk2.order = "a[items]-c[big-mining-drill]-b[mk2]"
 
 	data:extend{
 		foundryMk2,

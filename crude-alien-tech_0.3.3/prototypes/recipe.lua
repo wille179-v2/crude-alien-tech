@@ -720,8 +720,12 @@ data:extend({
 	{ -- Rocket Fuel from Oil Products
 		type = "recipe",
 		name = "cat-oxygenated-rocket-fuel",
-		icon = "__base__/graphics/icons/rocket-fuel.png",
-		icon_size = 64,
+		--icon = "__base__/graphics/icons/rocket-fuel.png",
+		--icon_size = 64,
+		icons = {
+			{ icon = "__base__/graphics/icons/rocket-fuel.png"},
+			{ icon = "__crude-alien-tech__/graphics/icon/oxygen-bobs.png", scale = 0.25, shift = {-8,8}}
+		},
 		enabled = false,
 		ingredients = {
 			{type = "fluid", name = "light-oil", amount = 15},
@@ -744,8 +748,12 @@ data:extend({
 	{ -- Rocket Fuel from Jelly
 		type = "recipe",
 		name = "cat-oxygenated-rocket-fuel-from-jelly",
-		icon = "__space-age__/graphics/icons/rocket-fuel-from-jelly.png",
-		icon_size = 64,
+		--icon = "__space-age__/graphics/icons/rocket-fuel-from-jelly.png",
+		--icon_size = 64,
+		icons = {
+			{ icon = "__space-age__/graphics/icons/rocket-fuel-from-jelly.png"},
+			{ icon = "__crude-alien-tech__/graphics/icon/oxygen-bobs.png", scale = 0.25, shift = {-8,8}}
+		},
 		enabled = false,
 		ingredients = {
 			{type = "item", name = "bioflux", amount = 3},
@@ -769,8 +777,12 @@ data:extend({
 	{ -- Rocket Fuel from Ammonia
 		type = "recipe",
 		name = "cat-oxygenated-ammonia-rocket-fuel",
-		icon = "__space-age__/graphics/icons/ammonia-rocket-fuel.png",
-		icon_size = 64,
+		--icon = "__space-age__/graphics/icons/ammonia-rocket-fuel.png",
+		--icon_size = 64,
+		icons = {
+			{ icon = "__space-age__/graphics/icons/ammonia-rocket-fuel.png"},
+			{ icon = "__crude-alien-tech__/graphics/icon/oxygen-bobs.png", scale = 0.25, shift = {-8,8}}
+		},
 		enabled = false,
 		ingredients = {
 			{type = "item", name = "solid-fuel", amount = 15},
@@ -794,8 +806,12 @@ data:extend({
 	{ -- Solid Fuel from Light Oil
 		type = "recipe",
 		name = "cat-oxygenated-solid-fuel-from-light-oil",
-		icon = "__base__/graphics/icons/solid-fuel-from-light-oil.png",
-		icon_size = 64,
+		--icon = "__base__/graphics/icons/solid-fuel-from-light-oil.png",
+		--icon_size = 64,
+		icons = {
+			{ icon = "__base__/graphics/icons/solid-fuel-from-light-oil.png"},
+			{ icon = "__crude-alien-tech__/graphics/icon/oxygen-bobs.png", scale = 0.25, shift = {-8,8}}
+		},
 		enabled = false,
 		ingredients = {
 			{type = "fluid", name = "light-oil", amount = 15},
@@ -807,8 +823,8 @@ data:extend({
 		category = "chemistry-or-cryogenics",
 		energy_required = 1,
 		allow_productivity = true,
-		subgroup = "raw-material",
-		order = "b[fluid-chemistry]-e[solid-fuel-from-light-oil]-o",
+		subgroup = "fluid-recipes",
+		order = "b[fluid-chemistry]-d[solid-fuel-from-light-oil]-o",
 		hidden_from_player_crafting = true,
 		hidden_in_factoriopedia = hideFuels,
 		hidden = hideFuels,
@@ -817,9 +833,12 @@ data:extend({
 	{ -- Solid Fuel from Heavy Oil
 		type = "recipe",
 		name = "cat-oxygenated-solid-fuel-from-heavy-oil",
-		icon = "__base__/graphics/icons/solid-fuel-from-heavy-oil.png",
-		icon_size = 64,
-		--icon_size = data.raw["recipe"]["solid-fuel-from-heavy-oil"].icon_size,
+		--icon = "__base__/graphics/icons/solid-fuel-from-heavy-oil.png",
+		--icon_size = 64,
+		icons = {
+			{ icon = "__base__/graphics/icons/solid-fuel-from-heavy-oil.png"},
+			{ icon = "__crude-alien-tech__/graphics/icon/oxygen-bobs.png", scale = 0.25, shift = {-8,8}}
+		},
 		enabled = false,
 		ingredients = {
 			{type = "fluid", name = "heavy-oil", amount = 30},
@@ -831,7 +850,7 @@ data:extend({
 		category = "chemistry-or-cryogenics",
 		energy_required = 1,
 		allow_productivity = true,
-		subgroup = "raw-material",
+		subgroup = "fluid-recipes",
 		order = "b[fluid-chemistry]-e[solid-fuel-from-heavy-oil]-o",
 		hidden_from_player_crafting = true,
 		hidden_in_factoriopedia = hideFuels,
@@ -841,9 +860,12 @@ data:extend({
 	{ -- Solid Fuel from Petrolium Gas
 		type = "recipe",
 		name = "cat-oxygenated-solid-fuel-from-petroleum-gas",
-		icon = "__base__/graphics/icons/solid-fuel-from-petroleum-gas.png",
-		icon_size = 64,
-		--icon_size = data.raw["recipe"]["solid-fuel-from-petroleum-gas"].icon_size,
+		--icon = "__base__/graphics/icons/solid-fuel-from-petroleum-gas.png",
+		--icon_size = 64,
+		icons = {
+			{ icon = "__base__/graphics/icons/solid-fuel-from-petroleum-gas.png"},
+			{ icon = "__crude-alien-tech__/graphics/icon/oxygen-bobs.png", scale = 0.25, shift = {-8,8}}
+		},
 		enabled = false,
 		ingredients = {
 			{type = "fluid", name = "petroleum-gas", amount = 30},
@@ -855,8 +877,8 @@ data:extend({
 		category = "chemistry-or-cryogenics",
 		energy_required = 1,
 		allow_productivity = true,
-		subgroup = "raw-material",
-		order = "b[fluid-chemistry]-e[solid-fuel-from-petroleum-gas]-o",
+		subgroup = "fluid-recipes",
+		order = "b[fluid-chemistry]-c[solid-fuel-from-petroleum-gas]-o",
 		hidden_from_player_crafting = true,
 		hidden_in_factoriopedia = hideFuels,
 		hidden = hideFuels,
@@ -865,9 +887,12 @@ data:extend({
 	{ -- Solid Fuel from Ammonia
 		type = "recipe",
 		name = "cat-oxygenated-solid-fuel-from-ammonia",
-		icon = "__space-age__/graphics/icons/solid-fuel-from-ammonia.png",
-		icon_size = 64,
-		--icon_size = data.raw["recipe"]["solid-fuel-from-ammonia"].icon_size,
+		--icon = "__space-age__/graphics/icons/solid-fuel-from-ammonia.png",
+		--icon_size = 64,
+		icons = {
+			{ icon = "__space-age__/graphics/icons/solid-fuel-from-ammonia.png"},
+			{ icon = "__crude-alien-tech__/graphics/icon/oxygen-bobs.png", scale = 0.25, shift = {-8,8}}
+		},
 		enabled = false,
 		ingredients = {
 			{type = "fluid", name = "ammonia", amount = 45},
