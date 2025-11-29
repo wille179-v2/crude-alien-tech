@@ -34,10 +34,10 @@ Recommended Mods:
 * Other wood-related mods, such as Wooden Military or Wooden Industry (No native compatibility, but should be fine to install as-is.)
 
 Other compatible Mods:
-* [Planetaris: Arig](https://mods.factorio.com/mod/planetaris-arig) (90% compatible. Restructures Arig's tech tree to not require visiting Vulcanus first, but still encourage it. Any Planet Start - Arig is still a work in progress, but probably should work well enough.)
+* [Planetaris: Arig](https://mods.factorio.com/mod/planetaris-arig) (100% compatible. Restructures Arig's tech tree to not require visiting Vulcanus first, but still encourage it. Any Planet Start - Arig is still a work in progress, but probably should work well enough.)
+* [Lignumis](https://mods.factorio.com/mod/lignumis) (100 compatible. Gold processing and, in a reverse of this mod's normal buildings, an electrified *advanced* version of the lumber mill)
 	
 Planned future compatibility  patches:
-* [Lignumis](https://mods.factorio.com/mod/lignumis) (Gold processing and, in a reverse of this mod's normal buildings, an electrified *advanced* version of the lumber mill)
 * [Omega Drill](https://mods.factorio.com/mod/OmegaDrill) (The Omega-Tau drill can be produced earlier without needing to venture to Vulcanus.)
 	
 Future updates to this mod may include:
