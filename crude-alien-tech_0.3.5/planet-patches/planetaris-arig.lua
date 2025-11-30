@@ -18,8 +18,6 @@ local pureSandToUse = "cat-pure-sand"
 if mods["planetaris-arig"] then 
 	sandToUse = arigSand
 	pureSandToUse = arigPure
-	data.raw["fluid"]["cat-sand"].auto_barrel = false -- Prevent auto-barreling if Arig sand is present.
-	data.raw["fluid"]["cat-pure-sand"].auto_barrel = false
 end
 
 --set crafting recipes for sand-related recipes
@@ -140,7 +138,7 @@ if mods["planetaris-arig"] then
 			icons = {
 				{ icon = "__planetaris-arig__/graphics/icons/compression-rocket-fuel.png"},
 				{ icon = "__crude-alien-tech__/graphics/icon/oxygen-bobs.png", scale = 0.25, shift = {-8,8}}
-			}
+			},
 			enabled = false,
 			ingredients = {
 				{type = "item", name = "coal", amount = 3},
