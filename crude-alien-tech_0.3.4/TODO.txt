@@ -9,6 +9,13 @@ Mod Compatability:
 	✔️Planetaris Arig Compatability (sand / pure sand)
 	✔️any-planet-start compatability
 	✔️Lignumis (gold and Mk2 Lumber Mill)
+	
+	Vesta (Gasses)
+	Myraxis (Gasses)
+	Myraxis/Moshine (Sand in item form)
+	Pelagos
+	Fluroflux: Stingfrond
+	Boompuff Agriculture
 
 Future Features:
 	Mk1 Fission Plant
