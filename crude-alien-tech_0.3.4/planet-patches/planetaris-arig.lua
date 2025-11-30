@@ -135,8 +135,12 @@ if mods["planetaris-arig"] then
 		{ -- Oxygenated Compressed Rocket Fuel
 			type = "recipe",
 			name = "cat-oxygenated-compression-rocket-fuel",
-			icon = "__planetaris-arig__/graphics/icons/compression-rocket-fuel.png",
-			icon_size = 64,
+			--icon = "__planetaris-arig__/graphics/icons/compression-rocket-fuel.png",
+			--icon_size = 64,
+			icons = {
+				{ icon = "__planetaris-arig__/graphics/icons/compression-rocket-fuel.png"},
+				{ icon = "__crude-alien-tech__/graphics/icon/oxygen-bobs.png", scale = 0.25, shift = {-8,8}}
+			}
 			enabled = false,
 			ingredients = {
 				{type = "item", name = "coal", amount = 3},
