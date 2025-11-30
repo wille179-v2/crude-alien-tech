@@ -18,6 +18,8 @@ local pureSandToUse = "cat-pure-sand"
 if mods["planetaris-arig"] then 
 	sandToUse = arigSand
 	pureSandToUse = arigPure
+	data.raw["fluid"]["cat-sand"].auto_barrel = false -- Prevent auto-barreling if Arig sand is present.
+	data.raw["fluid"]["cat-pure-sand"].auto_barrel = false
 end
 
 --set crafting recipes for sand-related recipes
