@@ -475,8 +475,8 @@ data:extend({
 			{type = "fluid", name = "water", amount = 100},
 		},
 		results = {
-			{type = "fluid", name = "cat-hydrogen", amount = 66},
-			{type = "fluid", name = "cat-oxygen", amount = 33},
+			{type = "fluid", name = "hydrogen", amount = 66},
+			{type = "fluid", name = "oxygen", amount = 33},
 		},
 		category = "chemistry-or-cryogenics",
 		energy_required = 2,
@@ -492,8 +492,8 @@ data:extend({
 		enabled = false,
 		ingredients = {},
 		results = {
-			{type = "fluid", name = "cat-nitrogen", amount = 78},
-			{type = "fluid", name = "cat-oxygen", amount = 21},
+			{type = "fluid", name = "nitrogen", amount = 78},
+			{type = "fluid", name = "oxygen", amount = 21},
 		},
 		category = "chemistry-or-cryogenics",
 		energy_required = 1,
@@ -529,8 +529,8 @@ data:extend({
 		icon_size = 64,
 		enabled = false,
 		ingredients = {
-			{type = "fluid", name = "cat-nitrogen", amount = 20},
-			{type = "fluid", name = "cat-hydrogen", amount = 60},
+			{type = "fluid", name = "nitrogen", amount = 20},
+			{type = "fluid", name = "hydrogen", amount = 60},
 		},
 		results = {
 			{type = "fluid", name = "ammonia", amount = 20},
@@ -664,7 +664,7 @@ data:extend({
 		icon_size = 64,
 		enabled = false,
 		ingredients = {
-			{type = "fluid", name = "cat-oxygen", amount = 30}
+			{type = "fluid", name = "oxygen", amount = 30}
 		},
 		results = {
 		},
@@ -682,7 +682,7 @@ data:extend({
 		icon_size = 64,
 		enabled = false,
 		ingredients = {
-			{type = "fluid", name = "cat-hydrogen", amount = 30}
+			{type = "fluid", name = "hydrogen", amount = 30}
 		},
 		results = {
 		},
@@ -700,7 +700,7 @@ data:extend({
 		icon_size = 64,
 		enabled = false,
 		ingredients = {
-			{type = "fluid", name = "cat-nitrogen", amount = 30}
+			{type = "fluid", name = "nitrogen", amount = 30}
 		},
 		results = {
 		},
@@ -730,7 +730,7 @@ data:extend({
 		ingredients = {
 			{type = "fluid", name = "light-oil", amount = 15},
 			{type = "item", name = "solid-fuel", amount = 15},
-			{type = "fluid", name = "cat-oxygen", amount = 30},
+			{type = "fluid", name = "oxygen", amount = 30},
 		},
 		products = {
 			{type = "item", name = "rocket-fuel", amount = 2}
@@ -759,7 +759,7 @@ data:extend({
 			{type = "item", name = "bioflux", amount = 3},
 			{type = "item", name = "jelly", amount = 45},
 			{type = "fluid", name = "water", amount = 45},
-			{type = "fluid", name = "cat-oxygen", amount = 30},
+			{type = "fluid", name = "oxygen", amount = 30},
 		},
 		products = {
 			{type = "item", name = "rocket-fuel", amount = 2}
@@ -788,7 +788,7 @@ data:extend({
 			{type = "item", name = "solid-fuel", amount = 15},
 			{type = "fluid", name = "water", amount = 75},
 			{type = "fluid", name = "ammonia", amount = 750},
-			{type = "fluid", name = "cat-oxygen", amount = 30},
+			{type = "fluid", name = "oxygen", amount = 30},
 		},
 		products = {
 			{type = "item", name = "rocket-fuel", amount = 2}
@@ -815,7 +815,7 @@ data:extend({
 		enabled = false,
 		ingredients = {
 			{type = "fluid", name = "light-oil", amount = 15},
-			{type = "fluid", name = "cat-oxygen", amount = 30},
+			{type = "fluid", name = "oxygen", amount = 30},
 		},
 		products = {
 			{type = "item", name = "solid-fuel", amount = 2}
@@ -842,7 +842,7 @@ data:extend({
 		enabled = false,
 		ingredients = {
 			{type = "fluid", name = "heavy-oil", amount = 30},
-			{type = "fluid", name = "cat-oxygen", amount = 30},
+			{type = "fluid", name = "oxygen", amount = 30},
 		},
 		products = {
 			{type = "item", name = "solid-fuel", amount = 2}
@@ -869,7 +869,7 @@ data:extend({
 		enabled = false,
 		ingredients = {
 			{type = "fluid", name = "petroleum-gas", amount = 30},
-			{type = "fluid", name = "cat-oxygen", amount = 30},
+			{type = "fluid", name = "oxygen", amount = 30},
 		},
 		products = {
 			{type = "item", name = "solid-fuel", amount = 2}
@@ -897,7 +897,7 @@ data:extend({
 		ingredients = {
 			{type = "fluid", name = "ammonia", amount = 45},
 			{type = "fluid", name = "crude-oil", amount = 18},
-			{type = "fluid", name = "cat-oxygen", amount = 30},
+			{type = "fluid", name = "oxygen", amount = 30},
 		},
 		products = {
 			{type = "item", name = "solid-fuel", amount = 4}

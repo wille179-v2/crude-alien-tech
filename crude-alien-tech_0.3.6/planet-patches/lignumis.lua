@@ -1,13 +1,3 @@
---[[
-TODO:
-	X- Peat recipe (Wood + Stone + Water)
-	X- Gold Bacteria Cultivation Recipe (Uses peat instead of bioflux)
-	X- Uncatalyzed Gold Melting
-	X- Electric Lumber Mill Recipe (with and without chain crafting)
-	X- Chain crafting recipe for crude agricultural tower (use localization to change mk1 to "agricultural tower 1" and mk2 to "agricultural tower 2")
-	X- Oxygenated Bio Rocket Fuel (also add to rocket fuel productivity)
-]]
-
 -- Electric Lumber Mill
 local utils = require("utils")
 

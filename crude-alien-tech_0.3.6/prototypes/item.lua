@@ -208,45 +208,50 @@ data:extend({
 		flow_color = {r = .12, g = .87, b = .12},
 		auto_barrel = false
 	},
-	{
-		type = "fluid",
-		name = "cat-oxygen",
-		subgroup = "cat-fluids",
-		icon = "__crude-alien-tech__/graphics/icon/oxygen-bobs.png",
-		icon_size = 64,
-		order = "c-c[aquilo]-f[o]",
-		default_temperature = 0,
-		max_temperature = 100,
-		gas_temperature = 0,
-		base_color = {r = .81, g = 0, b = 0},
-		flow_color = {r = .86, g = 0, b = 0},
-	},
-	{
-		type = "fluid",
-		name = "cat-hydrogen",
-		subgroup = "cat-fluids",
-		icon = "__crude-alien-tech__/graphics/icon/hydrogen-bobs.png",
-		icon_size = 64,
-		order = "c-c[aquilo]-f[h]",
-		default_temperature = 0,
-		max_temperature = 100,
-		gas_temperature = 0,
-		base_color = {r = .85, g = .85, b = .85},
-		flow_color = {r = .9, g = .9, b = .9},
-	},
-	{
-		type = "fluid",
-		name = "cat-nitrogen",
-		subgroup = "cat-fluids",
-		icon = "__crude-alien-tech__/graphics/icon/nitrogen-bobs.png",
-		order = "c-c[aquilo]-f[n]",
-		default_temperature = 0,
-		max_temperature = 100,
-		gas_temperature = 0,
-		base_color = {r = .14, g = .14, b = .67},
-		flow_color = {r = .17, g = .17, b = .73},
-	},
 })
+
+if not mods["skewer_planet_vesta"] or (mods["skewer_planet_vesta"] and settings.startup["ske_vesta_gases"].value == false) then
+	data:extend({
+			{
+			type = "fluid",
+			name = "oxygen",
+			subgroup = "cat-fluids",
+			icon = "__crude-alien-tech__/graphics/icon/oxygen-bobs.png",
+			icon_size = 64,
+			order = "c-c[aquilo]-f[o]",
+			default_temperature = 0,
+			max_temperature = 100,
+			gas_temperature = 0,
+			base_color = {r = .81, g = 0, b = 0},
+			flow_color = {r = .86, g = 0, b = 0},
+		},
+		{
+			type = "fluid",
+			name = "hydrogen",
+			subgroup = "cat-fluids",
+			icon = "__crude-alien-tech__/graphics/icon/hydrogen-bobs.png",
+			icon_size = 64,
+			order = "c-c[aquilo]-f[h]",
+			default_temperature = 0,
+			max_temperature = 100,
+			gas_temperature = 0,
+			base_color = {r = .85, g = .85, b = .85},
+			flow_color = {r = .9, g = .9, b = .9},
+		},
+		{
+			type = "fluid",
+			name = "nitrogen",
+			subgroup = "cat-fluids",
+			icon = "__crude-alien-tech__/graphics/icon/nitrogen-bobs.png",
+			order = "c-c[aquilo]-f[n]",
+			default_temperature = 0,
+			max_temperature = 100,
+			gas_temperature = 0,
+			base_color = {r = .14, g = .14, b = .67},
+			flow_color = {r = .17, g = .17, b = .73},
+		},
+	})
+end
 
 -- Generic Items
 

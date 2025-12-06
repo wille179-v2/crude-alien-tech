@@ -28,3 +28,8 @@ if mods["lignumis"] then
 	require("planet-patches.lignumis")
 end
 
+-- ##################### Vestra compatibility #####################
+
+if mods["skewer_planet_vesta"] then
+	require("planet-patches.vesta")
+end

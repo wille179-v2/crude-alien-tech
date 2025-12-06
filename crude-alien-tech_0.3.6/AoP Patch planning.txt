@@ -1,0 +1,14 @@
+Age of Production possible conflict points:
+
+	- Lumber Mill with Lignumis
+	- Tech Tree
+		- "aop-woodworking" can be moved to after "cat-dreaming-of-greener-pastures" and "heating-tower" (remove space science pack)
+		- "aop-greenhouse" can be moved to after the crude cryo plant
+		- "aop-arc-furnace" and "aop-armory" can be moved to after wolfram's might
+		- "aop-air-scrubbing" (and prerequisite carbon fiber) can be moved to after dreaming of greener pastures (remove Gleba science pack)
+	- Recipe Categories (Add mine to AoP's so they can benefit from AoP's buildings if they don't show up already)
+	- Recipes
+		- Agricultural Tower
+		- Lava-related Recipes (replace uncatalyzed melting with
+		- Ice freezing (override AoP recipe to be 1:1, keep no-productivity)
+		- Greenhouse needs Ashland tree recipe (Ashland seeds + sulfuric acid?)

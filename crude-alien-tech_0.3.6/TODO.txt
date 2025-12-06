@@ -2,6 +2,8 @@ Urgent:
 	✔️ Update locale text for all research / items / entities
 	Nooberrys get their own seed processing (1/40 chance to get a seed, to match 1 tree = 4 wood = 10 berries), alternative to vanilla wood processing
 	✔️ Use the util.lua file to clean up my code a lot.
+	Move "captivity" and "biter-egg-handling" to after Dreaming of Greener Pastures
+	Prod 3 and Efficiency 3 modules get Utility science instead of Gleba science. Biolab also loses gleba science
 
 Mod Compatability:
 	✔️ Flare Stack compatability
@@ -9,6 +11,8 @@ Mod Compatability:
 	✔️Planetaris Arig Compatability (sand / pure sand)
 	✔️any-planet-start compatability
 	✔️Lignumis (gold and Mk2 Lumber Mill)
+	Age of Production (https://mods.factorio.com/mod/Age-of-Production)
+	Extraplanetary Production (https://mods.factorio.com/mod/extraplanetary-production) or Em Foundry Expansion (https://mods.factorio.com/mod/em-foundry-expansion) (mostly just to check if there are conflicts at all...)
 	
 	Vesta (Gasses)
 	Myraxis (Gasses)
@@ -16,6 +20,7 @@ Mod Compatability:
 	Pelagos
 	Fluroflux: Stingfrond
 	Boompuff Agriculture
+	
 
 Future Features:
 	Mk1 Fission Plant
