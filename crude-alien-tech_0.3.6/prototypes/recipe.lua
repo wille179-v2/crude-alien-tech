@@ -457,8 +457,8 @@ data:extend({
 		icon = "__crude-alien-tech__/graphics/icon/hydrogen-fluoride-bobs.png",
 		icon_size = 64,
 		enabled = false,
-		ingredients = {}, --set in data-updates.lua for Arig compatibility
-		results = {}, --set in data-updates.lua for Arig compatibility
+		ingredients = {}, --set in planetaris-arig.lua for Arig compatibility
+		results = {}, --set in planetaris-arig.lua for Arig compatibility
 		category = "cryogenics",
 		energy_required = 10,
 		allow_productivity = true,

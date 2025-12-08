@@ -38,10 +38,14 @@ if aquiloStart then -- Start on aquilo
 	-- if no seabloom, use holmium synthetic wood
 
 else -- start elsewhere
-	utils.set_trigger("lithium-processing",{type = "craft-fluid",fluid = "lithium-brine"})
+	utils.set_prerequisites("planet-discovery-aquilo",{"lithium-processing","electromagnetic-science-pack","advanced-asteroid-processing","asteroid-reprocessing","rocket-turret"})
+	
+	-- If NOT using Any Planet Start: Vesta via my aps-vesta mod, adjust lithium
+	if not (settings.startup["aps-planet"].value == "vesta" and mods["aps-vesta"]) then
+		utils.set_trigger("lithium-processing",{type = "craft-fluid",fluid = "lithium-brine"})
+	end
 	utils.set_prerequisites("lithium-processing",{"cat-cold-chemistry"})
 	
-	utils.set_prerequisites("planet-discovery-aquilo",{"lithium-processing","electromagnetic-science-pack","advanced-asteroid-processing","asteroid-reprocessing","rocket-turret"})
 	
 	utils.set_prerequisites("cryogenic-plant",{"planet-discovery-aquilo"})
 	utils.set_trigger("cryogenic-plant",{type = "mine-entity", entity = "lithium-iceberg-big"})

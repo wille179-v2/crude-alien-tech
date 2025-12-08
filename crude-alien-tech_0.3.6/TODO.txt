@@ -4,6 +4,9 @@ Urgent:
 	✔️ Use the util.lua file to clean up my code a lot.
 	Move "captivity" and "biter-egg-handling" to after Dreaming of Greener Pastures
 	Prod 3 and Efficiency 3 modules get Utility science instead of Gleba science. Biolab also loses gleba science
+	Vesta (Gasses)
+		- When Vesta is installed, use vesta oxygen icon for oxygenated fuels instead of Bob's icon.
+	Buff Holmium production rate slightly.
 
 Mod Compatability:
 	✔️ Flare Stack compatability
@@ -14,7 +17,7 @@ Mod Compatability:
 	Age of Production (https://mods.factorio.com/mod/Age-of-Production)
 	Extraplanetary Production (https://mods.factorio.com/mod/extraplanetary-production) or Em Foundry Expansion (https://mods.factorio.com/mod/em-foundry-expansion) (mostly just to check if there are conflicts at all...)
 	
-	Vesta (Gasses)
+	
 	Myraxis (Gasses)
 	Myraxis/Moshine (Sand in item form)
 	Pelagos
