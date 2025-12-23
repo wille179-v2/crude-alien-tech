@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.9
+Date: 12-23-2025
+  Bugfixes:
+    - Fixed a bug that caused a crash on startup when certain other modded planets were installed.
+---------------------------------------------------------------------------------------------------
+Version: 0.3.8
+Date: 12-13-2025
+  Bugfixes:
+    - Fixed a bug that caused a crash when playing without Any Planet Start installed.
+---------------------------------------------------------------------------------------------------
 Version: 0.3.7
 Date: 12-08-2025
   Modding:

@@ -41,7 +41,7 @@ else -- start elsewhere
 	utils.set_prerequisites("planet-discovery-aquilo",{"lithium-processing","electromagnetic-science-pack","advanced-asteroid-processing","asteroid-reprocessing","rocket-turret"})
 	
 	-- If NOT using Any Planet Start: Vesta via my aps-vesta mod, adjust lithium
-	if not (settings.startup["aps-planet"].value == "vesta" and mods["aps-vesta"]) then
+	if not (mods["any-planet-start"] and mods["aps-vesta"] and settings.startup["aps-planet"].value == "vesta") then
 		utils.set_trigger("lithium-processing",{type = "craft-fluid",fluid = "lithium-brine"})
 	end
 	utils.set_prerequisites("lithium-processing",{"cat-cold-chemistry"})

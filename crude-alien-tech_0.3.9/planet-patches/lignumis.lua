@@ -222,7 +222,7 @@ data:extend({
 		ingredients = {
 			{type = "fluid", name = "wood-pulp", amount = 45*3},
 			{type = "item", name = "peat", amount = 9*3},
-			{type = "fluid", name = "cat-oxygen", amount = 30},
+			{type = "fluid", name = "oxygen", amount = 30},
 		},
 		products = {
 			{type = "item", name = "rocket-fuel", amount = 4}
