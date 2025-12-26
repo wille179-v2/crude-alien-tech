@@ -210,7 +210,7 @@ data:extend({
 	},
 })
 
-if not mods["skewer_planet_vesta"] or (mods["skewer_planet_vesta"] and settings.startup["ske_vesta_gases"].value == false) then
+if not mods["skewer_planet_vesta"] or (mods["skewer_planet_vesta"] and settings.startup["ske_vesta_gases"].value == true) then
 	data:extend({
 			{
 			type = "fluid",

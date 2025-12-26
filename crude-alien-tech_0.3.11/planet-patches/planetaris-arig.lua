@@ -41,7 +41,7 @@ holmiumOreSifting.ingredients = {
 }
 holmiumOreSifting.results = {
 	{type = "fluid", name = sandToUse, amount = 70, ignored_by_productivity = 70},
-	{type = "item", name = "holmium-ore", amount = 1, probability = 0.25}
+	{type = "item", name = "holmium-ore", amount = 1, probability = 0.3}
 }
 
 data.raw["recipe"]["cat-lava"].ingredients = {
@@ -89,7 +89,9 @@ if mods["planetaris-arig"] then
 		},
 		time = 30
 	}
-	planetDiscoveryArig.prerequisites = {"space-platform-thruster","cat-rock-and-stone","cat-wolframs-might"}
+	if mods["any-planet-start"] and not settings.startup["aps-planet"].value == "vulcanus" then -- Prevents Arig from being blocked if starting on Vulcanus
+		planetDiscoveryArig.prerequisites = {"space-platform-thruster","cat-rock-and-stone","cat-wolframs-might"}
+	end
 
 
 	table.insert(data.raw["technology"]["planetaris-silica-processing"].prerequisites, "planetaris-advanced-sand-sifting")
@@ -129,6 +131,15 @@ if mods["planetaris-arig"] then
 
 	-- add Oxygenated Compressed Rocket Fuel variant
 	local hideFuels = not settings.startup["oxygen-fuels"].value
+	local oxyIcon = "__crude-alien-tech__/graphics/icon/oxygen-bobs.png"
+	if mods["skewer_planet_vesta"] then
+		if settings.startup["ske_realistic_gases"].value then 
+			oxyIcon = "__skewer_planet_vesta_assets_2__/graphics/icons/gas_oxygen.png"
+		else 
+			oxyIcon = "__skewer_planet_vesta_assets__/graphics/icons/gas_oxygen.png"
+		end
+	end
+
 	data:extend({
 		{ -- Oxygenated Compressed Rocket Fuel
 			type = "recipe",
@@ -137,7 +148,7 @@ if mods["planetaris-arig"] then
 			--icon_size = 64,
 			icons = {
 				{ icon = "__planetaris-arig__/graphics/icons/compression-rocket-fuel.png"},
-				{ icon = "__crude-alien-tech__/graphics/icon/oxygen-bobs.png", scale = 0.25, shift = {-8,8}}
+				{ icon = oxyIcon, scale = 0.25, shift = {-8,8}}
 			},
 			enabled = false,
 			ingredients = {

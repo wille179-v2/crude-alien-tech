@@ -91,10 +91,12 @@ electromagneticPlantMk1.energy_source.emissions_per_minute.pollution = 5
 electromagneticPlantMk1.effect_receiver.base_effect = {productivity = 0.2}
 electromagneticPlantMk1.minable.result = "cat-electromagnetic-plant-mk1"
 
--- (5x5 grid, 80KW electricity)
-agriculturalTowerMk1.energy_usage = "80kW"
-agriculturalTowerMk1.crane_energy_usage = "80kW"
-agriculturalTowerMk1.radius = 2
+-- (5x5 grid (if set to use smaller size), 80KW electricity)
+agriculturalTowerMk1.energy_usage = "150kW"
+agriculturalTowerMk1.crane_energy_usage = "150kW"
+if settings.startup["small-agri-tower"].value == true then
+	agriculturalTowerMk1.radius = 2
+end
 agriculturalTowerMk1.minable.result = "cat-agricultural-tower-mk1"
 agriculturalTowerMk1.surface_conditions = nil
 agriculturalTowerMk1.crane.speed = {

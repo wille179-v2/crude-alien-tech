@@ -21,7 +21,8 @@ if glebaStart then -- Starting on Gleba
 
 	utils.set_prerequisites("cat-frozen-dreams",{"cat-rock-and-stone","cat-energize-innovation","cat-salvage-failed-efforts","heating-tower","biochamber"})
 	utils.add_recipes("planet-discovery-vulcanus",{"cat-wood-decarbonization"})
-
+	utils.add_recipes("agriculture",{"cat-wood-to-nutrients"})
+	utils.add_recipes("planet-discovery-nauvis",{"cat-wood-to-nooberry","cat-nooberry-to-jelly","cat-nooberry-to-mash"})
 	
 else -- Starting Elsewhere
 

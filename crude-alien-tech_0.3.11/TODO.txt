@@ -6,7 +6,9 @@ Urgent:
 	Prod 3 and Efficiency 3 modules get Utility science instead of Gleba science. Biolab also loses gleba science
 	Vesta (Gasses)
 		- When Vesta is installed, use vesta oxygen icon for oxygenated fuels instead of Bob's icon.
-	Buff Holmium production rate slightly.
+			- Update Lignumis Fuel
+			- Check gas icon logic
+	✔️Buff Holmium production rate slightly.
 
 Mod Compatability:
 	✔️ Flare Stack compatability

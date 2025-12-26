@@ -27,5 +27,12 @@ data:extend({
 		setting_type = "startup",
 		default_value = true,
 		order="d"
+	},
+	{
+		type = "bool-setting",
+		name = "small-agri-tower",
+		setting_type = "startup",
+		default_value = true,
+		order = "a-b"
 	}
 })

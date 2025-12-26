@@ -1,4 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.11
+Date: 12-25-2025
+  Bugfixes:
+    - Fixed a bug when starting on Vulcanus causing Arig's planet discovery tech to be incorrect.
+---------------------------------------------------------------------------------------------------
+Version: 0.3.10
+Date: 12-25-2025
+  Balancing:
+    - Slightly increased the yield of the holmium ore sifting recipe (from 25% to 30%).
+  Changes:
+    - Added a setting to optionally make the crude agricultural tower retain the vanilla 7x7 footprint, rather than the reduced 5x5 footprint (it still is slower and less energy efficient than the vanilla one, howerver)
+  Bugfixes:
+    - Fixed missing Nauvis Nooberry recipes when using Any Planet Start on Gleba
+    - Now uses the correct oxygen icon when both Vesta and Arig are installed together.
+    - No longer overrides Vesta's oxygen
+---------------------------------------------------------------------------------------------------
 Version: 0.3.9
 Date: 12-23-2025
   Bugfixes:
