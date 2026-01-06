@@ -732,7 +732,7 @@ data:extend({
 			{type = "item", name = "solid-fuel", amount = 15},
 			{type = "fluid", name = "oxygen", amount = 30},
 		},
-		products = {
+		results = {
 			{type = "item", name = "rocket-fuel", amount = 2}
 		},
 		category = "organic-or-chemistry",
@@ -761,7 +761,7 @@ data:extend({
 			{type = "fluid", name = "water", amount = 45},
 			{type = "fluid", name = "oxygen", amount = 30},
 		},
-		products = {
+		results = {
 			{type = "item", name = "rocket-fuel", amount = 2}
 		},
 		category = "organic",
@@ -790,7 +790,7 @@ data:extend({
 			{type = "fluid", name = "ammonia", amount = 750},
 			{type = "fluid", name = "oxygen", amount = 30},
 		},
-		products = {
+		results = {
 			{type = "item", name = "rocket-fuel", amount = 2}
 		},
 		category = "chemistry-or-cryogenics",
@@ -817,7 +817,7 @@ data:extend({
 			{type = "fluid", name = "light-oil", amount = 15},
 			{type = "fluid", name = "oxygen", amount = 30},
 		},
-		products = {
+		results = {
 			{type = "item", name = "solid-fuel", amount = 2}
 		},
 		category = "chemistry-or-cryogenics",
@@ -844,7 +844,7 @@ data:extend({
 			{type = "fluid", name = "heavy-oil", amount = 30},
 			{type = "fluid", name = "oxygen", amount = 30},
 		},
-		products = {
+		results = {
 			{type = "item", name = "solid-fuel", amount = 2}
 		},
 		category = "chemistry-or-cryogenics",
@@ -871,7 +871,7 @@ data:extend({
 			{type = "fluid", name = "petroleum-gas", amount = 30},
 			{type = "fluid", name = "oxygen", amount = 30},
 		},
-		products = {
+		results = {
 			{type = "item", name = "solid-fuel", amount = 2}
 		},
 		category = "chemistry-or-cryogenics",
@@ -899,7 +899,7 @@ data:extend({
 			{type = "fluid", name = "crude-oil", amount = 18},
 			{type = "fluid", name = "oxygen", amount = 30},
 		},
-		products = {
+		results = {
 			{type = "item", name = "solid-fuel", amount = 4}
 		},
 		category = "cryogenics",

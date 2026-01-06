@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.13
+Date: 01-06-2026
+  Bugfixes:
+    - Fixed a bug that caused the Tungsten ore leeching recipe to not appear if you started on Vulcanus with Any Planet Start.
+    - Fixed a bug that could prevent certain buildings from functioning correctly if other mods changed the recipe crafting categories of vanilla buildings. (Shoutout to Deepcore_sl for helping me find this bug! Thanks a bunch!)
+---------------------------------------------------------------------------------------------------
+Version: 0.3.12
+Date: 01-03-2026
+  Bugfixes:
+    - Fixed a major bug that caused oxygenated fuel recipes to consume ingredients but not produce any products.
+    - Fixed a minor typo.
+---------------------------------------------------------------------------------------------------
 Version: 0.3.11
 Date: 12-25-2025
   Bugfixes:

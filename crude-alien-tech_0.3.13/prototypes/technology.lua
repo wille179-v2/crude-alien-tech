@@ -322,7 +322,7 @@ data:extend({
 			{
 				type = "unlock-recipe",
 				recipe = "cat-pure-sand-brick"
-			}
+			},
 		},
 		prerequisites = {"cat-somethings-rumbling"},
 		essential = true
@@ -429,6 +429,10 @@ data:extend({
 			{
 				type = "unlock-recipe",
 				recipe = "cat-purify-molten-copper"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "cat-tungsten-ore"
 			},
 		},
 		prerequisites = {"foundry","space-science-pack"},

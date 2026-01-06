@@ -157,7 +157,7 @@ if mods["planetaris-arig"] then
 				{type = "item", name = "sulfur", amount = 3},
 				{type = "fluid", name = "oxygen", amount = 30},
 			},
-			products = {
+			results = {
 				{type = "item", name = "rocket-fuel", amount = 4}
 			},
 			category = "compressing",
