@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.14
+Date: 01-18-2026
+  Changes:
+    - Updated icon for Wood to Nutrients recipe.
+  Modding:
+    - Much greater compatibility with Age of Production. Recipes from this mod can now be used in AoP buildings. Also added AoP as an optional dependancy.
+---------------------------------------------------------------------------------------------------
 Version: 0.3.13
 Date: 01-06-2026
   Bugfixes:

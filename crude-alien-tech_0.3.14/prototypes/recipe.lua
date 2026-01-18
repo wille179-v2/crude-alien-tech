@@ -158,6 +158,10 @@ data:extend({
 	{
 		type = "recipe",
 		name = "cat-wood-to-nutrients",
+		icons = {
+			{icon = "__base__/graphics/icons/wood.png", shift = {-8,-8}, scale = .5},
+			{icon = "__space-age__/graphics/icons/nutrients.png", shift = {8,8}, scale = .5}
+		},
 		enabled = false,
 		ingredients = {
 			{type = "item", name = "wood", amount = 1}
@@ -420,9 +424,11 @@ data:extend({
 	{
 		type = "recipe",
 		name = "cat-wood-decarbonization",
-		icon = "__base__/graphics/icons/wood.png",
-		icon_size = 64,
-		icon_tint = {r = .3, b = .3, g = .3, a = 1},
+		icons = {
+			{icon = "__base__/graphics/icons/wood.png", tint = {r = .3, b = .3, g = .3, a = 1}},
+		},
+		--icon_size = 64,
+		--icon_tint = {r = .3, b = .3, g = .3, a = 1},
 		enabled = false,
 		ingredients = {
 			{type = "item", name = "cat-carbonized-wood", amount = 1},

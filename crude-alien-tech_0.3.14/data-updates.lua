@@ -33,3 +33,15 @@ end
 if mods["skewer_planet_vesta"] then
 	require("planet-patches.vesta")
 end
+
+-- ##################### Wolfprod compatibility #####################
+
+if mods["wolfprod"] then
+	require("mod-patches.wolfprod")
+end
+
+-- ##################### Age of Production compatibility #####################
+
+if mods["Age-of-Production"] then
+	require("mod-patches.Age-of-Production")
+end
