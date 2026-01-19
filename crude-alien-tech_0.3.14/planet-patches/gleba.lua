@@ -8,6 +8,7 @@ if mods["any-planet-start"] then
 	end
 end
 
+data.raw["recipe"]["pentapod-egg"].surface_conditions = nil -- so that pentapod eggs can be bred elsewhere.
 
 if glebaStart then -- Starting on Gleba
 	utils.remove_tech("cat-earthly-roots", false, false)

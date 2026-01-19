@@ -82,6 +82,32 @@ data:extend({
 		prerequisites = {"cat-earthly-roots"},
 		essential = true
 	},
+	{
+		type = "technology",
+		name = "cat-culinary-abomination",
+		icon_size = 256,
+		icon = "__space-age__/graphics/technology/biochamber.png",
+		unit = {
+			count = 1000,
+			ingredients = {
+				{"automation-science-pack",1},
+				{"logistic-science-pack",1},
+				{"chemical-science-pack",1},
+				{"production-science-pack",1},
+				{"agricultural-science-pack",1},
+
+			},
+			time = 30
+		},
+		effects = {
+			{
+				type = "unlock-recipe",
+				recipe = "cat-synthetic-pentapod-egg"
+			}
+		},
+		prerequisites = {"agricultural-science-pack","uranium-processing"},
+		--hidden = not settings.startup["unrestricted-buildings"].value
+	}
 })
 
 

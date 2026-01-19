@@ -79,3 +79,4 @@ data:extend({
 })
 
 utils.add_recipes("aop-greenhouse", {"cat-ashland-tree-greenhouse"})
+utils.add_productivity("aop-agriculture-productivity",{"cat-ashland-tree-greenhouse"},0.1)

@@ -221,6 +221,36 @@ data:extend({
 		allow_productivity = true,
 		allow_decomposition = false
 	},
+	{
+		type = "recipe",
+		name = "cat-synthetic-pentapod-egg",
+		enabled = false,
+		icons = {
+			{icon = "__space-age__/graphics/icons/pentapod-egg-3.png"},
+			{icon = "__base__/graphics/icons/uranium-235.png", scale = .25, shift = {8,8}}
+		},
+		ingredients = {
+			{type = "item", name = "yumako-mash", amount = 5},
+			{type = "item", name = "iron-bacteria", amount = 6},
+			{type = "item", name = "bioflux", amount = 1},
+			{type = "item", name = "uranium-235", amount = 1},
+			{type = "fluid", name = "water", amount = 40}
+
+		},
+		results = {
+			{type = "item", name = "pentapod-egg", amount = 1, probability = .1},
+			{type = "item", name = "uranium-235", amount = 1, probability = .25, ignored_by_productivity = 1},
+			{type = "item", name = "spoilage", amount = 10, probability = .9, ignored_by_productivity = 10}
+		},
+		main_product = "pentapod-egg",
+		category = "organic",
+		energy_required = 80,
+		allow_productivity = false,
+		allow_decomposition = false,
+		reset_freshness_on_craft = true,
+		--hidden = not settings.startup["unrestricted-buildings"].value,
+		--hidden_in_factoriopedia = not settings.startup["unrestricted-buildings"].value
+	}
 })
 
 data.raw["recipe"]["iron-bacteria"].surface_conditions = nil
@@ -386,8 +416,10 @@ data:extend({
 	{
 		type = "recipe",
 		name = "cat-uncatalyzed-molten-iron",
-		icon = "__space-age__/graphics/icons/fluid/molten-iron.png",
-		icon_size = 64,
+		icons = {
+			{icon = "__space-age__/graphics/icons/fluid/molten-iron.png"},
+			{icon = "__base__/graphics/icons/iron-ore.png", scale = .25, shift = {8,-8}}
+		},
 		enabled = false,
 		ingredients = {
 			{type = "item", name = "iron-ore", amount = 50}
@@ -405,8 +437,10 @@ data:extend({
 	{
 		type = "recipe",
 		name = "cat-uncatalyzed-molten-copper",
-		icon = "__space-age__/graphics/icons/fluid/molten-copper.png",
-		icon_size = 64,
+		icons = {
+			{icon = "__space-age__/graphics/icons/fluid/molten-copper.png"},
+			{icon = "__base__/graphics/icons/copper-ore.png", scale = .25, shift = {8,-8}}
+		},
 		enabled = false,
 		ingredients = {
 			{type = "item", name = "copper-ore", amount = 50}

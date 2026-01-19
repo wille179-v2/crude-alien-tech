@@ -80,6 +80,23 @@ end
 --- Adds recipes to a technology's unlocks.
 ---@param name string
 ---@param recipes string[]
+---@param productivity float
+function utils.add_productivity(name, recipes, productivity)
+    local technology = technologies[name]
+    technology.effects = technology.effects or {}
+    local len = #technology.effects
+    for i = 1, #recipes do
+        technology.effects[len + i] = {
+            type = "change-recipe-productivity",
+            recipe = recipes[i],
+            change = productivity,
+        }
+    end
+end
+
+--- Adds recipes to a technology's unlocks.
+---@param name string
+---@param recipes string[]
 function utils.add_recipes(name, recipes)
     local technology = technologies[name]
     technology.effects = technology.effects or {}

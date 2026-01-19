@@ -109,11 +109,19 @@ if mods["planetaris-arig"] then
 	data.raw["fluid"]["cat-sand"].hidden = true
 	data.raw["fluid"]["cat-sand"].hidden_in_factoriopedia = true
 	data.raw["fluid"]["cat-sand"].hidden_from_player_crafting = true
+	data.raw["recipe"]["cat-sand"].hide_from_signal_gui = true
+	--data.raw["recipe"]["cat-sand"].hidden = true
+	--data.raw["recipe"]["cat-sand"].hidden_in_factoriopedia = true
+	--data.raw["recipe"]["cat-sand"].hidden_from_player_crafting = true
 
 	--hide my version of cat-pure-sand
 	data.raw["fluid"]["cat-pure-sand"].hidden = true
 	data.raw["fluid"]["cat-pure-sand"].hidden_in_factoriopedia = true
 	data.raw["fluid"]["cat-pure-sand"].hidden_from_player_crafting = true
+	data.raw["recipe"]["cat-pure-sand"].hide_from_signal_gui = true
+	--data.raw["recipe"]["cat-pure-sand"].hidden = true
+	--data.raw["recipe"]["cat-pure-sand"].hidden_in_factoriopedia = true
+	--data.raw["recipe"]["cat-pure-sand"].hidden_from_player_crafting = true
 	
 	-- add my pure sand to Arig's Sifter
 	data.raw["recipe"]["cat-pure-sand"].additional_categories = {"sifting"}

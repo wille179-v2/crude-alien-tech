@@ -34,5 +34,12 @@ data:extend({
 		setting_type = "startup",
 		default_value = true,
 		order = "a-b"
+	},
+	{
+		type = "bool-setting",
+		name = "unrestricted-buildings",
+		setting_type = "startup",
+		default_value = false,
+		order = "e"
 	}
 })
