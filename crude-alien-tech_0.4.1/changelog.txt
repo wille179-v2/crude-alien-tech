@@ -1,16 +1,16 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.4.0
+Version: 0.4.1
 Date: 01-19-2026
   Features:
     - Added a setting to allow crafting the vanilla Agricultural Tower, Big Mining Drill, Biochamber, Cryogenic Plant, Electromagnetic Plant, Foundry, and Recycler on any planet. The setting defaults to off to preserving the vanilla gameplay experience, but can be adjusted at any time.
-	- Added one new technology and recipe, enabling you to slowly craft synthetic pentapod eggs anywhere through the power of radiation exposure. It requires uranium processing and agricultural science, and is meant to jumpstart pentapod egg production.
+    - Added one new technology and recipe, enabling you to slowly craft synthetic pentapod eggs anywhere through the power of radiation exposure. It requires uranium processing and agricultural science, and is meant to jumpstart pentapod egg production.
   Changes:
     - Updated icon for Wood to Nutrients.
     - Updated icons for uncatalyzed copper and iron melting
-	- The vanilla recipe for breeding Pentapod eggs can now be crafted on any planet, not just gleba. The recipe is otherwised unchanged and won't affect existing saves.
+    - The vanilla recipe for breeding Pentapod eggs can now be crafted on any planet, not just gleba. The recipe is otherwised unchanged and won't affect existing saves.
   Modding:
     - Much greater compatibility with Age of Production. Recipes from this mod can now be used in AoP buildings. Also added AoP as an optional hidden dependancy.
-	- Added compatibility with Wolverine's Productivity Research. Recipes created by this mod now benefit from the relevant productivity bonuses and some of those producivity technologies can be researched earlier once the relevant crude building is unlocked.
+    - Added compatibility with Wolverine's Productivity Research. Recipes created by this mod now benefit from the relevant productivity bonuses and some of those producivity technologies can be researched earlier once the relevant crude building is unlocked.
   Bugfixes:
     - Hid duplicate sand and pure sand icons in signal GUI menu when Planetaris: Arig is installed.
 ---------------------------------------------------------------------------------------------------
