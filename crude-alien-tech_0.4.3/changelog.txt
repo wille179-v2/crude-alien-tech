@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.3
+Date: 01-25-2026
+  Bugfixes:
+    - Fixed a bit of code that would overwrite certain technologies, breaking other mods installed alongside this one.
+---------------------------------------------------------------------------------------------------
+Version: 0.4.2
+Date: 01-25-2026
+  Bugfixes:
+    - Fixed a minor bug that prevented a recipe from Lignumis from properly being unlockable.
+---------------------------------------------------------------------------------------------------
 Version: 0.4.1
 Date: 01-19-2026
   Features:

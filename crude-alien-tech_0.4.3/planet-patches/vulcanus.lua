@@ -40,7 +40,19 @@ else -- Starting elsewhere
 
 	utils.set_trigger("foundry",data.raw["technology"]["tungsten-carbide"].research_trigger)
 	utils.set_prerequisites("foundry",{"calcite-processing"})
-	utils.set_recipes("foundry",{"foundry","molten-iron-from-lava","molten-copper-from-lava","molten-iron","molten-copper"})
+	--utils.set_recipes("foundry",{"foundry","molten-iron-from-lava","molten-copper-from-lava","molten-iron","molten-copper"})
+	utils.remove_recipes("foundry",{
+		"concrete-from-molten-iron",
+		"casting-low-density-structure",
+		"casting-iron",
+		"casting-steel",
+		"casting-copper",
+		"casting-iron-gear-wheel",
+		"casting-iron-stick",
+		"casting-pipe",
+		"casting-pipe-to-ground",
+		"casting-copper-cable",
+	})
 	utils.add_prerequisites("cat-uncatalyzed-melting",{"cat-somethings-rumbling"})
 
 	--Set Mining Drill mk2 and Foundry mk2 Recipes

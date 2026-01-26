@@ -259,4 +259,6 @@ utils.add_recipes("cat-earthly-roots", {lumberMillName})
 utils.remove_packs("cat-earthly-roots",{"chemical-science-pack","logistic-science-pack"})
 utils.remove_packs("cat-dreaming-of-greener-pastures",{"chemical-science-pack"})
 utils.remove_packs("fish-breeding",{"chemical-science-pack"})
+utils.remove_recipes("agriculture",{"nutrients-from-wood-pulp"})
+utils.add_recipes("cat-dreaming-of-greener-pastures",{"nutrients-from-wood-pulp"})
 

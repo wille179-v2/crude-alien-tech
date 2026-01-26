@@ -34,12 +34,12 @@ else -- Starting Elsewhere
 	utils.remove_tech("artificial-soil", false, false)
 	utils.set_unit("fish-breeding",{count = 100, ingredients = {{"automation-science-pack",1}, {"logistic-science-pack",1}, {"chemical-science-pack",1},},time = 15 })
 	utils.set_prerequisites("fish-breeding",{"cat-dreaming-of-greener-pastures"})
-	utils.set_recipes("agriculture",{"agricultural-tower"})
+	--utils.set_recipes("agriculture",{"agricultural-tower"})
 
 	utils.set_prerequisites("bioflux",{"cat-dreaming-of-greener-pastures"})
 	utils.set_trigger("bioflux",{ type = "build-entity", entity = { name = "cat-biochamber-mk1"	}})
 
-	utils.set_recipes("bacteria-cultivation",{"copper-bacteria","iron-bacteria","copper-bacteria-cultivation","iron-bacteria-cultivation"})
+	utils.add_recipes("bacteria-cultivation",{"copper-bacteria","iron-bacteria"})
 	utils.set_prerequisites("bioflux-processing",{"bioflux","rocket-fuel"})
 	utils.set_prerequisites("planet-discovery-gleba",{"bioflux-processing","bacteria-cultivation","space-platform-thruster","heating-tower"})
 	utils.set_prerequisites("agricultural-science-pack",{"planet-discovery-gleba","yumako","jellynut","biochamber"})
