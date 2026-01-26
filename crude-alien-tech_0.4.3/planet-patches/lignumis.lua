@@ -261,4 +261,7 @@ utils.remove_packs("cat-dreaming-of-greener-pastures",{"chemical-science-pack"})
 utils.remove_packs("fish-breeding",{"chemical-science-pack"})
 utils.remove_recipes("agriculture",{"nutrients-from-wood-pulp"})
 utils.add_recipes("cat-dreaming-of-greener-pastures",{"nutrients-from-wood-pulp"})
+utils.remove_recipes("foundry",{"casting-gold"})
+utils.remove_recipes("foundry",{"casting-gold"})
+utils.add_recipes("cat-somethings-rumbling",{"casting-gold"})
 

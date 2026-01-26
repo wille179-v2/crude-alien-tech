@@ -45,3 +45,9 @@ end
 if mods["Age-of-Production"] then
 	require("mod-patches.Age-of-Production")
 end
+
+-- ##################### EM Foundry Expansion compatibility #####################
+
+if mods["em-foundry-expansion"] then
+	require("mod-patches.em-foundry-expansion")
+end
