@@ -4,7 +4,7 @@ Date: 01-28-2026
   Bugfixes:
     - Fixed a bug that could cause errors with gleba's soil technology.
     - Cleaned up the code somewhat (to help a cool new other mod I'm currently working on, hint hint).
-	- Fixed a bug that could let you produce hydrofluoric acid from nothing.
+	- Fixed a bug that could let you produce hydrofluoric acid from nothing. Whoops.
   Balancing:
     - Slightly buffed the noobery to jelly/mash recipies to have slightly faster crafting times.
 	- Hydrofluoric acid now no longer has a pure sand byproduct.
