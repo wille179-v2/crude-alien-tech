@@ -31,7 +31,7 @@ else -- Starting Elsewhere
 	utils.set_trigger("heating-tower", {type = "craft-item", item = { name = "nutrients", count = 10 }})
 
 	utils.remove_tech("tree-seeding", false, false)
-	utils.remove_tech("artificial-soil", false, false)
+	--utils.remove_tech("artificial-soil", false, false)
 	utils.set_unit("fish-breeding",{count = 100, ingredients = {{"automation-science-pack",1}, {"logistic-science-pack",1}, {"chemical-science-pack",1},},time = 15 })
 	utils.set_prerequisites("fish-breeding",{"cat-dreaming-of-greener-pastures"})
 	--utils.set_recipes("agriculture",{"agricultural-tower"})
@@ -44,8 +44,10 @@ else -- Starting Elsewhere
 	utils.set_prerequisites("planet-discovery-gleba",{"bioflux-processing","bacteria-cultivation","space-platform-thruster","heating-tower"})
 	utils.set_prerequisites("agricultural-science-pack",{"planet-discovery-gleba","yumako","jellynut","biochamber"})
 
-	utils.set_recipes("yumako",{"yumako-processing","artificial-yumako-soil"})
-	utils.set_recipes("jellynut",{"jellynut-processing","artificial-jellynut-soil"})
+	--utils.set_recipes("yumako",{"yumako-processing","artificial-yumako-soil"})
+	--utils.set_recipes("jellynut",{"jellynut-processing","artificial-jellynut-soil"})
+	utils.remove_recipes("jellynut",{"iron-bacteria"})
+	utils.remove_recipes("yumako",{"copper-bacteria"})
 
 	utils.set_trigger("biochamber",{type = "build-entity", entity = "agricultural-tower"})
 

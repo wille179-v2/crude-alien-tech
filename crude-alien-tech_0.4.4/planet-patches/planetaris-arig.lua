@@ -56,14 +56,14 @@ data.raw["recipe"]["cat-tungsten-ore"].ingredients = {
 
 
 local hydrofluoricAcid = data.raw["recipe"]["cat-hydrofluoric-acid"]
-hydrofluoricAcid.ngredients = {
+hydrofluoricAcid.ingredients = {
 	{type = "fluid", name = sandToUse, amount = 50},
 	{type = "fluid", name = "sulfuric-acid", amount = 50},
 	{type = "fluid", name = "water", amount = 100},
 }
 hydrofluoricAcid.results = {
 	{type = "fluid", name = "cat-hydrofluoric-acid", amount = 10},
-	{type = "fluid", name = pureSandToUse, amount = 10},
+	--{type = "fluid", name = pureSandToUse, amount = 10},
 }
 
 --cat-sand-brick

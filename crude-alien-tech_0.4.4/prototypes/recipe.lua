@@ -202,7 +202,7 @@ data:extend({
 			{type = "item", name = "jelly", amount = 4}
 		},
 		category = "organic-or-hand-crafting",
-		energy_required = 4,
+		energy_required = 3,
 		allow_productivity = true,
 		allow_decomposition = false
 	},
@@ -217,7 +217,7 @@ data:extend({
 			{type = "item", name = "yumako-mash", amount = 2}
 		},
 		category = "organic-or-hand-crafting",
-		energy_required = 4,
+		energy_required = 3,
 		allow_productivity = true,
 		allow_decomposition = false
 	},

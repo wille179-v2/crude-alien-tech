@@ -1,11 +1,23 @@
 -- Electric Lumber Mill
 local utils = require("utils")
 
+local lignumisElectricMill = settings.startup["lignumis-electric-lumber-mill"].value
+
 local lumberMillName = "cat-electric-lumber-mill"
 
 local millEntity = table.deepcopy(data.raw["assembling-machine"]["lumber-mill"])
 local millItem = table.deepcopy(data.raw["item"]["lumber-mill"])
 local millRecipe = table.deepcopy(data.raw["recipe"]["lumber-mill"])
+
+-- if lignumis electric mill exists, hide all the stuff I made.
+millEntity.hidden = lignumisElectricMill
+millEntity.hidden_in_factoriopedia = lignumisElectricMill
+millItem.hidden = lignumisElectricMill
+millItem.hidden_in_factoriopedia = lignumisElectricMill
+millRecipe.hidden = lignumisElectricMill
+millRecipe.hidden_in_factoriopedia = lignumisElectricMill
+millRecipe.hide_from_signal_gui = lignumisElectricMill
+
 
 millEntity.name = lumberMillName
 millItem.name = lumberMillName
@@ -71,16 +83,18 @@ millRecipe.results = {
 
 data:extend{millEntity, millItem, millRecipe}
 
-local crudeTint = {r=.8,g=.5,b=.5,a=1}
+if not lignumisElectricMill then -- if Lignumis mill isn't electric, alter its tint
+	local crudeTint = {r=.8,g=.5,b=.5,a=1}
 
-data.raw["item"]["lumber-mill"].icons = {
-	{
-		icon = data.raw["item"]["lumber-mill"].icon,
-		tint = crudeTint
+	data.raw["item"]["lumber-mill"].icons = {
+		{
+			icon = data.raw["item"]["lumber-mill"].icon,
+			tint = crudeTint
+		}
 	}
-}
-local copperMillRecipe = data.raw["recipe"]["lumber-mill-copper"]
-copperMillRecipe.icons[1].tint = crudeTint
+	local copperMillRecipe = data.raw["recipe"]["lumber-mill-copper"]
+	copperMillRecipe.icons[1].tint = crudeTint
+end
 
 
 --- Agricultural tower localization & chain recipe
