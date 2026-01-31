@@ -46,7 +46,8 @@ local fulgoraProds = {
 	"nuclear-fuel-reprocessing-productivity-wolf",
 	"solid-fuel-productivity-wolf",
 	"uranium-fuel-cell-productivity-wolf",
-	"processing-unit-productivity"
+	"processing-unit-productivity",
+	"copper-cable-productivity-wolf"
 }
 
 for i=1, #fulgoraProds do 
