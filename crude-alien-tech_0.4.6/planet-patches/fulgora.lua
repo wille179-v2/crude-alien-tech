@@ -50,7 +50,7 @@ else -- Starting Elsewhere
 	utils.set_prerequisites("planet-discovery-fulgora",{"cat-extract-rare-elements","cat-salvage-failed-efforts","space-platform-thruster"})
 	utils.set_prerequisites("recycling",{"planet-discovery-fulgora","cat-salvage-failed-efforts"})
 	utils.set_prerequisites("electromagnetic-plant",{"planet-discovery-fulgora","holmium-processing"})
-	utils.set_trigger("electromagnetic-plant",data.raw["technology"]["recycling"].research_trigger)
+	utils.set_trigger("electromagnetic-plant",{type = "mine-entity", entity = "fulgoran-ruin-vault"})
 	utils.set_prerequisites("electromagnetic-science-pack",{"cat-energize-innovation","electromagnetic-plant"})
 	utils.set_trigger("electromagnetic-science-pack",{type = "build-entity", entity = "electromagnetic-plant"})
 
