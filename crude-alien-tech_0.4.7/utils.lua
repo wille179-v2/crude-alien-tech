@@ -185,6 +185,9 @@ end
 ---@param stitch boolean Stitch together the surrounding prerequisites and dependants in the tech tree.
 function utils.remove_tech(name, effects, stitch)
     local technology = technologies[name]
+    if technology == nil then -- IDK why this would be nil but apparently there was some error triggered by this.
+        return
+    end
     technology.hidden = true
 
     if effects and technology.effects then
