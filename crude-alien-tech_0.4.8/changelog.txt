@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.8
+Date: 04-17-2026
+  Bugfixes:
+    - Fixed a missing recipe when playing with Lignumis installed and Any Planet Start is set to Gleba.
+  Changes:
+    - Biolubricant can now be unlocked with the crude biochamber rather than with the vanilla biochamber.
+    - All recipies now have unique colors (such as the chemical plant's smoke or the biochamber's liquid).
+  Modding:
+    - Fixed a compatibility issue with Zirchona's Gleba Reborn mod.
+---------------------------------------------------------------------------------------------------
 Version: 0.4.7
 Date: 02-25-2026
   Bugfixes:
@@ -14,10 +24,10 @@ Date: 01-28-2026
   Bugfixes:
     - Fixed a bug that could cause errors with gleba's soil technology.
     - Cleaned up the code somewhat (to help a cool new other mod I'm currently working on, hint hint).
-	- Fixed a bug that could let you produce hydrofluoric acid from nothing. Whoops.
+    - Fixed a bug that could let you produce hydrofluoric acid from nothing. Whoops.
   Balancing:
     - Slightly buffed the noobery to jelly/mash recipies to have slightly faster crafting times.
-	- Hydrofluoric acid now no longer has a pure sand byproduct.
+    - Hydrofluoric acid now no longer has a pure sand byproduct.
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.4
 Date: 01-28-2026

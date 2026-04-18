@@ -7,6 +7,7 @@ if mods["any-planet-start"] then
 		vulcanusStart = true
 	end
 end
+utils.add_recipes("planet-discovery-vulcanus",{"cat-wood-decarbonization"})
 
 if vulcanusStart then --Starting on Vulcanus
 	utils.remove_tech("cat-somethings-rumbling", false, false)

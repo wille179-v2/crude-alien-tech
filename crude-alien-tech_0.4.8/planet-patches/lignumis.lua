@@ -255,7 +255,11 @@ data:extend({
 
 utils.add_recipes("bacteria-cultivation",{"cat-gold-bacteria","cat-gold-bacteria-cultivation"})
 utils.add_recipes("cat-uncatalyzed-melting",{"cat-uncatalyzed-molten-gold"})
-utils.add_recipes("cat-earthly-roots",{"cat-peat"})
+if mods["any-planet-start"] and settings.startup["aps-planet"].value == "gleba" then
+	utils.add_recipes("biochamber",{"cat-peat"})
+else
+	utils.add_recipes("cat-earthly-roots",{"cat-peat"})
+end
 utils.add_recipes("cat-a-breath-of-cold-air",{"cat-oxygenated-rocket-fuel-from-wood-pulp-and-peat"})
 
 table.insert(

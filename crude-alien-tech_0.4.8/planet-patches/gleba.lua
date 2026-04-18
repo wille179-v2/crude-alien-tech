@@ -21,7 +21,6 @@ if glebaStart then -- Starting on Gleba
 	utils.hide_asset("recipe","cat-agricultural-tower-mk1")
 
 	utils.set_prerequisites("cat-frozen-dreams",{"cat-rock-and-stone","cat-energize-innovation","cat-salvage-failed-efforts","heating-tower","biochamber"})
-	utils.add_recipes("planet-discovery-vulcanus",{"cat-wood-decarbonization"})
 	utils.add_recipes("agriculture",{"cat-wood-to-nutrients"})
 	utils.add_recipes("planet-discovery-nauvis",{"cat-wood-to-nooberry","cat-nooberry-to-jelly","cat-nooberry-to-mash"})
 	
@@ -48,6 +47,9 @@ else -- Starting Elsewhere
 	--utils.set_recipes("jellynut",{"jellynut-processing","artificial-jellynut-soil"})
 	utils.remove_recipes("jellynut",{"iron-bacteria"})
 	utils.remove_recipes("yumako",{"copper-bacteria"})
+
+	utils.remove_recipes("agriculture",{"nutrients-from-spoilage"})
+	utils.add_recipes("cat-dreaming-of-greener-pastures",{"nutrients-from-spoilage"})
 
 	utils.set_trigger("biochamber",{type = "build-entity", entity = "agricultural-tower"})
 

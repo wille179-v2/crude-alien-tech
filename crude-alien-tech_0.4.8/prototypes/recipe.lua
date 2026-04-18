@@ -14,6 +14,11 @@ Crafting Categories:
 
 local frep = require("__fdsl__.lib.recipe")
 
+local function colorCopy(recipe)
+	return table.deepcopy(data.raw["recipe"][recipe].crafting_machine_tint)
+
+end
+
 -- Mk1 Buildings (Mk2 building recipes are in their specific planet lua files)
 data:extend({
 	{ --Mk1 Foundry
@@ -34,7 +39,8 @@ data:extend({
 		category = "metallurgy-or-assembling",
 		energy_required = 8,
 		hidden_from_player_crafting = false,
-		hidden_in_factoriopedia = false
+		hidden_in_factoriopedia = false,
+		crafting_machine_tint = colorCopy("foundry")
 	},
 	{ --Mk1 Big Mining Drill
 		--5 Advanced Circuits + 5 Electric Engine Units + 1 Electric Mining Drill + 100 Molten Iron
@@ -54,7 +60,8 @@ data:extend({
 		energy_required = 25,
 		hidden_from_player_crafting = false,
 		hidden_in_factoriopedia = false,
-		order = "a[items]-c[big-mining-drill]-a"
+		order = "a[items]-c[big-mining-drill]-a",
+		crafting_machine_tint = colorCopy("big-mining-drill")
 	},
 	{ --Mk1 Recycler
 		-- 4 Advanced Circuits + 20 Gears + 10 Concrete + 10 Steel
@@ -73,7 +80,8 @@ data:extend({
 		category = "crafting",
 		energy_required = 2.5,
 		hidden_from_player_crafting = false,
-		hidden_in_factoriopedia = false
+		hidden_in_factoriopedia = false,
+		crafting_machine_tint = colorCopy("recycler")
 	},
 	{ --Mk1 Electromagnetic Plant
 		-- 30 Processing Units + 30 Refined Concrete + 30 Steel
@@ -91,7 +99,8 @@ data:extend({
 		category = "electronics-or-assembling",
 		energy_required = 8,
 		hidden_from_player_crafting = false,
-		hidden_in_factoriopedia = false
+		hidden_in_factoriopedia = false,
+		crafting_machine_tint = colorCopy("electromagnetic-plant")
 	},
 	{ --Mk1 Agricultural Tower
 		--2 Electronic Circuits + 1 Landfill + 10 Spoilage + 8 Steel
@@ -110,7 +119,8 @@ data:extend({
 		category = "crafting",
 		energy_required = 8,
 		hidden_from_player_crafting = false,
-		hidden_in_factoriopedia = false
+		hidden_in_factoriopedia = false,
+		crafting_machine_tint = colorCopy("agricultural-tower")
 	},
 	{ --Mk1 Biochamber
 		--1 Electronic Circuits + 1 Landfill + 10 Iron Plate + 5 Nutrients
@@ -129,7 +139,8 @@ data:extend({
 		category = "organic-or-assembling",
 		energy_required = 16,
 		hidden_from_player_crafting = false,
-		hidden_in_factoriopedia = false
+		hidden_in_factoriopedia = false,
+		crafting_machine_tint = colorCopy("biochamber")
 	},
 	{ --Mk1 Cryogenic Plant
 		--20 Steel + 10 Processing Units + 40 Refined Concrete + 20 copper cable
@@ -148,7 +159,8 @@ data:extend({
 		category = "cryogenics-or-assembling",
 		energy_required = 8,
 		hidden_from_player_crafting = false,
-		hidden_in_factoriopedia = false
+		hidden_in_factoriopedia = false,
+		crafting_machine_tint = colorCopy("cryogenic-plant")
 		
 	},
 })
@@ -172,7 +184,14 @@ data:extend({
 		category = "organic-or-assembling",
 		energy_required = 2.5,
 		allow_productivity = true,
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {.569,.302,.78,1},secondary = {1,.812,.392,1}}
+		crafting_machine_tint = {
+			primary = {.569,.302,.78}, 
+			secondary = {1,.812,.392},
+			tertiary = {.0,.0,.0},
+			quaternary = {.0,.0,.0}
+		}
 	},
 	{
 		type = "recipe",
@@ -188,7 +207,14 @@ data:extend({
 		category = "organic-or-assembling",
 		energy_required = 4,
 		allow_productivity = true,
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {0,.62,0,1},secondary = {.569,.302,.78,1}}
+		crafting_machine_tint = {
+			primary = {0,.62,0}, 
+			secondary = {.569,.302,.78},
+			tertiary = {.0,.0,.0},
+			quaternary = {.0,.0,.0}
+		}
 	},
 	{
 		type = "recipe",
@@ -204,7 +230,9 @@ data:extend({
 		category = "organic-or-hand-crafting",
 		energy_required = 3,
 		allow_productivity = true,
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {0,.62,0,1}}
+		crafting_machine_tint = colorCopy("jellynut-processing")
 	},
 	{
 		type = "recipe",
@@ -219,7 +247,9 @@ data:extend({
 		category = "organic-or-hand-crafting",
 		energy_required = 3,
 		allow_productivity = true,
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {.753,.251,.035,1}}
+		crafting_machine_tint = colorCopy("yumako-processing")
 	},
 	{
 		type = "recipe",
@@ -248,8 +278,8 @@ data:extend({
 		allow_productivity = false,
 		allow_decomposition = false,
 		reset_freshness_on_craft = true,
-		--hidden = not settings.startup["unrestricted-buildings"].value,
-		--hidden_in_factoriopedia = not settings.startup["unrestricted-buildings"].value
+		--crafting_machine_tint = {primary = {.435,.463,.035,1},secondary = {.141,.18,.031,1}}
+		crafting_machine_tint = colorCopy("pentapod-egg")
 	}
 })
 
@@ -275,7 +305,9 @@ data:extend({
 		energy_required = 1,
 		allow_productivity = true,
 		subgroup = "fulgora-processes",
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {.933,.294,.427,1},secondary = {.318,.176,.176,1}}
+		crafting_machine_tint = colorCopy("holmium-solution")
 	},
 	{
 		type = "recipe",
@@ -296,7 +328,9 @@ data:extend({
 		allow_productivity = true,
 		subgroup = "fulgora-processes",
 		allow_decomposition = false,
-		order = "d[wood]-a[synthetic-wood]"
+		order = "d[wood]-a[synthetic-wood]",
+		--crafting_machine_tint = {primary = {.569,.302,.78,1},secondary = {1,.812,.392,1}}
+		crafting_machine_tint = colorCopy("plastic-bar")
 	},
 })
 
@@ -318,7 +352,14 @@ data:extend({
 		energy_required = 20,
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {1, 0.4, 0.1,1}}
+		crafting_machine_tint = {
+			primary = {1, 0.4, 0.1}, 
+			secondary = {.0,.0,.0},
+			tertiary = {.0,.0,.0},
+			quaternary = {.0,.0,.0}
+		}
 	},
 	{
 		type = "recipe",
@@ -335,7 +376,14 @@ data:extend({
 		energy_required = 5,
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {.0, 0.08, 0.5,1}}
+		crafting_machine_tint = {
+			primary = {.0, 0.08, 0.5}, 
+			secondary = {.0,.0,.0},
+			tertiary = {.0,.0,.0},
+			quaternary = {.0,.0,.0}
+		}
 	},
 	{
 		type = "recipe",
@@ -352,7 +400,14 @@ data:extend({
 		energy_required = 5,
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {.5, 0.08, 0,1}}
+		crafting_machine_tint = {
+			primary = {.5, 0.08, 0}, 
+			secondary = {.0,.0,.0},
+			tertiary = {.0,.0,.0},
+			quaternary = {.0,.0,.0}
+		}
 	},
 	{
 		type = "recipe",
@@ -373,7 +428,14 @@ data:extend({
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
 		order = "d[metallurgy]-a[copper]",
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {.5, 0.08, 0,1}}
+		crafting_machine_tint = {
+			primary = {.5, 0.08, 0}, 
+			secondary = {.0,.0,.0},
+			tertiary = {.0,.0,.0},
+			quaternary = {.0,.0,.0}
+		}
 	},
 	{
 		type = "recipe",
@@ -394,7 +456,14 @@ data:extend({
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
 		order = "d[metallurgy]-a[iron]",
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {.0, 0.08, 0.5,1}}
+		crafting_machine_tint = {
+			primary = {.0, 0.08, 0.5}, 
+			secondary = {.0,.0,.0},
+			tertiary = {.0,.0,.0},
+			quaternary = {.0,.0,.0}
+		}
 	},
 	{
 		type = "recipe",
@@ -411,7 +480,14 @@ data:extend({
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
 		order = "d[metallurgy]-a[iron]",
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {.518,.388,.681,1},secondary = {.165,.188,.337,1}}
+		crafting_machine_tint = {
+			primary = {.518,.388,.681}, 
+			secondary = {.165,.188,.337},
+			tertiary = {.0,.0,.0},
+			quaternary = {.0,.0,.0}
+		}
 	},
 	{
 		type = "recipe",
@@ -432,7 +508,14 @@ data:extend({
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
 		order = "a[melting]-b[molten-iron]-b",
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {.0, 0.08, 0.5,1}}
+		crafting_machine_tint = {
+			primary = {.0, 0.08, 0.5}, 
+			secondary = {.0,.0,.0},
+			tertiary = {.0,.0,.0},
+			quaternary = {.0,.0,.0}
+		}
 	},
 	{
 		type = "recipe",
@@ -453,7 +536,14 @@ data:extend({
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
 		order = "a[melting]-c[molten-copper]-b",
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {.5, 0.08, 0,1}}
+		crafting_machine_tint = {
+			primary = {.5, 0.08, 0}, 
+			secondary = {.0,.0,.0},
+			tertiary = {.0,.0,.0},
+			quaternary = {.0,.0,.0}
+		}
 	},
 	{
 		type = "recipe",
@@ -484,7 +574,9 @@ data:extend({
 				property = "pressure",
 				min = 4000
 			}
-		}
+		},
+		--crafting_machine_tint = {primary = {0.1, 0.1, 0.1,1}}
+		crafting_machine_tint = colorCopy("burnt-spoilage")
 	},
 })
 
@@ -503,7 +595,9 @@ data:extend({
 		energy_required = 10,
 		allow_productivity = true,
 		subgroup = "fluid-recipes",
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {.153, 0.961, .153,1}}
+		crafting_machine_tint = colorCopy("fluoroketone-cooling")
 	},
 	{ -- electrolysis
 		type = "recipe",
@@ -522,7 +616,8 @@ data:extend({
 		energy_required = 2,
 		allow_productivity = false,
 		subgroup = "fluid-recipes",
-		allow_decomposition = false
+		allow_decomposition = false,
+		crafting_machine_tint = colorCopy("ice-melting")
 	},
 	{ -- air separation
 		type = "recipe",
@@ -539,7 +634,14 @@ data:extend({
 		energy_required = 1,
 		allow_productivity = false,
 		subgroup = "fluid-recipes",
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {.008, 0.792, .965,1}}
+		crafting_machine_tint = {
+			primary = {.05, .7, .9}, 
+			secondary = {.05,.75,.8},
+			tertiary = {.05,.7,.9},
+			quaternary = {.05,.75,.8}
+		}
 	},
 	{ -- fluorine
 		type = "recipe",
@@ -560,7 +662,9 @@ data:extend({
 		energy_required = 1,
 		allow_productivity = true,
 		subgroup = "fluid-recipes",
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {.533, 0.898, .737,1}}
+		crafting_machine_tint = colorCopy("fluoroketone")
 	},
 	{ -- ammonia
 		type = "recipe",
@@ -579,7 +683,9 @@ data:extend({
 		energy_required = 2,
 		allow_productivity = true,
 		subgroup = "fluid-recipes",
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {.11, 0.141, .765,1}}
+		crafting_machine_tint = colorCopy("ammoniacal-solution-separation")
 	},
 	{ -- lithium brine
 		type = "recipe",
@@ -602,7 +708,9 @@ data:extend({
 		energy_required = 15,
 		allow_productivity = true,
 		subgroup = "fluid-recipes",
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {.635, 0.694, .561,1}}
+		crafting_machine_tint = colorCopy("lithium")
 	},
 })
 
@@ -623,7 +731,14 @@ data:extend({
 		allow_productivity = true,
 		alternative_unlock_methods = {"cat-somethings-rumbling"},
 		subgroup = "fluid-recipes",
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {.937, 0.835, .741,1}}
+		crafting_machine_tint = {
+			primary = {.937, .835, .741}, 
+			secondary = {.0,.0,.0},
+			tertiary = {.0,.0,.0},
+			quaternary = {.0,.0,.0}
+		}
 	},
 	{ -- pure sand
 		type = "recipe",
@@ -637,7 +752,14 @@ data:extend({
 		energy_required = 1,
 		allow_productivity = true,
 		subgroup = "fluid-recipes",
-		allow_decomposition = false
+		allow_decomposition = false		,
+		--crafting_machine_tint = {primary = {.992, 0.808, .643,1}}
+		crafting_machine_tint = {
+			primary = {.0, .0, .0}, 
+			secondary = {.0,.0,.0},
+			tertiary = {.0,.0,.0},
+			quaternary = {.0,.0,.0}
+		}
 	},
 	{ -- ice
 		type = "recipe",
@@ -655,7 +777,9 @@ data:extend({
 		energy_required = 1,
 		allow_productivity = false,
 		subgroup = "fluid-recipes",
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {.433, 0.773, 1,1}, secondary = {.591, .856, 1, 1}}
+		crafting_machine_tint = colorCopy("ice-melting")
 	},
 	{ -- sand to brick
 		type = "recipe",
@@ -713,7 +837,14 @@ data:extend({
 		allow_productivity = false,
 		subgroup = "fluid-recipes",
 		order = "z[cat]-v[o]",
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {1, 0, 0,1}}
+		crafting_machine_tint = {
+			primary = {1, .5, .5}, 
+			secondary = {1, .5, .5},
+			tertiary = {1, .5, .5},
+			quaternary = {1, .5, .5}
+		}
 	},
 	{ -- vent hydrogen
 		type = "recipe",
@@ -731,7 +862,14 @@ data:extend({
 		allow_productivity = false,
 		subgroup = "fluid-recipes",
 		order = "z[cat]-v[h]",
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {.9, 0.9, .9,1}}
+		crafting_machine_tint = {
+			primary = {.9, .9, .9}, 
+			secondary = {.9, .9, .9},
+			tertiary = {.9, .9, .9},
+			quaternary = {.9, .9, .9}
+		}
 	},
 	{ -- vent nitrogen
 		type = "recipe",
@@ -749,7 +887,14 @@ data:extend({
 		allow_productivity = false,
 		subgroup = "fluid-recipes",
 		order = "z[cat]-v[n]",
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {0, 0, .99,1}}
+		crafting_machine_tint = {
+			primary = {.5, .5, 1}, 
+			secondary = {.5, .5, 1},
+			tertiary = {.5, .5, 1},
+			quaternary = {.5, .5, 1}
+		}
 	},
 })
 
@@ -783,7 +928,9 @@ data:extend({
 		hidden_from_player_crafting = true,
 		hidden_in_factoriopedia = hideFuels,
 		hidden = hideFuels,
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {1, 0.7, 0,1}}
+		crafting_machine_tint = colorCopy("rocket-fuel")
 	},
 	{ -- Rocket Fuel from Jelly
 		type = "recipe",
@@ -812,7 +959,9 @@ data:extend({
 		hidden_from_player_crafting = true,
 		hidden_in_factoriopedia = hideFuels,
 		hidden = hideFuels,
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {.592, 0.259, 0,.1}}
+		crafting_machine_tint = colorCopy("rocket-fuel-from-jelly")
 	},
 	{ -- Rocket Fuel from Ammonia
 		type = "recipe",
@@ -841,7 +990,9 @@ data:extend({
 		hidden_from_player_crafting = true,
 		hidden_in_factoriopedia = hideFuels,
 		hidden = hideFuels,
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {.996, 0.742, .408,1}}
+		crafting_machine_tint = colorCopy("ammonia-rocket-fuel")
 	},
 	{ -- Solid Fuel from Light Oil
 		type = "recipe",
@@ -868,7 +1019,9 @@ data:extend({
 		hidden_from_player_crafting = true,
 		hidden_in_factoriopedia = hideFuels,
 		hidden = hideFuels,
-		allow_decomposition = false
+		allow_decomposition = false,
+		--crafting_machine_tint = {primary = {.71, 0.633, .482,1}},
+		crafting_machine_tint = colorCopy("solid-fuel-from-light-oil")
 	},
 	{ -- Solid Fuel from Heavy Oil
 		type = "recipe",
@@ -895,7 +1048,8 @@ data:extend({
 		hidden_from_player_crafting = true,
 		hidden_in_factoriopedia = hideFuels,
 		hidden = hideFuels,
-		allow_decomposition = false
+		allow_decomposition = false,
+		crafting_machine_tint = colorCopy("solid-fuel-from-heavy-oil")
 	},
 	{ -- Solid Fuel from Petrolium Gas
 		type = "recipe",
@@ -922,7 +1076,8 @@ data:extend({
 		hidden_from_player_crafting = true,
 		hidden_in_factoriopedia = hideFuels,
 		hidden = hideFuels,
-		allow_decomposition = false
+		allow_decomposition = false,
+		crafting_machine_tint = colorCopy("solid-fuel-from-petroleum-gas")
 	},
 	{ -- Solid Fuel from Ammonia
 		type = "recipe",
@@ -950,7 +1105,8 @@ data:extend({
 		hidden_from_player_crafting = true,
 		hidden_in_factoriopedia = hideFuels,
 		hidden = hideFuels,
-		allow_decomposition = false
+		allow_decomposition = false,
+		crafting_machine_tint = colorCopy("solid-fuel-from-ammonia")
 	},
 })
 

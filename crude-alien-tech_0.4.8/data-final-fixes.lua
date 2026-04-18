@@ -5,3 +5,9 @@ data.raw["assembling-machine"]["cat-electromagnetic-plant-mk1"].crafting_categor
 data.raw["assembling-machine"]["cat-biochamber-mk1"].crafting_categories = data.raw["assembling-machine"]["biochamber"].crafting_categories
 data.raw["assembling-machine"]["cat-cryogenic-plant-mk1"].crafting_categories = data.raw["assembling-machine"]["cryogenic-plant"].crafting_categories
 --log("ran data final fixes")
+
+
+-- ##################### Gleba Reborn compatibility #####################
+if mods["gleba-reborn"] then
+	require("mod-patches.gleba-reborn")
+end
