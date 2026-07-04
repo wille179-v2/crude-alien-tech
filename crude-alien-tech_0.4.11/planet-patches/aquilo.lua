@@ -45,7 +45,7 @@ else -- start elsewhere
 	
 	
 	utils.set_prerequisites("cryogenic-plant",{"planet-discovery-aquilo"})
-	utils.set_trigger("cryogenic-plant",{type = "mine-entity", entity = "lithium-iceberg-big"})
+	utils.set_trigger("cryogenic-plant",{type = "mine-entity", entities = {"lithium-iceberg-big"}})
 
 	if settings.startup["use-chain-recipe"].value then
 		data.raw["recipe"]["cryogenic-plant"].ingredients = {

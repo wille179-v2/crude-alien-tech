@@ -1,21 +1,25 @@
 local utils = require("utils")
 
-data.raw["recipe"]["cat-wood-to-nutrients"].additional_categories = {"woodworking","biochemistry"}
-data.raw["recipe"]["cat-wood-to-nooberry"].additional_categories = {"woodworking"}
-data.raw["recipe"]["cat-nooberry-to-mash"].additional_categories = {"woodworking"}
-data.raw["recipe"]["cat-nooberry-to-jelly"].additional_categories = {"woodworking"}
+local function categoryMerge(recipe,newCategories)
+	data.raw["recipe"][recipe].categories = utils.merge{data.raw["recipe"][recipe].categories,newCategories}
+end
 
-data.raw["recipe"]["cat-wood-decarbonization"].additional_categories = {"woodworking"}
-data.raw["recipe"]["cat-agricultural-tower-mk1"].additional_categories = {"woodworking"}
-data.raw["recipe"]["cat-synthetic-wood"].additional_categories = {"biochemistry"}
+categoryMerge("cat-wood-to-nutrients",{"woodworking"})
+categoryMerge("cat-wood-to-nooberry",{"woodworking"})
+categoryMerge("cat-nooberry-to-mash",{"woodworking"})
+categoryMerge("cat-nooberry-to-jelly",{"woodworking"})
 
-data.raw["recipe"]["cat-oxygenated-rocket-fuel"].additional_categories = {"petrochemistry"}
-data.raw["recipe"]["cat-oxygenated-rocket-fuel-from-jelly"].additional_categories = {"petrochemistry"}
-data.raw["recipe"]["cat-oxygenated-ammonia-rocket-fuel"].additional_categories = {"petrochemistry"}
-data.raw["recipe"]["cat-oxygenated-solid-fuel-from-light-oil"].additional_categories = {"petrochemistry"}
-data.raw["recipe"]["cat-oxygenated-solid-fuel-from-heavy-oil"].additional_categories = {"petrochemistry"}
-data.raw["recipe"]["cat-oxygenated-solid-fuel-from-petroleum-gas"].additional_categories = {"petrochemistry"}
-data.raw["recipe"]["cat-oxygenated-solid-fuel-from-ammonia"].additional_categories = {"petrochemistry"}
+--categoryMerge("cat-wood-decarbonization",{"woodworking"})
+categoryMerge("cat-agricultural-tower-mk1",{"woodworking"})
+categoryMerge("cat-synthetic-wood",{"petrochemistry"})
+
+categoryMerge("cat-oxygenated-rocket-fuel",{"petrochemistry"})
+categoryMerge("cat-oxygenated-rocket-fuel-from-jelly",{"petrochemistry"})
+categoryMerge("cat-oxygenated-ammonia-rocket-fuel",{"petrochemistry"})
+categoryMerge("cat-oxygenated-solid-fuel-from-light-oil",{"petrochemistry"})
+categoryMerge("cat-oxygenated-solid-fuel-from-heavy-oil",{"petrochemistry"})
+categoryMerge("cat-oxygenated-solid-fuel-from-petroleum-gas",{"petrochemistry"})
+categoryMerge("cat-oxygenated-solid-fuel-from-ammonia",{"petrochemistry"})
 
 
 
@@ -65,7 +69,7 @@ data:extend({
 			{type = "item", name = "cat-carbonized-wood", amount = 16},
 			{type = "item", name = "carbon", amount = 8}
 		},
-		category = "agriculture",
+		categories = {"agriculture"},
 		energy_required = 1200,
 		allow_productivity = true,
 		subgroup = "aop-advanced-agriculture",

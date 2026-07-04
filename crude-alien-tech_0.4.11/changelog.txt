@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.11
+Date: 07-04-2026
+  Features:
+    - Updated to Factorio version 2.1.
+---------------------------------------------------------------------------------------------------
+Version: 0.4.10
+Date: 05-12-2026
+  Bugfixes:
+    - Fixed a minor ordering issue with lignumis items.
+---------------------------------------------------------------------------------------------------
+Version: 0.4.9
+Date: 04-18-2026
+  Bugfixes:
+    - Fixed a rare crash that could occur if another mod changed an altered technology into a trigger tech.
+---------------------------------------------------------------------------------------------------
 Version: 0.4.8
 Date: 04-17-2026
   Bugfixes:

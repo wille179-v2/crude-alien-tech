@@ -30,8 +30,8 @@ data.raw["recipe"]["cat-pure-sand"].ingredients = {
 }
 data.raw["recipe"]["cat-pure-sand"].results = {
 	{type = "fluid", name = pureSandToUse, amount_min = 1, amount_max = 5},
-	{type = "item", name = "iron-ore", amount_min = 1, amount_max = 2, probability = 0.1},
-	{type = "item", name = "copper-ore", amount_min = 1, amount_max = 2, probability = 0.1}
+	{type = "item", name = "iron-ore", amount_min = 1, amount_max = 2, independent_probability = 0.1},
+	{type = "item", name = "copper-ore", amount_min = 1, amount_max = 2, independent_probability = 0.1}
 }
 
 local holmiumOreSifting = data.raw["recipe"]["cat-holmium-ore-sifting"]
@@ -41,7 +41,7 @@ holmiumOreSifting.ingredients = {
 }
 holmiumOreSifting.results = {
 	{type = "fluid", name = sandToUse, amount = 70, ignored_by_productivity = 70},
-	{type = "item", name = "holmium-ore", amount = 1, probability = 0.3}
+	{type = "item", name = "holmium-ore", amount = 1, independent_probability = 0.3}
 }
 
 data.raw["recipe"]["cat-lava"].ingredients = {
@@ -168,7 +168,7 @@ if mods["planetaris-arig"] then
 			results = {
 				{type = "item", name = "rocket-fuel", amount = 4}
 			},
-			category = "compressing",
+			categories = {"compressing"},
 			energy_required = 4,
 			allow_productivity = true,
 			subgroup = "arig-processes",

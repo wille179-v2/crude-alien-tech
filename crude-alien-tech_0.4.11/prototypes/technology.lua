@@ -21,7 +21,7 @@ data:extend({
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "wood-processing"
+				recipe = "tree-seed"
 			},
 			{
 				type = "unlock-recipe",
@@ -137,7 +137,7 @@ data:extend({
 		type = "technology",
 		name = "cat-salvage-failed-efforts",
 		icon_size = 256,
-		icon = "__quality__/graphics/technology/recycling.png",
+		icon = "__recycler__/graphics/technology/recycling.png",
 		unit = {
 			count = 250,
 			ingredients = {

@@ -9,6 +9,8 @@ local millEntity = table.deepcopy(data.raw["assembling-machine"]["lumber-mill"])
 local millItem = table.deepcopy(data.raw["item"]["lumber-mill"])
 local millRecipe = table.deepcopy(data.raw["recipe"]["lumber-mill"])
 
+local order = (millEntity.order or "eb[lumber-mill]") .. "-e[electric]"
+
 -- if lignumis electric mill exists, hide all the stuff I made.
 millEntity.hidden = lignumisElectricMill
 millEntity.hidden_in_factoriopedia = lignumisElectricMill
@@ -30,7 +32,7 @@ millEntity.energy_source = {
 }
 millEntity.crafting_speed = 2.5
 millEntity.minable.result = lumberMillName
-millEntity.order = "z-2[lumber-mill]-e"
+millEntity.order = order
 millEntity.icons = {
 	{
 		icon = millItem.icon
@@ -63,7 +65,7 @@ else
 		{type = "item", name = "assembling-machine-1", amount = 2},
 	}
 end
-millItem.order = "2[lumber-mill]-e"
+millItem.order = order
 millItem.icons = {
 	{
 		icon = millItem.icon
@@ -76,7 +78,7 @@ millItem.icons = {
 	}
 }
 
-millRecipe.order = "2[lumber-mill]-e"
+millRecipe.order = order
 millRecipe.results = {
 	{type = "item", name = lumberMillName, amount = 1}
 }
@@ -143,7 +145,7 @@ data:extend({
 		results = {
 			{type = "item", name = "peat", amount = 15}
 		},
-		category = "organic-or-chemistry",
+		categories = {"organic","chemistry"},
 		energy_required = 16,
 		allow_productivity = true,
 		hidden_from_player_crafting = false,
@@ -165,11 +167,10 @@ data:extend({
 
 		},
 		results = {
-			{type = "item", name = "gold-bacteria", amount = 4}
+			{type = "item", name = "gold-bacteria", amount = 4,reset_freshness_on_craft = true}
 		},
-		category = "organic",
+		categories = {"organic"},
 		energy_required = 4,
-		reset_freshness_on_craft = true,
 		allow_productivity = true,
 		hidden_from_player_crafting = false,
 		hidden_in_factoriopedia = false,
@@ -189,13 +190,12 @@ data:extend({
 
 		},
 		results = {
-			{type = "item", name = "gold-bacteria", amount = 1, probability = .1},
+			{type = "item", name = "gold-bacteria", amount = 1, independent_probability = .1,reset_freshness_on_craft = true},
 			{type = "item", name = "spoilage", amount = 2},
 
 		},
-		category = "organic",
+		categories = {"organic"},
 		energy_required = 1,
-		reset_freshness_on_craft = true,
 		allow_productivity = true,
 		hidden_from_player_crafting = false,
 		hidden_in_factoriopedia = false,
@@ -217,7 +217,7 @@ data:extend({
 			{type = "fluid", name = "molten-gold", amount = 450}
 		},
 		energy_required = 35,
-		category = "metallurgy",
+		categories = {"metallurgy"},
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
 		order = "b[new-fluid]-0[lignumis]-a[molten-gold]-b",
@@ -241,7 +241,7 @@ data:extend({
 		products = {
 			{type = "item", name = "rocket-fuel", amount = 4}
 		},
-		category = "organic-or-chemistry",
+		categories = {"organic","chemistry"},
 		energy_required = 30,
 		allow_productivity = true,
 		subgroup = "lignumis-bioprocessing",

@@ -171,7 +171,11 @@ function utils.remove_packs(name, packs)
     for _, pack in pairs(packs) do
         map[pack] = true
     end
-    local ingredients = technologies[name].unit.ingredients
+    local unit = technologies[name].unit
+    if unit == nil then
+        return
+    end
+    local ingredients = unit.ingredients
     for i = #ingredients, 1, -1 do
         if map[ingredients[i][1]] then
             table.remove(ingredients, i)
@@ -227,6 +231,22 @@ end
 function utils.ignore_multiplier(name)
     local technology = technologies[name]
     technology.ignore_tech_cost_multiplier = true
+end
+
+-- Merges two or more tables into one new table. Later tables with matching keys overwrite the values of earlier tables, while items with integer keys are placed in sequence.
+-- call function as merge{table1, table2, ...}
+function utils.merge(tables)
+  result = {}
+	for i,t in ipairs(tables) do
+		for key,value in pairs(t) do
+		  if type(key) == type(1) then
+		    table.insert(result, value)
+		  else
+			  result[key] = value
+			 end
+		end
+	end
+	return result
 end
 
 return utils

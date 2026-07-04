@@ -102,7 +102,7 @@ if isVestaComplex then
 			results = {
 				{type = "item", name = "sand", amount = 4}
 			},
-			category = "crafting-with-fluid",
+			categories = {"crafting-with-fluid"},
 			energy_required = .0125,
 			allow_productivity = false,
 			allow_decomposition = false,
@@ -124,7 +124,7 @@ if isVestaComplex then
 			results = {
 				{type = "fluid", name = sand, amount = 20}
 			},
-			category = "crafting-with-fluid",
+			categories = {"crafting-with-fluid"},
 			energy_required = .0125,
 			allow_productivity = false,
 			allow_decomposition = false,
@@ -146,7 +146,7 @@ if isVestaComplex then
 			results = {
 				{type = "item", name = "lithium", amount = 5}
 			},
-			category = "chemistry-or-cryogenics",
+			categories = {"chemistry","cryogenics"},
 			energy_required = 20,
 			allow_productivity = true,
 			allow_decomposition = false,

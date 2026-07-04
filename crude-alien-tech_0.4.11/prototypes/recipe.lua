@@ -1,15 +1,13 @@
 ﻿--[[
 Crafting Categories:
-	Cryogenic Plant: "cryogenics", "chemistry-or-cryogenics","cryogenics-or-assembling"
-	Biochamber: "organic", "organic-or-hand-crafting", "organic-or-assembling","organic-or-chemistry"
-	Electromagnetic Plant: "electromagnetics", "electronics", "electronics-with-fluid","electronics-or-assembling"
-	Foundry: "metallurgy","pressing","crafting-with-fluid-or-metallurgy","metallurgy-or-assembling"
+	Cryogenic Plant: "cryogenics"
+	Biochamber: "organic"
+	Electromagnetic Plant: "electromagnetics"
+	Foundry: "metallurgy"
+	Assembling Machine 1: "crafting", "advanced-crafting"
+		#2 & #3: "crafting-with-fluid"
 
-	Default categories for recipes:
-		Foundry = "metallurgy-or-assembling"
-		Electromagnetic Plant = "electronics-or-assembling"
-		Biochamber = "organic-or-assembling"
-		Cryogenic Plant = "cryogenics-or-assembling"
+
 ]]
 
 local frep = require("__fdsl__.lib.recipe")
@@ -36,7 +34,7 @@ data:extend({
 		results = {
 			{type = "item", name = "cat-foundry-mk1", amount = 1}
 		},
-		category = "metallurgy-or-assembling",
+		categories = {"metallurgy","crafting-with-fluid"},
 		energy_required = 8,
 		hidden_from_player_crafting = false,
 		hidden_in_factoriopedia = false,
@@ -56,7 +54,7 @@ data:extend({
 		results = {
 			{type = "item", name = "cat-big-mining-drill-mk1", amount = 1}
 		},
-		category = "metallurgy",
+		categories = {"metallurgy"},
 		energy_required = 25,
 		hidden_from_player_crafting = false,
 		hidden_in_factoriopedia = false,
@@ -77,7 +75,7 @@ data:extend({
 		results = {
 			{type = "item", name = "cat-recycler-mk1", amount = 1}
 		},
-		category = "crafting",
+		categories = {"crafting"},
 		energy_required = 2.5,
 		hidden_from_player_crafting = false,
 		hidden_in_factoriopedia = false,
@@ -96,7 +94,7 @@ data:extend({
 		results = {
 			{type = "item", name = "cat-electromagnetic-plant-mk1", amount = 1}
 		},
-		category = "electronics-or-assembling",
+		categories = {"electromagnetics","crafting"},
 		energy_required = 8,
 		hidden_from_player_crafting = false,
 		hidden_in_factoriopedia = false,
@@ -116,7 +114,7 @@ data:extend({
 		results = {
 			{type = "item", name = "cat-agricultural-tower-mk1", amount = 1}
 		},
-		category = "crafting",
+		categories = {"crafting"},
 		energy_required = 8,
 		hidden_from_player_crafting = false,
 		hidden_in_factoriopedia = false,
@@ -136,7 +134,7 @@ data:extend({
 		results = {
 			{type = "item", name = "cat-biochamber-mk1", amount = 1}
 		},
-		category = "organic-or-assembling",
+		categories = {"organic","crafting"},
 		energy_required = 16,
 		hidden_from_player_crafting = false,
 		hidden_in_factoriopedia = false,
@@ -156,7 +154,7 @@ data:extend({
 		results = {
 			{type = "item", name = "cat-cryogenic-plant-mk1", amount = 1}
 		},
-		category = "cryogenics-or-assembling",
+		categories = {"cryogenics","crafting"},
 		energy_required = 8,
 		hidden_from_player_crafting = false,
 		hidden_in_factoriopedia = false,
@@ -181,7 +179,7 @@ data:extend({
 		results = {
 			{type = "item", name = "nutrients", amount = 3, percent_spoiled = 0.25}
 		},
-		category = "organic-or-assembling",
+		categories = {"organic","crafting"},
 		energy_required = 2.5,
 		allow_productivity = true,
 		allow_decomposition = false,
@@ -204,7 +202,7 @@ data:extend({
 		results = {
 			{type = "item", name = "cat-nooberry", amount = 10}
 		},
-		category = "organic-or-assembling",
+		categories = {"organic","crafting-with-fluid"},
 		energy_required = 4,
 		allow_productivity = true,
 		allow_decomposition = false,
@@ -227,7 +225,7 @@ data:extend({
 		results = {
 			{type = "item", name = "jelly", amount = 4}
 		},
-		category = "organic-or-hand-crafting",
+		categories = {"organic","hand-crafting"},
 		energy_required = 3,
 		allow_productivity = true,
 		allow_decomposition = false,
@@ -244,7 +242,7 @@ data:extend({
 		results = {
 			{type = "item", name = "yumako-mash", amount = 2}
 		},
-		category = "organic-or-hand-crafting",
+		categories = {"organic","hand-crafting"},
 		energy_required = 3,
 		allow_productivity = true,
 		allow_decomposition = false,
@@ -268,16 +266,15 @@ data:extend({
 
 		},
 		results = {
-			{type = "item", name = "pentapod-egg", amount = 1, probability = .1},
-			{type = "item", name = "uranium-235", amount = 1, probability = .25, ignored_by_productivity = 1},
-			{type = "item", name = "spoilage", amount = 10, probability = .9, ignored_by_productivity = 10}
+			{type = "item", name = "pentapod-egg", amount = 1, independent_probability = .1,reset_freshness_on_craft = true},
+			{type = "item", name = "uranium-235", amount = 1, independent_probability = .25, ignored_by_productivity = 1},
+			{type = "item", name = "spoilage", amount = 10, independent_probability = .9, ignored_by_productivity = 10}
 		},
 		main_product = "pentapod-egg",
-		category = "organic",
+		categories = {"organic"},
 		energy_required = 80,
 		allow_productivity = false,
 		allow_decomposition = false,
-		reset_freshness_on_craft = true,
 		--crafting_machine_tint = {primary = {.435,.463,.035,1},secondary = {.141,.18,.031,1}}
 		crafting_machine_tint = colorCopy("pentapod-egg")
 	}
@@ -301,7 +298,7 @@ data:extend({
 		ingredients = {}, --set in data-updates.lua for Arig compatibility
 		results = {},
 		main_product = "holmium-ore",
-		category = "chemistry-or-cryogenics",
+		categories = {"chemistry","cryogenics"},
 		energy_required = 1,
 		allow_productivity = true,
 		subgroup = "fulgora-processes",
@@ -322,7 +319,7 @@ data:extend({
 		  {type="fluid", name="holmium-solution", amount=10}
 		},	
 		results = {{type="item", name="wood", amount=3}},
-		category = "organic-or-chemistry",
+		categories = {"organic","chemistry"},
 		energy_required = 2,
 		auto_recycle = false,
 		allow_productivity = true,
@@ -335,7 +332,7 @@ data:extend({
 })
 
 if settings.startup["scrap-power-poles"].value then
-	frep.add_result("scrap-recycling",{type = "item", name = "small-electric-pole", amount = 1, probability = .04, show_details_in_recipe_tooltip = false})
+	frep.add_result("scrap-recycling",{type = "item", name = "small-electric-pole", amount = 1, independent_probability = .04, show_details_in_recipe_tooltip = false})
 end
 
 -- Vulcanus recipes
@@ -348,7 +345,7 @@ data:extend({
 		results = {
 			{type = "fluid", name = "lava", amount = 500}
 		},
-		category = "metallurgy",
+		categories = {"metallurgy"},
 		energy_required = 20,
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
@@ -372,7 +369,7 @@ data:extend({
 		results = {
 			{type = "fluid", name = "cat-impure-molten-iron", amount=500}
 		},
-		category = "metallurgy",
+		categories = {"metallurgy"},
 		energy_required = 5,
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
@@ -396,7 +393,7 @@ data:extend({
 		results = {
 			{type = "fluid", name = "cat-impure-molten-copper", amount=500}
 		},
-		category = "metallurgy",
+		categories = {"metallurgy"},
 		energy_required = 5,
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
@@ -423,7 +420,7 @@ data:extend({
 			{type = "item", name = "stone", amount = 5}
 		},
 		main_product = "molten-copper",
-		category = "metallurgy",
+		categories = {"metallurgy"},
 		energy_required = 5,
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
@@ -451,7 +448,7 @@ data:extend({
 			{type = "item", name = "stone", amount = 5}
 		},
 		main_product = "molten-iron",
-		category = "metallurgy",
+		categories = {"metallurgy"},
 		energy_required = 5,
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
@@ -475,7 +472,7 @@ data:extend({
 		results = {
 			{type = "item", name = "tungsten-ore", amount_min = 3, amount_max = 4}
 		},
-		category = "chemistry-or-cryogenics",
+		categories = {"chemistry","cryogenics"},
 		energy_required = 5,
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
@@ -504,7 +501,7 @@ data:extend({
 			{type = "fluid", name = "molten-iron", amount = 450}
 		},
 		energy_required = 35,
-		category = "metallurgy",
+		categories = {"metallurgy"},
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
 		order = "a[melting]-b[molten-iron]-b",
@@ -532,7 +529,7 @@ data:extend({
 			{type = "fluid", name = "molten-copper", amount = 450}
 		},
 		energy_required = 35,
-		category = "metallurgy",
+		categories = {"metallurgy"},
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
 		order = "a[melting]-c[molten-copper]-b",
@@ -561,10 +558,10 @@ data:extend({
 		},
 		results = {
 			{type = "item", name = "wood", amount = 1},
-			{type = "item", name = "cat-ashland-tree-seed", amount = 1, probability = .25},
+			{type = "item", name = "cat-ashland-tree-seed", amount = 1, independent_probability = .25},
 		},
 		energy_required = 1,
-		category = "organic-or-chemistry",
+		categories = {"organic","chemistry"},
 		allow_productivity = true,
 		subgroup = "vulcanus-processes",
 		order = "c[wood]-a[decarbonization]",
@@ -591,7 +588,7 @@ data:extend({
 		enabled = false,
 		ingredients = {}, --set in planetaris-arig.lua for Arig compatibility
 		results = {}, --set in planetaris-arig.lua for Arig compatibility
-		category = "cryogenics",
+		categories = {"cryogenics"},
 		energy_required = 10,
 		allow_productivity = true,
 		subgroup = "fluid-recipes",
@@ -612,7 +609,7 @@ data:extend({
 			{type = "fluid", name = "hydrogen", amount = 66},
 			{type = "fluid", name = "oxygen", amount = 33},
 		},
-		category = "chemistry-or-cryogenics",
+		categories = {"chemistry","cryogenics"},
 		energy_required = 2,
 		allow_productivity = false,
 		subgroup = "fluid-recipes",
@@ -630,7 +627,7 @@ data:extend({
 			{type = "fluid", name = "nitrogen", amount = 78},
 			{type = "fluid", name = "oxygen", amount = 21},
 		},
-		category = "chemistry-or-cryogenics",
+		categories = {"chemistry","cryogenics"},
 		energy_required = 1,
 		allow_productivity = false,
 		subgroup = "fluid-recipes",
@@ -658,7 +655,7 @@ data:extend({
 			{type = "fluid", name = "fluorine", amount = 10},
 		},
 		main_product = "fluorine",
-		category = "cryogenics",
+		categories = {"cryogenics"},
 		energy_required = 1,
 		allow_productivity = true,
 		subgroup = "fluid-recipes",
@@ -679,7 +676,7 @@ data:extend({
 		results = {
 			{type = "fluid", name = "ammonia", amount = 20},
 		},
-		category = "cryogenics",
+		categories = {"cryogenics"},
 		energy_required = 2,
 		allow_productivity = true,
 		subgroup = "fluid-recipes",
@@ -704,7 +701,7 @@ data:extend({
 			{type = "fluid", name = "steam", amount = 50, temperature = 500, ignored_by_productivity = 50},
 		},
 		main_product = "lithium-brine",
-		category = "cryogenics",
+		categories = {"cryogenics"},
 		energy_required = 15,
 		allow_productivity = true,
 		subgroup = "fluid-recipes",
@@ -726,7 +723,7 @@ data:extend({
 			{type = "item", name = "stone", amount = 50}
 		},
 		results = {}, --set in data-updates.lua under Arig compatibility
-		category = "metallurgy-or-assembling",
+		categories = {"metallurgy","crafting-with-fluid"},
 		energy_required = 20,
 		allow_productivity = true,
 		alternative_unlock_methods = {"cat-somethings-rumbling"},
@@ -748,7 +745,7 @@ data:extend({
 		enabled = false,
 		ingredients = {}, --set in data-updates.lua under Arig compatibility
 		results = {}, --set in data-updates.lua under Arig compatibility
-		category = "chemistry-or-cryogenics",
+		categories = {"cryogenics","chemistry"},
 		energy_required = 1,
 		allow_productivity = true,
 		subgroup = "fluid-recipes",
@@ -773,7 +770,7 @@ data:extend({
 		results = {
 			{type = "item", name = "ice", amount = 1}
 		},
-		category = "cryogenics",
+		categories = {"cryogenics"},
 		energy_required = 1,
 		allow_productivity = false,
 		subgroup = "fluid-recipes",
@@ -791,7 +788,7 @@ data:extend({
 		results = {
 			{type = "item", name = "stone-brick", amount = 1}
 		},
-		category = "metallurgy",
+		categories = {"metallurgy"},
 		order = "a[stone-brick]-b",
 		energy_required = 3,
 		allow_productivity = true,
@@ -809,7 +806,7 @@ data:extend({
 		results = {
 			{type = "item", name = "stone-brick", amount = 1}
 		},
-		category = "metallurgy",
+		categories = {"metallurgy"},
 		order = "a[stone-brick]-c",
 		energy_required = 2,
 		allow_productivity = true,
@@ -832,7 +829,7 @@ data:extend({
 		},
 		results = {
 		},
-		category = "chemistry-or-cryogenics",
+		categories = {"cryogenics","chemistry"},
 		energy_required = 1,
 		allow_productivity = false,
 		subgroup = "fluid-recipes",
@@ -857,7 +854,7 @@ data:extend({
 		},
 		results = {
 		},
-		category = "chemistry-or-cryogenics",
+		categories = {"cryogenics","chemistry"},
 		energy_required = 1,
 		allow_productivity = false,
 		subgroup = "fluid-recipes",
@@ -882,7 +879,7 @@ data:extend({
 		},
 		results = {
 		},
-		category = "chemistry-or-cryogenics",
+		categories = {"cryogenics","chemistry"},
 		energy_required = 1,
 		allow_productivity = false,
 		subgroup = "fluid-recipes",
@@ -920,7 +917,7 @@ data:extend({
 		results = {
 			{type = "item", name = "rocket-fuel", amount = 2}
 		},
-		category = "organic-or-chemistry",
+		categories = {"organic","chemistry"},
 		energy_required = 15,
 		allow_productivity = true,
 		subgroup = "intermediate-product",
@@ -951,7 +948,7 @@ data:extend({
 		results = {
 			{type = "item", name = "rocket-fuel", amount = 2}
 		},
-		category = "organic",
+		categories = {"organic"},
 		energy_required = 10,
 		allow_productivity = true,
 		subgroup = "agriculture-products",
@@ -982,7 +979,7 @@ data:extend({
 		results = {
 			{type = "item", name = "rocket-fuel", amount = 2}
 		},
-		category = "chemistry-or-cryogenics",
+		categories = {"cryogenics","chemistry"},
 		energy_required = 10,
 		allow_productivity = true,
 		subgroup = "aquilo-processes",
@@ -1011,7 +1008,7 @@ data:extend({
 		results = {
 			{type = "item", name = "solid-fuel", amount = 2}
 		},
-		category = "chemistry-or-cryogenics",
+		categories = {"cryogenics","chemistry"},
 		energy_required = 1,
 		allow_productivity = true,
 		subgroup = "fluid-recipes",
@@ -1040,7 +1037,7 @@ data:extend({
 		results = {
 			{type = "item", name = "solid-fuel", amount = 2}
 		},
-		category = "chemistry-or-cryogenics",
+		categories = {"cryogenics","chemistry"},
 		energy_required = 1,
 		allow_productivity = true,
 		subgroup = "fluid-recipes",
@@ -1068,7 +1065,7 @@ data:extend({
 		results = {
 			{type = "item", name = "solid-fuel", amount = 2}
 		},
-		category = "chemistry-or-cryogenics",
+		categories = {"cryogenics","chemistry"},
 		energy_required = 1,
 		allow_productivity = true,
 		subgroup = "fluid-recipes",
@@ -1097,7 +1094,7 @@ data:extend({
 		results = {
 			{type = "item", name = "solid-fuel", amount = 4}
 		},
-		category = "cryogenics",
+		categories = {"cryogenics"},
 		energy_required = 1,
 		allow_productivity = true,
 		subgroup = "aquilo-processes",

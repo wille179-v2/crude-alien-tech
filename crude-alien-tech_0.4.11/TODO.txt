@@ -18,6 +18,8 @@ Mod Compatability:
 	✔️Lignumis (gold and Mk2 Lumber Mill)
 	✔️Age of Production (https://mods.factorio.com/mod/Age-of-Production)
 	Extraplanetary Production (https://mods.factorio.com/mod/extraplanetary-production) or Em Foundry Expansion (https://mods.factorio.com/mod/em-foundry-expansion) (mostly just to check if there are conflicts at all...)
+    
+    Update AoP / Lignumis Lumber mill to add fluid boxes.
 	
 	
 	Myraxis (Gasses)

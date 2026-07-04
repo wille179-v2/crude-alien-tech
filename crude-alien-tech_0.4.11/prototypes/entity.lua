@@ -201,7 +201,7 @@ data:extend{vulcanusGrownTree}
 local vulcanusNaturalTreeResults = {
 	{type="item", name = "cat-carbonized-wood", amount = 4},
 	{type="item", name = "carbon", amount = 2},
-	{type="item", name = "cat-ashland-tree-seed", amount = 1, probability = .1}
+	{type="item", name = "cat-ashland-tree-seed", amount = 1, independent_probability = .1}
 }
 data.raw["tree"]["ashland-lichen-tree"].minable.results = vulcanusNaturalTreeResults
 data.raw["tree"]["ashland-lichen-tree-flaming"].minable.results = vulcanusNaturalTreeResults
