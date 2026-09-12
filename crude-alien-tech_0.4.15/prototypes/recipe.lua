@@ -189,7 +189,8 @@ data:extend({
 			secondary = {1,.812,.392},
 			tertiary = {.0,.0,.0},
 			quaternary = {.0,.0,.0}
-		}
+		},
+		auto_recycle = false
 	},
 	{
 		type = "recipe",
@@ -212,7 +213,8 @@ data:extend({
 			secondary = {.569,.302,.78},
 			tertiary = {.0,.0,.0},
 			quaternary = {.0,.0,.0}
-		}
+		},
+		auto_recycle = false
 	},
 	{
 		type = "recipe",
@@ -230,7 +232,8 @@ data:extend({
 		allow_productivity = true,
 		allow_decomposition = false,
 		--crafting_machine_tint = {primary = {0,.62,0,1}}
-		crafting_machine_tint = colorCopy("jellynut-processing")
+		crafting_machine_tint = colorCopy("jellynut-processing"),
+		auto_recycle = false
 	},
 	{
 		type = "recipe",
@@ -247,7 +250,8 @@ data:extend({
 		allow_productivity = true,
 		allow_decomposition = false,
 		--crafting_machine_tint = {primary = {.753,.251,.035,1}}
-		crafting_machine_tint = colorCopy("yumako-processing")
+		crafting_machine_tint = colorCopy("yumako-processing"),
+		auto_recycle = false
 	},
 	{
 		type = "recipe",
@@ -276,7 +280,8 @@ data:extend({
 		allow_productivity = false,
 		allow_decomposition = false,
 		--crafting_machine_tint = {primary = {.435,.463,.035,1},secondary = {.141,.18,.031,1}}
-		crafting_machine_tint = colorCopy("pentapod-egg")
+		crafting_machine_tint = colorCopy("pentapod-egg"),
+		auto_recycle = false
 	}
 })
 
@@ -327,7 +332,8 @@ data:extend({
 		allow_decomposition = false,
 		order = "d[wood]-a[synthetic-wood]",
 		--crafting_machine_tint = {primary = {.569,.302,.78,1},secondary = {1,.812,.392,1}}
-		crafting_machine_tint = colorCopy("plastic-bar")
+		crafting_machine_tint = colorCopy("plastic-bar"),
+		auto_recycle = false
 	},
 })
 
@@ -707,7 +713,8 @@ data:extend({
 		subgroup = "fluid-recipes",
 		allow_decomposition = false,
 		--crafting_machine_tint = {primary = {.635, 0.694, .561,1}}
-		crafting_machine_tint = colorCopy("lithium")
+		crafting_machine_tint = colorCopy("lithium"),
+		auto_recycle = false
 	},
 })
 
@@ -735,7 +742,8 @@ data:extend({
 			secondary = {.0,.0,.0},
 			tertiary = {.0,.0,.0},
 			quaternary = {.0,.0,.0}
-		}
+		},
+		auto_recycle = false
 	},
 	{ -- pure sand
 		type = "recipe",
@@ -756,7 +764,8 @@ data:extend({
 			secondary = {.0,.0,.0},
 			tertiary = {.0,.0,.0},
 			quaternary = {.0,.0,.0}
-		}
+		},
+		auto_recycle = false
 	},
 	{ -- ice
 		type = "recipe",
@@ -776,7 +785,8 @@ data:extend({
 		subgroup = "fluid-recipes",
 		allow_decomposition = false,
 		--crafting_machine_tint = {primary = {.433, 0.773, 1,1}, secondary = {.591, .856, 1, 1}}
-		crafting_machine_tint = colorCopy("ice-melting")
+		crafting_machine_tint = colorCopy("ice-melting"),
+		auto_recycle = false
 	},
 	{ -- sand to brick
 		type = "recipe",
@@ -794,7 +804,8 @@ data:extend({
 		allow_productivity = true,
 		subgroup = "terrain",
 		hidden_from_player_crafting = true,
-		allow_decomposition = false
+		allow_decomposition = false,
+		auto_recycle = false
 	},
 	{ -- pure sand to brick
 		type = "recipe",
@@ -812,7 +823,8 @@ data:extend({
 		allow_productivity = true,
 		subgroup = "terrain",
 		hidden_from_player_crafting = true,
-		allow_decomposition = false
+		allow_decomposition = false,
+		auto_recycle = false
 	},
 })
 
@@ -927,7 +939,8 @@ data:extend({
 		hidden = hideFuels,
 		allow_decomposition = false,
 		--crafting_machine_tint = {primary = {1, 0.7, 0,1}}
-		crafting_machine_tint = colorCopy("rocket-fuel")
+		crafting_machine_tint = colorCopy("rocket-fuel"),
+		auto_recycle = false
 	},
 	{ -- Rocket Fuel from Jelly
 		type = "recipe",
@@ -958,7 +971,8 @@ data:extend({
 		hidden = hideFuels,
 		allow_decomposition = false,
 		--crafting_machine_tint = {primary = {.592, 0.259, 0,.1}}
-		crafting_machine_tint = colorCopy("rocket-fuel-from-jelly")
+		crafting_machine_tint = colorCopy("rocket-fuel-from-jelly"),
+		auto_recycle = false
 	},
 	{ -- Rocket Fuel from Ammonia
 		type = "recipe",
@@ -989,7 +1003,8 @@ data:extend({
 		hidden = hideFuels,
 		allow_decomposition = false,
 		--crafting_machine_tint = {primary = {.996, 0.742, .408,1}}
-		crafting_machine_tint = colorCopy("ammonia-rocket-fuel")
+		crafting_machine_tint = colorCopy("ammonia-rocket-fuel"),
+		auto_recycle = false
 	},
 	{ -- Solid Fuel from Light Oil
 		type = "recipe",
@@ -1018,7 +1033,8 @@ data:extend({
 		hidden = hideFuels,
 		allow_decomposition = false,
 		--crafting_machine_tint = {primary = {.71, 0.633, .482,1}},
-		crafting_machine_tint = colorCopy("solid-fuel-from-light-oil")
+		crafting_machine_tint = colorCopy("solid-fuel-from-light-oil"),
+		auto_recycle = false
 	},
 	{ -- Solid Fuel from Heavy Oil
 		type = "recipe",
@@ -1046,7 +1062,8 @@ data:extend({
 		hidden_in_factoriopedia = hideFuels,
 		hidden = hideFuels,
 		allow_decomposition = false,
-		crafting_machine_tint = colorCopy("solid-fuel-from-heavy-oil")
+		crafting_machine_tint = colorCopy("solid-fuel-from-heavy-oil"),
+		auto_recycle = false
 	},
 	{ -- Solid Fuel from Petrolium Gas
 		type = "recipe",
@@ -1074,7 +1091,8 @@ data:extend({
 		hidden_in_factoriopedia = hideFuels,
 		hidden = hideFuels,
 		allow_decomposition = false,
-		crafting_machine_tint = colorCopy("solid-fuel-from-petroleum-gas")
+		crafting_machine_tint = colorCopy("solid-fuel-from-petroleum-gas"),
+		auto_recycle = false
 	},
 	{ -- Solid Fuel from Ammonia
 		type = "recipe",
@@ -1103,7 +1121,8 @@ data:extend({
 		hidden_in_factoriopedia = hideFuels,
 		hidden = hideFuels,
 		allow_decomposition = false,
-		crafting_machine_tint = colorCopy("solid-fuel-from-ammonia")
+		crafting_machine_tint = colorCopy("solid-fuel-from-ammonia"),
+		auto_recycle = false
 	},
 })
 

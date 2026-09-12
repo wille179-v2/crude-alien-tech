@@ -1,5 +1,16 @@
 local utils = require("utils")
 
+
+local recycleEffects = data.raw.technology.recycling.effects
+local catSalvageEffects = data.raw.technology["cat-salvage-failed-efforts"].effects
+for _,effect in pairs(recycleEffects) do
+	if effect.type == "unlock-recipe" and not (effect.recipe == "recycler" or effect.recipe == "scrap-recycling") then
+		table.insert(catSalvageEffects,effect)
+	end
+end
+
+
+
 -- ##################### Flare Stack compatibility #####################
 
 if mods["Flare Stack"] then 

@@ -1,4 +1,25 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.15
+Date: 09-12-2026
+  Bugfixes:
+    - Fixed an issue where recycling stone had a very small chance to give ice as an accidental byproduct.
+---------------------------------------------------------------------------------------------------
+Version: 0.4.14
+Date: 07-22-2026
+  Bugfixes:
+    - Fixed a lingering 2.1 compatibility issue.
+    - Fixed nooberries overwriting the vanilla jelly and yumako mash recycling recipes. (Thanks puydomgulat for spotting this!)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.13
+Date: 07-10-2026
+  Bugfixes:
+    - Fixed a bug that prevented the crude recycler from working before the regular recycler was researched.
+---------------------------------------------------------------------------------------------------
+Version: 0.4.12
+Date: 07-04-2026
+  Bugfixes:
+    - Fixed minor bug with Age of Production mod.
+---------------------------------------------------------------------------------------------------
 Version: 0.4.11
 Date: 07-04-2026
   Features:

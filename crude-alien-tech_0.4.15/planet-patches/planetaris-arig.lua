@@ -124,17 +124,30 @@ if mods["planetaris-arig"] then
 	--data.raw["recipe"]["cat-pure-sand"].hidden_from_player_crafting = true
 	
 	-- add my pure sand to Arig's Sifter
-	data.raw["recipe"]["cat-pure-sand"].additional_categories = {"sifting"}
+	local function categoryMerge(recipe, categories)
+		local rawRecipe = data.raw["recipe"][recipe]
+		rawRecipe.categories = utils.merge{rawRecipe.categories, categories}
+	end
+
+	
+	--data.raw["recipe"]["cat-pure-sand"].additional_categories = {"sifting"}
+	categoryMerge("cat-pure-sand",{"sifting"})
+
 
 	--sifting
-	holmiumOreSifting.additional_categories = {"sifting"}
-	data.raw["recipe"]["cat-tungsten-ore"].additional_categories = {"sifting"}
+	--holmiumOreSifting.additional_categories = {"sifting"}
+	categoryMerge("cat-holmium-ore-sifting",{"sifting"})
+	--data.raw["recipe"]["cat-tungsten-ore"].additional_categories = {"sifting"}
+	categoryMerge("cat-tungsten-ore",{"sifting"})
 
 
 	-- add oxygenated solid fuels to compressing category
-	data.raw["recipe"]["cat-oxygenated-solid-fuel-from-light-oil"].additional_categories = {"compressing"}
-	data.raw["recipe"]["cat-oxygenated-solid-fuel-from-heavy-oil"].additional_categories = {"compressing"}
-	data.raw["recipe"]["cat-oxygenated-solid-fuel-from-petroleum-gas"].additional_categories = {"compressing"}
+	--data.raw["recipe"]["cat-oxygenated-solid-fuel-from-light-oil"].additional_categories = {"compressing"}
+	--data.raw["recipe"]["cat-oxygenated-solid-fuel-from-heavy-oil"].additional_categories = {"compressing"}
+	--data.raw["recipe"]["cat-oxygenated-solid-fuel-from-petroleum-gas"].additional_categories = {"compressing"}
+	categoryMerge("cat-oxygenated-solid-fuel-from-light-oil",{"compressing"})
+	categoryMerge("cat-oxygenated-solid-fuel-from-heavy-oil",{"compressing"})
+	categoryMerge("cat-oxygenated-solid-fuel-from-petroleum-gas",{"compressing"})
 	
 
 	-- add Oxygenated Compressed Rocket Fuel variant
