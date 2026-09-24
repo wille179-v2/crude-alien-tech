@@ -129,7 +129,7 @@ data:extend({
 		spoil_result = "spoilage",
 		spoil_ticks = 216000,
 		fuel_value = "1.8MJ",
-		fuel_category = "chemical",
+		fuel_categories = {"chemical"},
 		capsule_action = data.raw["capsule"]["yumako"].capsule_action,
 		subgroup = "nauvis-agriculture",
 		order = "a[seeds]-b[fruit]"
